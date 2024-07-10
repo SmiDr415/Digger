@@ -5,18 +5,18 @@ namespace Digger
 {
     public class FormController
     {
-        private IForm _currentForm;
-        private readonly IForm[] _forms;
+        private PlayerForm _currentForm;
+        private readonly PlayerForm[] _forms;
 
-        public event Action<int> OnFormSwitched;
+        public event Action<PlayerForm> OnFormSwitched;
 
         public FormController(FormsData formsData)
         {
-            _forms = new IForm[formsData.AllForms.Length];
+            _forms = new PlayerForm[formsData.AllForms.Length];
 
             for(int i = 0; i < formsData.AllForms.Length; i++)
             {
-                _forms[i] = new ScytheForm(formsData.AllForms[i]);
+                _forms[i] = new PlayerForm(formsData.AllForms[i], i);
             }
 
         }
@@ -25,11 +25,11 @@ namespace Digger
         {
             for(int i = 0; i < _forms.Length; i++)
             {
-                IForm form = _forms[i];
+                var form = _forms[i];
                 if(formType.ToString() == form.FormName)
                 {
                     _currentForm = form;
-                    OnFormSwitched?.Invoke(i);
+                    OnFormSwitched?.Invoke(form);
                     Debug.Log($"Switched to {_currentForm.FormName}");
                     return;
                 }

@@ -15,7 +15,7 @@ namespace Digger
             _formController.OnFormSwitched += _uiController.UpdateFormUI;
             _formController.OnFormSwitched += _playerController.ChangePlayerSprite;
 
-            _formController.SwitchForm(FormType.Form_Scissors);
+            _formController.SwitchForm(FormType.Form_Sickle);
         }
 
         private void Update()
@@ -27,7 +27,7 @@ namespace Digger
 
             if(Input.GetKeyDown(KeyCode.Alpha1))
             {
-                _formController.SwitchForm(FormType.Form_Scissors);
+                _formController.SwitchForm(FormType.Form_Sickle);
             }
             else if(Input.GetKeyDown(KeyCode.Alpha2))
             {
