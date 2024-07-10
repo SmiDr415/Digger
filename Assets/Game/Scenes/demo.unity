@@ -5501,8 +5501,8 @@ MonoBehaviour:
   _spritesForms:
   - {fileID: 4601653009265083442, guid: 4af8e4aab4c911b4fab75cb5a3ccfacc, type: 3}
   - {fileID: 3725517137254927161, guid: c6ceee597c188b94bb314ecfaffa1bea, type: 3}
-  _moveSpeed: 5
-  _jumpForce: 10
+  _moveSpeed: 2
+  _jumpForce: 4
   _groundCheck: {fileID: 406931012}
   _groundLayer:
     serializedVersion: 2
@@ -5544,7 +5544,7 @@ CircleCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ac41df62ae70af243b3fbc7726e10308, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
