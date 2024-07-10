@@ -10,11 +10,11 @@ namespace Digger
 
         private Image _currentIcon;
 
-        public void UpdateFormUI(int val)
+        public void UpdateFormUI(PlayerForm form)
         {
             if(_currentIcon != null)
                 _currentIcon.color = Color.white;
-            _currentIcon = _formIconsBack[val];
+            _currentIcon = _formIconsBack[form.Index];
             _currentIcon.color =_selectedColor;
         }
     }

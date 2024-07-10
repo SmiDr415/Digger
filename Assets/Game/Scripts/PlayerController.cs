@@ -21,35 +21,30 @@ namespace Digger
             _rigidbody2D = GetComponent<Rigidbody2D>();
         }
 
-        private void Update()
-        {
-            Move();
-            Jump();
-        }
 
-        private void Move()
+        public void Move(float moveInput)
         {
-            float moveInput = Input.GetAxis("Horizontal");
             Vector2 moveVelocity = new(moveInput * _moveSpeed, _rigidbody2D.velocity.y);
             _rigidbody2D.velocity = moveVelocity;
         }
 
-        private void Jump()
+        public void Jump()
         {
             _isGrounded = Physics2D.OverlapCircle(_groundCheck.position, 0.1f, _groundLayer);
 
-            if(Input.GetKeyDown(KeyCode.Space) && _isGrounded)
+            if(_isGrounded)
             {
                 _rigidbody2D.AddForce(new Vector2(0f, _jumpForce), ForceMode2D.Impulse);
             }
         }
 
+
         // Метод для смены спрайта игрока
-        public void ChangePlayerSprite(int val)
+        public void ChangePlayerSprite(PlayerForm form)
         {
             if(_spriteRenderer != null)
             {
-                _spriteRenderer.sprite = _spritesForms[val];
+                _spriteRenderer.sprite = _spritesForms[form.Index];
                 Debug.Log("Player sprite changed.");
             }
             else

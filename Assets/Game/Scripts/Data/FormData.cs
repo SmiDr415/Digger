@@ -7,6 +7,7 @@ namespace Digger
     {
         public FormType FormType;
         public Vector2 SizeInTiles;
+        public Sprite Sprite;
         public TileType[] SuitableResources;
         public TileType[] UnsuitableResources;
     }
