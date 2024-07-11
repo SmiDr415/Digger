@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Digger
@@ -10,6 +11,7 @@ namespace Digger
         private readonly Sprite _sprite;
         private readonly TileType[] _suitableResources;
         private readonly TileType[] _unsuitableResources;
+        private int _strength;
 
         public PlayerForm(FormData data, int index)
         {
@@ -19,6 +21,7 @@ namespace Digger
             _suitableResources = data.SuitableResources;
             _unsuitableResources = data.UnsuitableResources;
             _index = index;
+            _strength = 100;
         }
 
         public int Index => _index;
@@ -27,6 +30,7 @@ namespace Digger
         public Sprite Sprite => _sprite;
         public TileType[] SuitableResources => _suitableResources;
         public TileType[] UnsuitableResources => _unsuitableResources;
+        public int Strength => _strength;
 
 
         public void UseAbility()
@@ -34,6 +38,11 @@ namespace Digger
             // Реализация способности "Серпа"
             Debug.Log("Using Scythe Ability: Destroying Grass tiles");
             // Добавить логику для разрушения тайлов типа "Grass"
+        }
+
+        internal void GetDamage(int val)
+        {
+            _strength = Mathf.Clamp(_strength -= val, 0, 100);
         }
     }
 }

@@ -7,8 +7,10 @@ namespace Digger
     {
         private PlayerForm _currentForm;
         private readonly PlayerForm[] _forms;
+        private int _currentFormIndex;
 
         public event Action<PlayerForm> OnFormSwitched;
+        public event Action<int, int> OnGetDamage;
 
         public FormController(FormsData formsData)
         {
@@ -29,6 +31,7 @@ namespace Digger
                 if(formType.ToString() == form.FormName)
                 {
                     _currentForm = form;
+                    _currentFormIndex = i;
                     OnFormSwitched?.Invoke(form);
                     Debug.Log($"Switched to {_currentForm.FormName}");
                     return;
@@ -38,9 +41,11 @@ namespace Digger
             Debug.LogWarning("Unknown form type!");
         }
 
-        public void UseCurrentFormAbility()
+        public void GetDamage(int val)
         {
-            _currentForm?.UseAbility();
+            _currentForm.GetDamage(val);
+            OnGetDamage?.Invoke(_currentFormIndex, _currentForm.Strength);
         }
+
     }
 }

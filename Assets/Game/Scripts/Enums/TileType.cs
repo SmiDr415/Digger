@@ -4,6 +4,7 @@ namespace Digger
     {
         Grass,
         Stone,
+        Undefinit,
         //  здесь новые типы тайлов
     }
 }
