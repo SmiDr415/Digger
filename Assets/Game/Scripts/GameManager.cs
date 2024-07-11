@@ -13,18 +13,13 @@ namespace Digger
         {
             _formController = new FormController(_formsData);
             _formController.OnFormSwitched += _uiController.UpdateFormUI;
-            _formController.OnFormSwitched += _playerController.ChangePlayerSprite;
-
+            _formController.OnFormSwitched += _playerController.ChangePlayerForm;
+            _formController.OnGetDamage += _uiController.SetStrenghtValue;
             _formController.SwitchForm(FormType.Form_Sickle);
         }
 
         private void Update()
         {
-            if(Input.GetKeyDown(KeyCode.Space))
-            {
-                _formController.UseCurrentFormAbility();
-            }
-
             if(Input.GetKeyDown(KeyCode.Alpha1))
             {
                 _formController.SwitchForm(FormType.Form_Sickle);
@@ -38,7 +33,9 @@ namespace Digger
         private void OnDestroy()
         {
             _formController.OnFormSwitched -= _uiController.UpdateFormUI;
-            _formController.OnFormSwitched -= _playerController.ChangePlayerSprite;
+            _formController.OnFormSwitched -= _playerController.ChangePlayerForm;
+            _formController.OnGetDamage -= _uiController.SetStrenghtValue;
+
         }
     }
 }

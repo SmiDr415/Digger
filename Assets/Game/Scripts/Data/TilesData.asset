@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0fb89b12cf27a846be33b997285a51f, type: 3}
+  m_Name: TilesData
+  m_EditorClassIdentifier: 
+  tileDatas:
+  - Type: 1
+    tiles:
+    - {fileID: 11400000, guid: 041e2e8fd1d0ab54f9f391c141e1f40b, type: 2}
+    - {fileID: 11400000, guid: d2a454cdcf61587439cbe5ede10d0c9c, type: 2}
+    strength: 0200000001000000
+  - Type: 1
+    tiles:
+    - {fileID: 11400000, guid: 7959bc86ee95ac64bb81b94a2de72bea, type: 2}
+    - {fileID: 11400000, guid: c23a69d5fd018cb4893dd6f63e6d1948, type: 2}
+    - {fileID: 11400000, guid: 2f70c4bc8f3b6204a8847947b95871dd, type: 2}
+    - {fileID: 11400000, guid: b9a875a4b87044f4b82a7d9d2a922a39, type: 2}
+    strength: 04000000030000000200000001000000
+  - Type: 0
+    tiles:
+    - {fileID: 11400000, guid: e0b1d6aef541eaa40877268a214e3630, type: 2}
+    strength: 01000000

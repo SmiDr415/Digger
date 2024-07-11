@@ -15,11 +15,11 @@ MonoBehaviour:
   AllForms:
   - FormType: 0
     SizeInTiles: {x: 2, y: 2}
-    Sprite: {fileID: 3755354169050089389, guid: e5a0adc8a133e864b97bd155bc283843, type: 3}
+    Sprite: {fileID: 21300000, guid: e5a0adc8a133e864b97bd155bc283843, type: 3}
     SuitableResources: 00000000
     UnsuitableResources: 01000000
   - FormType: 1
     SizeInTiles: {x: 2, y: 2}
-    Sprite: {fileID: 3725517137254927161, guid: c6ceee597c188b94bb314ecfaffa1bea, type: 3}
+    Sprite: {fileID: 21300000, guid: c6ceee597c188b94bb314ecfaffa1bea, type: 3}
     SuitableResources: 01000000
     UnsuitableResources: 00000000
