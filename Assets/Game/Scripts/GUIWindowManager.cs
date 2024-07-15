@@ -12,6 +12,8 @@ namespace Digger
 
         private RectTransform _interactionWindowRectTransform;
 
+        public bool IsActive => _interactionWindow.activeInHierarchy;
+
         private void Awake()
         {
             if(Instance == null)
@@ -30,6 +32,7 @@ namespace Digger
         public void HideWindow()
         {
             _interactionWindow.SetActive(false);
+            PlayerController.Instance.HideInteractibleWindow();
         }
 
         public void ShowWindowAbovePosition(Vector3 position)

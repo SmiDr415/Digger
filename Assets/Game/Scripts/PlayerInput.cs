@@ -34,6 +34,8 @@ namespace Digger
             {
                 HandleMovementInput();
                 HandleJumpInput();
+
+                HandleInteractibleInput();
             }
 
         }
@@ -41,26 +43,25 @@ namespace Digger
 
         private void FixedUpdate()
         {
-            _cameraController.SetTargetPosition(CheckCursorPosition(_playerController.transform.position, _camera));
+            if(!GUIWindowManager.Instance.IsActive)
+                _cameraController.SetTargetPosition(CheckCursorPosition(_playerController.transform.position, _camera));
         }
 
         private Vector3 CheckCursorPosition(Vector3 playerPosition, Camera camera)
         {
-            var cursorPos = Input.mousePosition;
-            var screenWidth = Screen.width;
-            var screenHeight = Screen.height;
+            Vector3 cursorPos = Input.mousePosition;
+            float screenWidth = Screen.width;
+            float screenHeight = Screen.height;
 
-            // Определяем границу для краёв экрана (10% от ширины и высоты экрана)
             float edgeThresholdWidth = screenWidth * _offsetBorder;
             float edgeThresholdHeight = screenHeight * _offsetBorder;
 
-            // Определяем позицию курсора на экране
             bool isLeft = cursorPos.x <= edgeThresholdWidth;
             bool isRight = cursorPos.x >= screenWidth - edgeThresholdWidth;
             bool isTop = cursorPos.y >= screenHeight - edgeThresholdHeight;
             bool isBottom = cursorPos.y <= edgeThresholdHeight;
 
-            Vector3 offset = Vector3.zero; // Начальный отступ
+            Vector3 offset;
 
             if(isLeft && isTop)
             {
@@ -96,14 +97,14 @@ namespace Digger
             }
             else
             {
-                return playerPosition; // Центр экрана, возвращаем позицию игрока без изменений
+                return playerPosition;
             }
 
-            // Переводим координаты отступа из экранных в мировые
+            // Convert screen offset to world space
             Vector3 screenOffset = cursorPos + offset;
             Vector3 worldOffset = camera.ScreenToWorldPoint(new Vector3(screenOffset.x, screenOffset.y, camera.nearClipPlane)) - camera.ScreenToWorldPoint(new Vector3(cursorPos.x, cursorPos.y, camera.nearClipPlane));
 
-            return playerPosition + worldOffset; // Возвращаем позицию игрока с отступом
+            return playerPosition + worldOffset;
         }
 
 
@@ -120,18 +121,14 @@ namespace Digger
                 _playerController.Jump();
             }
         }
-    }
 
-    public enum Positions
-    {
-        Left,
-        Right,
-        Top,
-        Bottom,
-        TopLeft,
-        BottomLeft,
-        TopRight,
-        BottomRight,
-        Center
+        private void HandleInteractibleInput()
+        {
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                _playerController.ReadyInteractible();
+            }
+        }
+
     }
 }

@@ -5,16 +5,46 @@ namespace Digger
     public class GameManager : MonoBehaviour
     {
         [SerializeField] private FormsData _formsData;
-        [SerializeField] private UIController _uiController;
         [SerializeField] private PlayerController _playerController;
         private FormController _formController;
+
+
+        private static GameManager _instance;
+        public static GameManager Instance
+        {
+            get
+            {
+                if(_instance == null)
+                {
+                    GameManager[] instances = FindObjectsByType<GameManager>(FindObjectsSortMode.InstanceID);
+                    if(instances.Length > 0)
+                    {
+                        _instance = instances[0];
+                    }
+
+                    if(instances.Length > 1)
+                    {
+                        Debug.LogError("More than one GameManager instance found!");
+                    }
+
+                    if(_instance == null)
+                    {
+                        GameObject singletonObject = new();
+                        _instance = singletonObject.AddComponent<GameManager>();
+                        singletonObject.name = typeof(GameManager).ToString() + " (GameManagerSingleton)";
+                        DontDestroyOnLoad(singletonObject);
+                    }
+                }
+                return _instance;
+            }
+        }
+
+        public FormController FormController => _formController;
 
         private void Start()
         {
             _formController = new FormController(_formsData);
-            _formController.OnFormSwitched += _uiController.UpdateFormUI;
-            _formController.OnFormSwitched += _playerController.ChangePlayerForm;
-            _formController.OnGetDamage += _uiController.SetStrenghtValue;
+            _formController.OnGetDamage += UIController.Instance.SetStrenghtValue;
             _formController.SwitchForm(FormType.Form_Sickle);
         }
 
@@ -32,10 +62,7 @@ namespace Digger
 
         private void OnDestroy()
         {
-            _formController.OnFormSwitched -= _uiController.UpdateFormUI;
-            _formController.OnFormSwitched -= _playerController.ChangePlayerForm;
-            _formController.OnGetDamage -= _uiController.SetStrenghtValue;
-
+            _formController.OnGetDamage -= UIController.Instance.SetStrenghtValue;
         }
     }
 }

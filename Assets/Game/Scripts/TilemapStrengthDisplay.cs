@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
-using TMPro;
 
 namespace Digger
 {
@@ -92,37 +91,6 @@ namespace Digger
         }
 
 
-        public void SetCurrentTileStrength(Vector3Int position, int newStrength)
-        {
-            if(_tileCurrentStrengthDict.ContainsKey(position))
-            {
-                _tileCurrentStrengthDict[position] = newStrength;
-
-                // ќбновл€ем текстовое отображение прочности
-                UpdateStrengthDisplay(position, newStrength);
-            }
-        }
-
-        private void UpdateStrengthDisplay(Vector3Int position, int newStrength)
-        {
-            if(_tileTextObjects.TryGetValue(position, out GameObject textObj))
-            {
-                TextMesh textMesh = textObj.GetComponent<TextMesh>();
-                if(textMesh != null)
-                {
-                    textMesh.text = newStrength.ToString();
-                    if(newStrength <= 0)
-                    {
-                        textMesh.color = new Color(0, 0, 0, 0);
-                    }
-                    else
-                    {
-                        textMesh.color = Color.white;
-                    }
-                }
-            }
-        }
-
 
         public void UpdateTileStrengthColor(Vector3 playerPosition, float radius, Color suitableColor, Color unsuitableColor, PlayerForm playerForm)
         {
@@ -210,6 +178,9 @@ namespace Digger
                     }
                     else
                     {
+                        var tile =  _tilemap.GetTile(tilePos);
+                        var newTile = _tileData.GetTileByStrength(tile.name, currentStrength);
+                        _tilemap.SetTile(tilePos, newTile);
                         textMesh.text = currentStrength.ToString();
                     }
                 }

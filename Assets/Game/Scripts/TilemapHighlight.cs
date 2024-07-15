@@ -36,7 +36,6 @@ namespace Digger
                 if(_previousHighlightObject != null && _previousHighlightPos != tilePos)
                 {
                     _previousHighlightObject.GetComponent<SpriteRenderer>().enabled = false;
-                    Debug.Log($"Unhighlighted tile at {_previousHighlightPos}");
                 }
 
                 // Выделяем текущий тайл
@@ -44,7 +43,6 @@ namespace Digger
                 if(highlightObject != null)
                 {
                     highlightObject.GetComponent<SpriteRenderer>().enabled = true;
-                    Debug.Log($"Highlighted tile at {tilePos}");
                 }
 
                 _previousHighlightPos = tilePos;
@@ -54,7 +52,6 @@ namespace Digger
             {
                 // Убираем выделение с предыдущего тайла
                 _previousHighlightObject.GetComponent<SpriteRenderer>().enabled = false;
-                Debug.Log($"Unhighlighted tile at {_previousHighlightPos}");
                 _previousHighlightObject = null;
             }
         }
