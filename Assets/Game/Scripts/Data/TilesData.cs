@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace Digger
 {
@@ -9,7 +10,7 @@ namespace Digger
 
         public TileType GetTileType(string tileName)
         {
-            foreach (var tile in tileDatas)
+            foreach(var tile in tileDatas)
             {
                 foreach(var tileData in tile.tiles)
                 {
@@ -20,6 +21,24 @@ namespace Digger
                 }
             }
             return TileType.Undefinit;
+        }
+
+        public TileBase GetTileByStrength(string tileName, int strength)
+        {
+            foreach(var tileData in tileDatas)
+            {
+                for(int i = 0; i < tileData.tiles.Length; i++)
+                {
+                    if(tileData.tiles[i].name.Contains(tileName))
+                    {
+                        if(tileData.strength[i] > strength)
+                        {
+                            return tileData.tiles[i + 1];
+                        }
+                    }
+                }
+            }
+            return null;
         }
     }
 

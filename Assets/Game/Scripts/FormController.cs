@@ -9,8 +9,10 @@ namespace Digger
         private readonly PlayerForm[] _forms;
         private int _currentFormIndex;
 
-        public event Action<PlayerForm> OnFormSwitched;
+        public event Action OnFormSwitched;
         public event Action<int, int> OnGetDamage;
+
+        public PlayerForm CurrentForm => _currentForm;
 
         public FormController(FormsData formsData)
         {
@@ -32,8 +34,7 @@ namespace Digger
                 {
                     _currentForm = form;
                     _currentFormIndex = i;
-                    OnFormSwitched?.Invoke(form);
-                    Debug.Log($"Switched to {_currentForm.FormName}");
+                    GameEventManager.Instance.TriggerEvent(GameEvent.OnChangeForm);
                     return;
                 }
             }
