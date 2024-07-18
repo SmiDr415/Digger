@@ -5,7 +5,6 @@ namespace Digger
     public class GameManager : MonoBehaviour
     {
         [SerializeField] private FormsData _formsData;
-        [SerializeField] private PlayerController _playerController;
         private FormController _formController;
 
 
@@ -44,6 +43,7 @@ namespace Digger
         private void Start()
         {
             _formController = new FormController(_formsData);
+            PlayerController.Instance.SubscribeToEvents();
             _formController.OnGetDamage += UIController.Instance.SetStrenghtValue;
             _formController.SwitchForm(FormType.Form_Sickle);
         }
