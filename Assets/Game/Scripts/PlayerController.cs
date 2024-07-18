@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Digger
@@ -36,7 +37,7 @@ namespace Digger
         [Header("Время каста телепортации")]
         [Tooltip("Столько секунд кастуется телепорт в хаб")]
         [SerializeField]
-        private float _teleportationDelay = 0;
+        private float _teleportationDelay = 3f;
 
         [Header("Время смены формы")]
         [Tooltip("Столько секунд герой сменяет форму")]
@@ -68,12 +69,19 @@ namespace Digger
         [SerializeField] private BoxCollider2D _interactionTrigger;
         [SerializeField] private BoxCollider2D _gatherTrigger;
 
+        [SerializeField] private Transform _hubPosition; // Позиция хаба для телепортации
+
+        private bool _isTeleporting = false; // Флаг для проверки телепортации
+        private Coroutine _teleportCoroutine; // Коррутина для телепортации
+
+
         private BoxCollider2D _playerBoxCollider;
         private Rigidbody2D _rigidbody2D;
         private SpriteRenderer _spriteRenderer;
         private bool _isGrounded;
         private PlayerForm _form;
         private InteractiveObject _currentInteractive;
+        private Animator _animator;
 
         private float _gravityScale;
         private float _jumpVelocity;
@@ -107,6 +115,7 @@ namespace Digger
             _playerBoxCollider = GetComponent<BoxCollider2D>();
             _rigidbody2D = GetComponent<Rigidbody2D>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
+            _animator = GetComponent<Animator>();
         }
 
         private static void SetupSingleton()
@@ -164,6 +173,51 @@ namespace Digger
 
             _tilemapStrengthDisplay.UpdateTileStrengthColor(transform.position, _breakRadius, Color.green, Color.red, _form);
         }
+
+        public void StartTeleport()
+        {
+            if(_isTeleporting)
+                return;
+
+            _isTeleporting = true;
+            _teleportCoroutine = StartCoroutine(TeleportRoutine());
+        }
+
+        private IEnumerator TeleportRoutine()
+        {
+            // Включить анимацию телепортации
+            _animator.SetTrigger("StartTeleport");
+
+            yield return new WaitForSeconds(_teleportationDelay);
+
+            if(_isTeleporting)
+            {
+                // Перемещение игрока в хаб
+                transform.position = _hubPosition.position;
+
+                // Сброс состояния телепортации
+                _isTeleporting = false;
+                _animator.SetTrigger("EndTeleport");
+            }
+        }
+
+        public void CancelTeleport()
+        {
+            if(!_isTeleporting)
+                return;
+
+            _isTeleporting = false;
+
+            if(_teleportCoroutine != null)
+            {
+                StopCoroutine(_teleportCoroutine);
+                _teleportCoroutine = null;
+            }
+
+            // Включить анимацию Idle
+            _animator.SetTrigger("CancelTeleport");
+        }
+
 
         #endregion
 

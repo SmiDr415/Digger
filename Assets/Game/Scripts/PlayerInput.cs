@@ -30,12 +30,15 @@ namespace Digger
 
         private void Update()
         {
-            if(_playerController != null)
+            if(_playerController != null && !GUIWindowManager.Instance.IsActive)
             {
                 HandleMovementInput();
                 HandleJumpInput();
 
                 HandleInteractibleInput();
+
+                HandleTeleportInput();
+                HandleCancelInput();
             }
 
         }
@@ -110,10 +113,6 @@ namespace Digger
 
         private void HandleMovementInput()
         {
-            if(GUIWindowManager.Instance.IsActive)
-            {
-                return;
-            }
 
             float moveInput = Input.GetAxis("Horizontal");
             _playerController.Move(moveInput);
@@ -121,10 +120,6 @@ namespace Digger
 
         private void HandleJumpInput()
         {
-            if(GUIWindowManager.Instance.IsActive)
-            {
-                return;
-            }
 
             if(Input.GetKeyDown(KeyCode.Space))
             {
@@ -137,6 +132,23 @@ namespace Digger
             if(Input.GetKeyDown(KeyCode.E))
             {
                 _playerController.ReadyInteractible();
+            }
+        }
+
+        private void HandleTeleportInput()
+        {
+
+            if(Input.GetKeyDown(KeyCode.H))
+            {
+                _playerController.StartTeleport();
+            }
+        }
+
+        private void HandleCancelInput()
+        {
+            if(Input.GetKeyDown(KeyCode.Escape))
+            {
+                _playerController.CancelTeleport();
             }
         }
 
