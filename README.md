@@ -12,16 +12,12 @@
 - **Телепортация**: Игрок может телепортироваться в хаб с задержкой и анимацией.
 - **Смена формы**: Игрок может менять форму персонажа с помощью хотбара с задержкой и анимацией.
 
-## Скриншоты
-
-![Screenshot 1](https://your-image-url.com/screenshot1.png)
-![Screenshot 2](https://your-image-url.com/screenshot2.png)
 
 ## Установка
 
 1. Клонируйте репозиторий:
     ```sh
-    git clone https://github.com/yourusername/digger-game.git
+    git clone https://github.com/AnroiDevel/Digger.git
     ```
 2. Перейдите в директорию проекта:
     ```sh
@@ -59,8 +55,8 @@
 
 - Автор: [AnroiDevel](https://igromaker.ru)
 - Email: anroidevel@gmail.com
-- GitHub: [AnroiDevel](https://github.com/anroidevel)
+- GitHub: [AnroiDevel](https://github.com/AnroiDevel)
 
 ![GitHub Stars](https://img.shields.io/github/stars/yourusername/digger-game?style=social)
 ![GitHub Forks](https://img.shields.io/github/forks/yourusername/digger-game?style=social)
-![GitHub Issues](https://img.shields.io/github/issues/yourusername/digger-game)
+![GitHub Issues](https://img.shields.io/github/issues/AnroiDevel/Digger)
