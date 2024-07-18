@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Digger
 {
-    public class InteractiveSprite : MonoBehaviour
+    public class InteractiveObject : MonoBehaviour
     {
         [SerializeField] private GameObject _helpInfo;
 

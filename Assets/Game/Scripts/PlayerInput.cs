@@ -110,12 +110,22 @@ namespace Digger
 
         private void HandleMovementInput()
         {
+            if(GUIWindowManager.Instance.IsActive)
+            {
+                return;
+            }
+
             float moveInput = Input.GetAxis("Horizontal");
             _playerController.Move(moveInput);
         }
 
         private void HandleJumpInput()
         {
+            if(GUIWindowManager.Instance.IsActive)
+            {
+                return;
+            }
+
             if(Input.GetKeyDown(KeyCode.Space))
             {
                 _playerController.Jump();

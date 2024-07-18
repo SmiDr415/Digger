@@ -32,7 +32,7 @@ namespace Digger
         public void HideWindow()
         {
             _interactionWindow.SetActive(false);
-            PlayerController.Instance.HideInteractibleWindow();
+            PlayerController.Instance.HideInteractableWindow();
         }
 
         public void ShowWindowAbovePosition(Vector3 position)
