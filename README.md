@@ -31,16 +31,15 @@
 
 ## Как играть
 
-1. Используйте клавиши **WASD** или **стрелки** для перемещения персонажа.
+1. Используйте клавиши **AD** или **стрелки** для перемещения персонажа.
 2. Нажмите **Пробел** для прыжка.
-3. Нажмите **T** для телепортации в хаб.
+3. Нажмите **H** для телепортации в хаб.
 4. Используйте клавиши **1**, **2**, **3** и т.д. для смены формы персонажа через хотбар.
-5. Нажмите **C** для отмены телепортации или смены формы.
+5. Нажмите **Esc** для отмены телепортации или смены формы.
 
 ## Требования
 
 - Unity 2021.3 или выше
-- Поддерживаемые платформы: Windows, macOS, Linux
 
 ## Вклад
 
@@ -58,9 +57,9 @@
 
 ## Контакты
 
-- Автор: [Ваше имя](https://yourwebsite.com)
-- Email: your.email@example.com
-- GitHub: [yourusername](https://github.com/yourusername)
+- Автор: [AnroiDevel](https://igromaker.ru)
+- Email: anroidevel@gmail.com
+- GitHub: [AnroiDevel](https://github.com/anroidevel)
 
 ![GitHub Stars](https://img.shields.io/github/stars/yourusername/digger-game?style=social)
 ![GitHub Forks](https://img.shields.io/github/forks/yourusername/digger-game?style=social)
