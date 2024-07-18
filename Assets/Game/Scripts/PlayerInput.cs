@@ -149,6 +149,7 @@ namespace Digger
             if(Input.GetKeyDown(KeyCode.Escape))
             {
                 _playerController.CancelTeleport();
+                _playerController.CancelShapeshift();
             }
         }
 

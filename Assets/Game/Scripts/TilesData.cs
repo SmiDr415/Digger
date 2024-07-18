@@ -16,7 +16,7 @@ namespace Digger
                 {
                     if(tileData.name.Contains(tileName))
                     {
-                        return tile.Type;
+                        return tile.TileType;
                     }
                 }
             }
@@ -31,7 +31,7 @@ namespace Digger
                 {
                     if(tileData.tiles[i].name.Contains(tileName))
                     {
-                        if(tileData.strength[i] > strength)
+                        if(tileData.Durability[i] > strength)
                         {
                             return tileData.tiles[i + 1];
                         }

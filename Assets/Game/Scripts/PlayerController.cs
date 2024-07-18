@@ -42,7 +42,7 @@ namespace Digger
         [Header("Время смены формы")]
         [Tooltip("Столько секунд герой сменяет форму")]
         [SerializeField]
-        private float _shapeshiftDelay = 0;
+        private float _shapeshiftDelay = 3;
 
         [Header("Скорость движения по горизонтали")]
         [Tooltip("Скорость движения героя по горизонтали")]
@@ -74,17 +74,22 @@ namespace Digger
         private bool _isTeleporting = false; // Флаг для проверки телепортации
         private Coroutine _teleportCoroutine; // Коррутина для телепортации
 
+        private bool _isShapeshifting = false; // Флаг для проверки процесса смены формы
+        private Coroutine _shapeshiftCoroutine; // Коррутина для смены формы
+        private FormType _targetFormType; // Тип целевой формы для смены
 
         private BoxCollider2D _playerBoxCollider;
         private Rigidbody2D _rigidbody2D;
         private SpriteRenderer _spriteRenderer;
         private bool _isGrounded;
-        private PlayerForm _form;
+        private PlayerForm _currentForm;
         private InteractiveObject _currentInteractive;
         private Animator _animator;
 
         private float _gravityScale;
         private float _jumpVelocity;
+
+        public bool IsReady => !_isTeleporting && !_isShapeshifting;
 
         public InteractiveObject InteractiveSprite => _currentInteractive;
 
@@ -171,7 +176,7 @@ namespace Digger
                 return;
             }
 
-            _tilemapStrengthDisplay.UpdateTileStrengthColor(transform.position, _breakRadius, Color.green, Color.red, _form);
+            _tilemapStrengthDisplay.UpdateTileStrengthColor(transform.position, _breakRadius, Color.green, Color.red, _currentForm);
         }
 
         public void StartTeleport()
@@ -222,9 +227,70 @@ namespace Digger
         #endregion
 
         #region Form Management
+
+        public void SwitchForm(FormType formType)
+        {
+            if(_currentForm != null && formType.ToString() == _currentForm.FormName)
+            {
+                // Текущая форма уже выбрана, ничего не делаем
+                return;
+            }
+
+            if(_isShapeshifting)
+            {
+                // Уже идет процесс смены формы, ничего не делаем
+                return;
+            }
+
+            _targetFormType = formType;
+            _isShapeshifting = true;
+            _shapeshiftCoroutine = StartCoroutine(ShapeshiftRoutine());
+        }
+
+        private IEnumerator ShapeshiftRoutine()
+        {
+            // Включить анимацию смены формы
+            _animator.SetTrigger("StartShapeshift");
+
+            yield return new WaitForSeconds(_shapeshiftDelay);
+
+            if(_isShapeshifting)
+            {
+                PerformShapeshift(_targetFormType);
+
+                // Сброс состояния смены формы
+                _isShapeshifting = false;
+                _animator.SetTrigger("EndShapeshift");
+            }
+        }
+
+        private void PerformShapeshift(FormType formType)
+        {
+            GameManager.Instance.FormController.SwitchForm(formType);
+        }
+
+
+        public void CancelShapeshift()
+        {
+            if(!_isShapeshifting)
+                return;
+
+            _isShapeshifting = false;
+
+            if(_shapeshiftCoroutine != null)
+            {
+                StopCoroutine(_shapeshiftCoroutine);
+                _shapeshiftCoroutine = null;
+            }
+
+            // Включить анимацию Idle
+            _animator.SetTrigger("CancelShapeshift");
+        }
+
+
         private void OnChangeForm()
         {
-            _form = GameManager.Instance.FormController.CurrentForm;
+            _currentForm = GameManager.Instance.FormController.CurrentForm;
             UpdateColliderSize();
             UpdatePlayerSprite();
         }
@@ -251,7 +317,7 @@ namespace Digger
         {
             if(_spriteRenderer != null)
             {
-                _spriteRenderer.sprite = _form?.Sprite;
+                _spriteRenderer.sprite = _currentForm?.Sprite;
             }
         }
 
@@ -275,13 +341,13 @@ namespace Digger
         #region Interaction
         public void GetDamage(int val)
         {
-            if(_form == null)
+            if(_currentForm == null)
             {
                 return;
             }
 
-            _form.GetDamage(val);
-            UIController.Instance.SetStrenghtValue(_form.Index, _form.Strength);
+            _currentForm.GetDamage(val);
+            UIController.Instance.SetStrenghtValue(_currentForm.Index, _currentForm.Strength);
         }
 
         internal void ReadyInteractible()
