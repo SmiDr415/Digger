@@ -52,11 +52,13 @@ namespace Digger
         {
             if(Input.GetKeyDown(KeyCode.Alpha1))
             {
-                _formController.SwitchForm(FormType.Form_Sickle);
+                if(_formController.CurrentForm.Index != (int)FormType.Form_Sickle)
+                    PlayerController.Instance.SwitchForm(FormType.Form_Sickle);
             }
             else if(Input.GetKeyDown(KeyCode.Alpha2))
             {
-                _formController.SwitchForm(FormType.Form_Pickaxe);
+                if(_formController.CurrentForm.Index != (int)FormType.Form_Pickaxe)
+                    PlayerController.Instance.SwitchForm(FormType.Form_Pickaxe);
             }
         }
 

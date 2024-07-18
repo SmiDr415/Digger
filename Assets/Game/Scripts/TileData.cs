@@ -7,9 +7,11 @@ namespace Digger
     [Serializable]
     public class TileData
     {
-        public TileType Type;
+        public TileType TileType;
+        public HarvestType HarvestType;
         public TileBase[] tiles;
-        public int[] strength;
+        public int MiningLevel;
+        public int[] Durability;
     }
 
 }

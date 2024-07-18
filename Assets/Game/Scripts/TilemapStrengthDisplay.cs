@@ -40,7 +40,7 @@ namespace Digger
                 for(int i = 0; i < tileData.tiles.Length; i++)
                 {
                     TileBase tile = tileData.tiles[i];
-                    _tileStrengthDict[tile] = tileData.strength[i];
+                    _tileStrengthDict[tile] = tileData.Durability[i];
                 }
             }
 
@@ -101,7 +101,7 @@ namespace Digger
                 if(_tileTextObjects.ContainsKey(pos))
                 {
                     float distance = Vector3.Distance(_tilemap.CellToWorld(pos), playerCell);
-                    if(distance <= radius)
+                    if(distance <= radius  && PlayerController.Instance.IsReady)
                     {
                         TextMesh textMesh = _tileTextObjects[pos].GetComponent<TextMesh>();
                         if(textMesh != null)
