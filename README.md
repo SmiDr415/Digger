@@ -1,4 +1,4 @@
-# Digger Game
+# Multi Tool
 
 ![Digger Game Banner](https://igromaker.ru/Games/Digger/bannerMultiTool.png)
 
