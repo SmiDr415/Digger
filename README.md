@@ -1,6 +1,6 @@
 # Digger Game
 
-![Digger Game Banner](https://your-image-url.com/banner.png)
+![Digger Game Banner](https://igromaker.ru/Games/Digger/bannerMultiTool.png)
 
 ## Описание
 
