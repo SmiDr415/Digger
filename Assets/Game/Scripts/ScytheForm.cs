@@ -12,6 +12,7 @@ namespace Digger
         private readonly TileType[] _suitableResources;
         private readonly TileType[] _unsuitableResources;
         private int _strength;
+        private float _cooldown;
 
         public PlayerForm(FormData data, int index)
         {
@@ -22,6 +23,7 @@ namespace Digger
             _unsuitableResources = data.UnsuitableResources;
             _index = index;
             _strength = 100;
+            _cooldown = data.Cooldown;
         }
 
         public int Index => _index;
@@ -31,7 +33,7 @@ namespace Digger
         public TileType[] SuitableResources => _suitableResources;
         public TileType[] UnsuitableResources => _unsuitableResources;
         public int Strength => _strength;
-
+        public float Cooldown => _cooldown;
 
         public void UseAbility()
         {

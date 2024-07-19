@@ -88,8 +88,9 @@ namespace Digger
 
         private float _gravityScale;
         private float _jumpVelocity;
+        private float _lastMineTime;
 
-        public bool IsReady => !_isTeleporting && !_isShapeshifting;
+        public bool IsReady => !_isTeleporting && !_isShapeshifting && IsCooldown();
 
         public InteractiveObject InteractiveSprite => _currentInteractive;
 
@@ -151,6 +152,13 @@ namespace Digger
         {
             var moveVelocity = new Vector2(moveInput * _moveSpeed, _rigidbody2D.velocity.y);
             _rigidbody2D.velocity = moveVelocity;
+            if(moveVelocity.x != 0)
+            {
+                _spriteRenderer.flipX = moveVelocity.x > 0;
+            }
+
+            _animator.SetBool("IsJump", Mathf.Abs(moveVelocity.y) > 0.5f);
+            _animator.SetBool("IsWalk", Mathf.Abs(moveVelocity.x) > 0.5f);
             UpdateTileStrengthDisplay();
         }
 
@@ -295,6 +303,11 @@ namespace Digger
             UpdatePlayerSprite();
         }
 
+        public bool IsCooldown()
+        {
+            return Time.time - _lastMineTime > _currentForm.Cooldown;
+        }
+
         private void UpdateColliderSize()
         {
             if(_playerBoxCollider == null)
@@ -346,7 +359,9 @@ namespace Digger
                 return;
             }
 
+            _animator.SetTrigger("Mine");
             _currentForm.GetDamage(val);
+            _lastMineTime = Time.time;
             UIController.Instance.SetStrenghtValue(_currentForm.Index, _currentForm.Strength);
         }
 
