@@ -18,8 +18,16 @@ MonoBehaviour:
     Sprite: {fileID: 21300000, guid: e5a0adc8a133e864b97bd155bc283843, type: 3}
     SuitableResources: 00000000
     UnsuitableResources: 01000000
+    Damage: 0
+    ExtractedResourceAmount: 0
+    Cost: 0
+    Cooldown: 1
   - FormType: 1
     SizeInTiles: {x: 2, y: 2}
     Sprite: {fileID: 21300000, guid: c6ceee597c188b94bb314ecfaffa1bea, type: 3}
     SuitableResources: 01000000
     UnsuitableResources: 00000000
+    Damage: 0
+    ExtractedResourceAmount: 0
+    Cost: 0
+    Cooldown: 1

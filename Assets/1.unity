@@ -22693,13 +22693,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5010848470228447869}
     - target: {fileID: 1054216818342762123, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
-      propertyPath: _shapeshiftDelay
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1054216818342762123, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
       propertyPath: _tilemapStrengthDisplay
       value: 
       objectReference: {fileID: 1471598421}
+    - target: {fileID: 1663043573436566091, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.57
+      objectReference: {fileID: 0}
     - target: {fileID: 3562011376877855044, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.98
@@ -22740,9 +22740,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4470228970782613473, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
-      propertyPath: m_EdgeRadius
-      value: 0.02
+    - target: {fileID: 4979413954893802145, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
+      propertyPath: m_Name
+      value: TestJumpAnimation
       objectReference: {fileID: 0}
     - target: {fileID: 8848474196840882546, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
       propertyPath: m_Name
