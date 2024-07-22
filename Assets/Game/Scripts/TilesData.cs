@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace Digger
+namespace MultiTool
 {
     [CreateAssetMenu(fileName = "TilesData", menuName = "Tiles Data", order = 1)]
     public class TilesData : ScriptableObject
@@ -12,7 +12,7 @@ namespace Digger
         {
             foreach(var tile in tileDatas)
             {
-                foreach(var tileData in tile.tiles)
+                foreach(var tileData in tile.Tiles)
                 {
                     if(tileData.name.Contains(tileName))
                     {
@@ -27,15 +27,27 @@ namespace Digger
         {
             foreach(var tileData in tileDatas)
             {
-                for(int i = 0; i < tileData.tiles.Length; i++)
+                for(int i = 0; i < tileData.Tiles.Length; i++)
                 {
-                    if(tileData.tiles[i].name.Contains(tileName))
+                    if(tileData.Tiles[i].name.Contains(tileName))
                     {
                         if(tileData.Durability[i] > strength)
                         {
-                            return tileData.tiles[i + 1];
+                            return tileData.Tiles[i + 1];
                         }
                     }
+                }
+            }
+            return null;
+        }
+
+        public TileData GetTileDataByName(string tileName) 
+        {
+            foreach(var tileData in tileDatas)
+            {
+                if(tileData.NameEn.Contains(tileName))
+                {
+                    return tileData;
                 }
             }
             return null;

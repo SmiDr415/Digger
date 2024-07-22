@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Digger
+namespace MultiTool
 {
     public class FormController
     {

@@ -1,12 +1,12 @@
 using UnityEngine;
 
-namespace Digger
+namespace MultiTool
 {
     public class GameManager : MonoBehaviour
     {
         [SerializeField] private FormsData _formsData;
+        [SerializeField] private DropItemDatabase _dropItemDatabase;
         private FormController _formController;
-
 
         private static GameManager _instance;
         public static GameManager Instance
@@ -39,6 +39,7 @@ namespace Digger
         }
 
         public FormController FormController => _formController;
+        public DropItemDatabase DropItemDatabase => _dropItemDatabase;
 
         private void Start()
         {

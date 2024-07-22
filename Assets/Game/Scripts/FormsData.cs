@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Digger
+namespace MultiTool
 {
     [CreateAssetMenu(fileName = "FormsData", menuName = "Digger/FormsData", order = 1)]
     public class FormsData : ScriptableObject

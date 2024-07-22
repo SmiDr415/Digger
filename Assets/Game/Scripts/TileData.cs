@@ -1,17 +1,27 @@
 ﻿using System;
+using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace Digger
+namespace MultiTool
 {
-
     [Serializable]
     public class TileData
     {
-        public TileType TileType;
-        public HarvestType HarvestType;
-        public TileBase[] tiles;
-        public int MiningLevel;
-        public int[] Durability;
+        [SerializeField] private string _nameRu;
+        [SerializeField] private string _nameEn;
+        [SerializeField] private TileType _type;
+        [SerializeField] private HarvestType _harvestType;
+        [SerializeField] private TileBase[] _tiles;
+        [SerializeField] private int _miningLevel;
+        [SerializeField] private int[] _durability;
+
+        public string NameRu => _nameRu;
+        public string NameEn => _nameEn;
+        public TileType TileType => _type;
+        public HarvestType HarvestType => _harvestType;
+        public TileBase[] Tiles => _tiles;
+        public int MiningLevel => _miningLevel;
+        public int[] Durability => _durability;
     }
 
 }

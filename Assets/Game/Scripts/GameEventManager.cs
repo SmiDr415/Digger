@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Digger
+namespace MultiTool
 {
     public sealed class GameEventManager
     {

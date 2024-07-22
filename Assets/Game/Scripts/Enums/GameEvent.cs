@@ -1,12 +1,9 @@
-namespace Digger
+namespace MultiTool
 {
     public enum GameEvent
     {
         OnChangeForm,
-        OnPlayerHeal,
         OnItemAdded,
         OnItemRemoved,
-        OnQuestAdded,
-        OnQuestCompleted
     }
 }

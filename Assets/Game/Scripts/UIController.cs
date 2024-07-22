@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Digger
+namespace MultiTool
 {
     public class UIController : MonoBehaviour
     {
