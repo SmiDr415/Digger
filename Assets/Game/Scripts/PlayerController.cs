@@ -7,6 +7,9 @@ namespace MultiTool
     [ExecuteInEditMode]
     public class PlayerController : MonoBehaviour
     {
+        [SerializeField] private AnimationCurve _gravityCurve;
+        [SerializeField] private AnimationCurve _jumpVelocityCurve;
+
         public static PlayerController Instance { get; private set; }
 
         [Header("Player Settings")]
@@ -431,9 +434,13 @@ namespace MultiTool
             if(_rigidbody2D == null)
                 _rigidbody2D = GetComponent<Rigidbody2D>();
 
-            _gravityScale = (2 * _maxJumpHeight) / Mathf.Pow(_timeToJumpApex, 2);
-            _jumpVelocity = Mathf.Sqrt(2 * _gravityScale * _maxJumpHeight);
-            _rigidbody2D.gravityScale = _gravityScale / Mathf.Abs(Physics2D.gravity.y) - 0.1f;
+            float gravityMultiplier = _gravityCurve.Evaluate(_moveSpeed);
+            float jumpVelocityMultiplier = _jumpVelocityCurve.Evaluate(_timeToJumpApex);
+
+            _gravityScale = (2 * _maxJumpHeight) / Mathf.Pow(_timeToJumpApex, 2) * gravityMultiplier;
+            _jumpVelocity = Mathf.Sqrt(2 * _gravityScale * _maxJumpHeight) * jumpVelocityMultiplier;
+
+            _rigidbody2D.gravityScale = _gravityScale / Mathf.Abs(Physics2D.gravity.y);
         }
         #endregion
     }

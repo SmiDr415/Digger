@@ -537,6 +537,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f5d46a65ae8e8e4284e099733a6622d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gravityCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _jumpVelocityCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   _gatherRadius: 1
   _breakRadius: 2
   _interactionRadius: 1
@@ -624,7 +636,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1.5309887
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

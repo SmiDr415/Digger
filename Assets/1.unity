@@ -22848,9 +22848,61 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5010848470228447869}
     - target: {fileID: 1054216818342762123, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
+      propertyPath: _maxJumpHeight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054216818342762123, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
+      propertyPath: _timeToJumpApex
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054216818342762123, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
       propertyPath: _tilemapStrengthDisplay
       value: 
       objectReference: {fileID: 1471598421}
+    - target: {fileID: 1054216818342762123, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
+      propertyPath: _gravityCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054216818342762123, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
+      propertyPath: _jumpVelocityCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054216818342762123, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
+      propertyPath: _gravityCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054216818342762123, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
+      propertyPath: _gravityCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054216818342762123, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
+      propertyPath: _gravityCurve.m_Curve.Array.data[1].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054216818342762123, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
+      propertyPath: _gravityCurve.m_Curve.Array.data[1].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054216818342762123, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
+      propertyPath: _jumpVelocityCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054216818342762123, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
+      propertyPath: _jumpVelocityCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054216818342762123, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
+      propertyPath: _jumpVelocityCurve.m_Curve.Array.data[1].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054216818342762123, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
+      propertyPath: _jumpVelocityCurve.m_Curve.Array.data[1].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973025131455783287, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
+      propertyPath: m_GravityScale
+      value: 1.6309887
+      objectReference: {fileID: 0}
     - target: {fileID: 3562011376877855044, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.98
@@ -22890,6 +22942,10 @@ PrefabInstance:
     - target: {fileID: 3562011376877855044, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018868439438402307, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.8833332
       objectReference: {fileID: 0}
     - target: {fileID: 8848474196840882546, guid: de2648c9683432f4aa57f3b301de7c75, type: 3}
       propertyPath: m_Name
