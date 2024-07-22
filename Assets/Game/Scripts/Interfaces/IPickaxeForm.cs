@@ -1,4 +1,4 @@
-﻿namespace Digger
+﻿namespace MultiTool
 {
     public interface IPickaxeForm : IForm
     {

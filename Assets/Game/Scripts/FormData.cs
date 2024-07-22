@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Digger
+namespace MultiTool
 {
     [System.Serializable]
     public class FormData

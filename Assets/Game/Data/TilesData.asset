@@ -13,25 +13,31 @@ MonoBehaviour:
   m_Name: TilesData
   m_EditorClassIdentifier: 
   tileDatas:
-  - TileType: 1
-    HarvestType: 0
-    tiles:
-    - {fileID: 11400000, guid: 041e2e8fd1d0ab54f9f391c141e1f40b, type: 2}
-    - {fileID: 11400000, guid: d2a454cdcf61587439cbe5ede10d0c9c, type: 2}
-    MiningLevel: 0
-    Durability: 0200000001000000
-  - TileType: 1
-    HarvestType: 0
-    tiles:
-    - {fileID: 11400000, guid: 7959bc86ee95ac64bb81b94a2de72bea, type: 2}
-    - {fileID: 11400000, guid: c23a69d5fd018cb4893dd6f63e6d1948, type: 2}
-    - {fileID: 11400000, guid: 2f70c4bc8f3b6204a8847947b95871dd, type: 2}
-    - {fileID: 11400000, guid: b9a875a4b87044f4b82a7d9d2a922a39, type: 2}
-    MiningLevel: 0
-    Durability: 04000000030000000200000001000000
-  - TileType: 0
-    HarvestType: 0
-    tiles:
-    - {fileID: 11400000, guid: e0b1d6aef541eaa40877268a214e3630, type: 2}
-    MiningLevel: 0
-    Durability: 01000000
+  - _nameRu: "\u041F\u043E\u0434\u0437\u0435\u043C\u043D\u0438\u043A"
+    _nameEn: Tile_SubPlantain
+    _type: 0
+    _harvestType: 0
+    _tiles:
+    - {fileID: 11400000, guid: 53aa7bef5b3f0a74580fb3b7cd4e8f6d, type: 2}
+    _miningLevel: 0
+    _durability: 01000000
+  - _nameRu: "\u0417\u0435\u043C\u043B\u044F"
+    _nameEn: Tile_Dirt
+    _type: 1
+    _harvestType: 0
+    _tiles:
+    - {fileID: 11400000, guid: 4a1d37e8ef2645d4686597968b920ff7, type: 2}
+    - {fileID: 11400000, guid: a2bea500e7b582544a5d748d2a7c06f3, type: 2}
+    _miningLevel: 0
+    _durability: 0200000001000000
+  - _nameRu: "\u041A\u0430\u043C\u0435\u043D\u044C"
+    _nameEn: Tile_Stone
+    _type: 1
+    _harvestType: 0
+    _tiles:
+    - {fileID: 11400000, guid: 71fbe75934da208439887af58d61e354, type: 2}
+    - {fileID: 11400000, guid: eee501ee31b87f942be9cabcb83316e2, type: 2}
+    - {fileID: 11400000, guid: 945811d6f43a4bd428d3590a2ae0861c, type: 2}
+    - {fileID: 11400000, guid: b0261342d57e89446ba8ae37cc6d221a, type: 2}
+    _miningLevel: 0
+    _durability: 04000000030000000200000001000000

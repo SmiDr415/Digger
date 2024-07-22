@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Digger
+namespace MultiTool
 {
     [RequireComponent(typeof(BoxCollider2D), typeof(Rigidbody2D), typeof(SpriteRenderer))]
     [ExecuteInEditMode]
@@ -105,6 +105,13 @@ namespace Digger
             CalculateJumpForce(); // Вычислить силу прыжка при инициализации
         }
 
+        private void Start()
+        {
+            if(GameManager.Instance.FormController != null)
+                _currentForm = GameManager.Instance.FormController.CurrentForm;
+            UpdateTileStrengthDisplay();
+        }
+
         private void OnValidate()
         {
             UpdateColliderSize();
@@ -122,6 +129,7 @@ namespace Digger
             _rigidbody2D = GetComponent<Rigidbody2D>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
             _animator = GetComponent<Animator>();
+
         }
 
         private static void SetupSingleton()
@@ -147,6 +155,13 @@ namespace Digger
         }
         #endregion
 
+
+        private void FixedUpdate()
+        {
+            //if(_rigidbody2D.velocity != Vector2.zero)
+            UpdateTileStrengthDisplay();
+        }
+
         #region Movement
         public void Move(float moveInput)
         {
@@ -159,7 +174,6 @@ namespace Digger
 
             _animator.SetBool("IsJump", Mathf.Abs(moveVelocity.y) > 0.5f);
             _animator.SetBool("IsWalk", Mathf.Abs(moveVelocity.x) > 0.5f);
-            UpdateTileStrengthDisplay();
         }
 
         public void Jump()
@@ -184,7 +198,8 @@ namespace Digger
                 return;
             }
 
-            _tilemapStrengthDisplay.UpdateTileStrengthColor(transform.position, _breakRadius, Color.green, Color.red, _currentForm);
+            if(_currentForm != null)
+                _tilemapStrengthDisplay.UpdateTileStrengthColor(transform.position, _breakRadius, Color.green, Color.red, _currentForm);
         }
 
         public void StartTeleport()
@@ -194,6 +209,7 @@ namespace Digger
 
             _isTeleporting = true;
             _teleportCoroutine = StartCoroutine(TeleportRoutine());
+            UpdateTileStrengthDisplay();
         }
 
         private IEnumerator TeleportRoutine()
@@ -253,6 +269,8 @@ namespace Digger
             _targetFormType = formType;
             _isShapeshifting = true;
             _shapeshiftCoroutine = StartCoroutine(ShapeshiftRoutine());
+            UpdateTileStrengthDisplay();
+
         }
 
         private IEnumerator ShapeshiftRoutine()
@@ -275,6 +293,8 @@ namespace Digger
         private void PerformShapeshift(FormType formType)
         {
             GameManager.Instance.FormController.SwitchForm(formType);
+            UpdateTileStrengthDisplay();
+
         }
 
 
@@ -293,6 +313,8 @@ namespace Digger
 
             // Включить анимацию Idle
             _animator.SetTrigger("CancelShapeshift");
+            UpdateTileStrengthDisplay();
+
         }
 
 

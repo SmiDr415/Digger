@@ -1,4 +1,4 @@
-namespace Digger
+namespace MultiTool
 {
     public enum TileType
     {
@@ -6,5 +6,11 @@ namespace Digger
         Stone,
         Undefinit,
         //  здесь новые типы тайлов
+    }
+
+    public enum ItemType
+    {
+        Flower,
+        Ore,
     }
 }

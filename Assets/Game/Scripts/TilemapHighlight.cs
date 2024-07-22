@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace Digger
+namespace MultiTool
 {
     public class TilemapHighlight : MonoBehaviour
     {

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
 
-namespace Digger
+namespace MultiTool
 {
     public class TilemapStrengthDisplay : MonoBehaviour
     {
@@ -18,6 +18,7 @@ namespace Digger
         [SerializeField]
         private PlayerController _playerController;
 
+        [SerializeField] private GameObject _dropPrefab;
 
         private Dictionary<TileBase, int> _tileStrengthDict;
         private Dictionary<Vector3Int, int> _tileCurrentStrengthDict;
@@ -37,9 +38,9 @@ namespace Digger
 
             foreach(TileData tileData in _tileData.tileDatas)
             {
-                for(int i = 0; i < tileData.tiles.Length; i++)
+                for(int i = 0; i < tileData.Tiles.Length; i++)
                 {
-                    TileBase tile = tileData.tiles[i];
+                    TileBase tile = tileData.Tiles[i];
                     _tileStrengthDict[tile] = tileData.Durability[i];
                 }
             }
@@ -175,6 +176,11 @@ namespace Digger
                         _tilemap.SetTile(tilePos, null);
                         textMesh.text = "0";
                         textMesh.color = new Color(0, 0, 0, 0); // Скрываем текст
+                        //todo : здесь на месте нашего тайла должен выпасть дроп (префаб со скриптом который, будет инициироваться по имени тайла)
+
+                        Vector3 worldPos = _tilemap.CellToWorld(tilePos);
+                        var dropGO = Instantiate(_dropPrefab, worldPos, Quaternion.identity);
+                        dropGO.name = "Item_SubPlantain";
                     }
                     else
                     {

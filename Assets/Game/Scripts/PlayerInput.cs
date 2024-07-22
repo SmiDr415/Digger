@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Digger
+namespace MultiTool
 {
     public class PlayerInput : MonoBehaviour
     {
