@@ -163,6 +163,7 @@ namespace MultiTool
         {
             //if(_rigidbody2D.velocity != Vector2.zero)
             UpdateTileStrengthDisplay();
+            _gravityScale *= _gravityCurve.Evaluate(Time.time);
         }
 
         #region Movement
@@ -185,7 +186,7 @@ namespace MultiTool
 
             if(_isGrounded)
             {
-                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _jumpVelocity);
+                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _jumpVelocity) * _jumpVelocityCurve.Evaluate(Time.time);
             }
         }
 
@@ -434,11 +435,8 @@ namespace MultiTool
             if(_rigidbody2D == null)
                 _rigidbody2D = GetComponent<Rigidbody2D>();
 
-            float gravityMultiplier = _gravityCurve.Evaluate(_moveSpeed);
-            float jumpVelocityMultiplier = _jumpVelocityCurve.Evaluate(_timeToJumpApex);
-
-            _gravityScale = (2 * _maxJumpHeight) / Mathf.Pow(_timeToJumpApex, 2) * gravityMultiplier;
-            _jumpVelocity = Mathf.Sqrt(2 * _gravityScale * _maxJumpHeight) * jumpVelocityMultiplier;
+            _gravityScale = (2 * _maxJumpHeight) / Mathf.Pow(_timeToJumpApex, 2);
+            _jumpVelocity = Mathf.Sqrt(2 * _gravityScale * _maxJumpHeight);
 
             _rigidbody2D.gravityScale = _gravityScale / Mathf.Abs(Physics2D.gravity.y);
         }
