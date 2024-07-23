@@ -36,8 +36,8 @@ MonoBehaviour:
     _harvestType: 0
     _tiles:
     - {fileID: 11400000, guid: 71fbe75934da208439887af58d61e354, type: 2}
-    - {fileID: 11400000, guid: eee501ee31b87f942be9cabcb83316e2, type: 2}
-    - {fileID: 11400000, guid: 945811d6f43a4bd428d3590a2ae0861c, type: 2}
     - {fileID: 11400000, guid: b0261342d57e89446ba8ae37cc6d221a, type: 2}
+    - {fileID: 11400000, guid: 945811d6f43a4bd428d3590a2ae0861c, type: 2}
+    - {fileID: 11400000, guid: eee501ee31b87f942be9cabcb83316e2, type: 2}
     _miningLevel: 0
     _durability: 04000000030000000200000001000000

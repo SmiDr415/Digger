@@ -37,16 +37,6 @@ namespace MultiTool
         [SerializeField]
         private int _moneyAmount = 0;
 
-        [Header("Время каста телепортации")]
-        [Tooltip("Столько секунд кастуется телепорт в хаб")]
-        [SerializeField]
-        private float _teleportationDelay = 3f;
-
-        [Header("Время смены формы")]
-        [Tooltip("Столько секунд герой сменяет форму")]
-        [SerializeField]
-        private float _shapeshiftDelay = 3;
-
         [Header("Скорость движения по горизонтали")]
         [Tooltip("Скорость движения героя по горизонтали")]
         [SerializeField]
@@ -66,20 +56,15 @@ namespace MultiTool
 
         [Space]
 
+        private PlayerAnimation _playerAnimation;
+        private PlayerShapeshift _playerShapeshift;
+        private PlayerTeleportation _playerTeleportation;
+
         [SerializeField] private Transform _groundCheck;
         [SerializeField] private LayerMask _groundLayer;
         [SerializeField] private TilemapStrengthDisplay _tilemapStrengthDisplay;
         [SerializeField] private BoxCollider2D _interactionTrigger;
         [SerializeField] private BoxCollider2D _gatherTrigger;
-
-        [SerializeField] private Transform _hubPosition; // Позиция хаба для телепортации
-
-        private bool _isTeleporting = false; // Флаг для проверки телепортации
-        private Coroutine _teleportCoroutine; // Коррутина для телепортации
-
-        private bool _isShapeshifting = false; // Флаг для проверки процесса смены формы
-        private Coroutine _shapeshiftCoroutine; // Коррутина для смены формы
-        private FormType _targetFormType; // Тип целевой формы для смены
 
         private BoxCollider2D _playerBoxCollider;
         private Rigidbody2D _rigidbody2D;
@@ -87,14 +72,15 @@ namespace MultiTool
         private bool _isGrounded;
         private PlayerForm _currentForm;
         private InteractiveObject _currentInteractive;
-        private Animator _animator;
 
         private float _gravityScale;
         private float _jumpVelocity;
         private float _lastMineTime;
 
-        public bool IsReady => !_isTeleporting && !_isShapeshifting && IsCooldown();
+        public bool IsReady => !_playerTeleportation.IsTeleporting && !_playerShapeshift.IsShapeshifting && IsCooldown();
 
+        public PlayerShapeshift PlayerShapeshift => _playerShapeshift;
+        public PlayerTeleportation PlayerTeleportation => _playerTeleportation;
         public InteractiveObject InteractiveSprite => _currentInteractive;
 
 
@@ -121,17 +107,18 @@ namespace MultiTool
             _interactionTrigger.edgeRadius = _interactionRadius;
             _gatherTrigger.edgeRadius = _gatherRadius;
             _moneyAmount = Mathf.Clamp(_moneyAmount, 0, int.MaxValue);
-            _teleportationDelay = Mathf.Clamp(_teleportationDelay, 0, 100);
-            _shapeshiftDelay = Mathf.Clamp(_shapeshiftDelay, 0, 100);
             CalculateJumpForce(); // Вычислить силу прыжка при изменении значений в инспекторе
         }
 
         private void InitializeComponents()
         {
+            _playerAnimation = GetComponent<PlayerAnimation>();
+            _playerShapeshift = GetComponent<PlayerShapeshift>();
+            _playerTeleportation = GetComponent<PlayerTeleportation>();
+
             _playerBoxCollider = GetComponent<BoxCollider2D>();
             _rigidbody2D = GetComponent<Rigidbody2D>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
-            _animator = GetComponent<Animator>();
 
         }
 
@@ -167,6 +154,7 @@ namespace MultiTool
         }
 
         #region Movement
+
         public void Move(float moveInput)
         {
             var moveVelocity = new Vector2(moveInput * _moveSpeed, _rigidbody2D.velocity.y);
@@ -176,8 +164,8 @@ namespace MultiTool
                 _spriteRenderer.flipX = moveVelocity.x > 0;
             }
 
-            _animator.SetBool("IsJump", Mathf.Abs(moveVelocity.y) > 0.5f);
-            _animator.SetBool("IsWalk", Mathf.Abs(moveVelocity.x) > 0.5f);
+            _playerAnimation.SetJump(Mathf.Abs(moveVelocity.y) > 1f);
+            _playerAnimation.SetWalk(Mathf.Abs(moveVelocity.x) > 1f);
         }
 
         public void Jump()
@@ -206,121 +194,10 @@ namespace MultiTool
                 _tilemapStrengthDisplay.UpdateTileStrengthColor(transform.position, _breakRadius, Color.green, Color.red, _currentForm);
         }
 
-        public void StartTeleport()
-        {
-            if(_isTeleporting)
-                return;
-
-            _isTeleporting = true;
-            _teleportCoroutine = StartCoroutine(TeleportRoutine());
-            UpdateTileStrengthDisplay();
-        }
-
-        private IEnumerator TeleportRoutine()
-        {
-            // Включить анимацию телепортации
-            _animator.SetTrigger("StartTeleport");
-
-            yield return new WaitForSeconds(_teleportationDelay);
-
-            if(_isTeleporting)
-            {
-                // Перемещение игрока в хаб
-                transform.position = _hubPosition.position;
-
-                // Сброс состояния телепортации
-                _isTeleporting = false;
-                _animator.SetTrigger("EndTeleport");
-            }
-        }
-
-        public void CancelTeleport()
-        {
-            if(!_isTeleporting)
-                return;
-
-            _isTeleporting = false;
-
-            if(_teleportCoroutine != null)
-            {
-                StopCoroutine(_teleportCoroutine);
-                _teleportCoroutine = null;
-            }
-
-            // Включить анимацию Idle
-            _animator.SetTrigger("CancelTeleport");
-        }
-
-
         #endregion
 
+
         #region Form Management
-
-        public void SwitchForm(FormType formType)
-        {
-            if(_currentForm != null && formType.ToString() == _currentForm.FormName)
-            {
-                // Текущая форма уже выбрана, ничего не делаем
-                return;
-            }
-
-            if(_isShapeshifting)
-            {
-                // Уже идет процесс смены формы, ничего не делаем
-                return;
-            }
-
-            _targetFormType = formType;
-            _isShapeshifting = true;
-            _shapeshiftCoroutine = StartCoroutine(ShapeshiftRoutine());
-            UpdateTileStrengthDisplay();
-
-        }
-
-        private IEnumerator ShapeshiftRoutine()
-        {
-            // Включить анимацию смены формы
-            _animator.SetTrigger("StartShapeshift");
-
-            yield return new WaitForSeconds(_shapeshiftDelay);
-
-            if(_isShapeshifting)
-            {
-                PerformShapeshift(_targetFormType);
-
-                // Сброс состояния смены формы
-                _isShapeshifting = false;
-                _animator.SetTrigger("EndShapeshift");
-            }
-        }
-
-        private void PerformShapeshift(FormType formType)
-        {
-            GameManager.Instance.FormController.SwitchForm(formType);
-            UpdateTileStrengthDisplay();
-
-        }
-
-
-        public void CancelShapeshift()
-        {
-            if(!_isShapeshifting)
-                return;
-
-            _isShapeshifting = false;
-
-            if(_shapeshiftCoroutine != null)
-            {
-                StopCoroutine(_shapeshiftCoroutine);
-                _shapeshiftCoroutine = null;
-            }
-
-            // Включить анимацию Idle
-            _animator.SetTrigger("CancelShapeshift");
-            UpdateTileStrengthDisplay();
-
-        }
-
 
         private void OnChangeForm()
         {
@@ -385,7 +262,7 @@ namespace MultiTool
                 return;
             }
 
-            _animator.SetTrigger("Mine");
+            _playerAnimation.Mine();
             _currentForm.GetDamage(val);
             _lastMineTime = Time.time;
             UIController.Instance.SetStrenghtValue(_currentForm.Index, _currentForm.Strength);

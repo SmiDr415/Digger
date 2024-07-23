@@ -28,10 +28,12 @@ namespace MultiTool
             _camera = Camera.main;
         }
 
+
         private void Update()
         {
             if(_playerController != null && !GUIWindowManager.Instance.IsActive)
             {
+
                 HandleMovementInput();
                 HandleJumpInput();
 
@@ -140,7 +142,7 @@ namespace MultiTool
 
             if(Input.GetKeyDown(KeyCode.H))
             {
-                _playerController.StartTeleport();
+                _playerController.PlayerTeleportation.StartTeleport();
             }
         }
 
@@ -148,8 +150,8 @@ namespace MultiTool
         {
             if(Input.GetKeyDown(KeyCode.Escape))
             {
-                _playerController.CancelTeleport();
-                _playerController.CancelShapeshift();
+                _playerController.PlayerTeleportation.CancelTeleport();
+                _playerController.PlayerShapeshift.CancelShapeshift();
             }
         }
 

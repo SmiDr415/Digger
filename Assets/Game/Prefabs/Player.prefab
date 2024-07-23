@@ -498,6 +498,9 @@ GameObject:
   - component: {fileID: 4470228970782613473}
   - component: {fileID: 5649260313178774464}
   - component: {fileID: 6973916463459815286}
+  - component: {fileID: 2658764348625953400}
+  - component: {fileID: 930717594031402391}
+  - component: {fileID: 6768451519378432192}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -539,13 +542,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gravityCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   _jumpVelocityCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -553,8 +592,6 @@ MonoBehaviour:
   _breakRadius: 2
   _interactionRadius: 1
   _moneyAmount: 1
-  _teleportationDelay: 3
-  _shapeshiftDelay: 3
   _moveSpeed: 3.3
   _maxJumpHeight: 2
   _timeToJumpApex: 0.5
@@ -565,7 +602,6 @@ MonoBehaviour:
   _tilemapStrengthDisplay: {fileID: 0}
   _interactionTrigger: {fileID: 6247708458688455133}
   _gatherTrigger: {fileID: 2316091487376629022}
-  _hubPosition: {fileID: 0}
 --- !u!212 &1894333493895490058
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -730,3 +766,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemDatabase: {fileID: 11400000, guid: 17997f71a9846df4187012ea0806aa53, type: 2}
   _maxSlots: 8
+--- !u!114 &2658764348625953400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8848474196840882546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff30ad67344965246974de8f79da53d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &930717594031402391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8848474196840882546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c2d4a0d86cb8a4468287777b88dcfbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shapeshiftDelay: 3
+--- !u!114 &6768451519378432192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8848474196840882546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4988d0c96134d41b9126b7461b3f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _teleportationDelay: 3
+  _hubPosition: {fileID: 0}

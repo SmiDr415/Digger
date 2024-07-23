@@ -28,7 +28,6 @@ namespace MultiTool
                 if(InventoryManager.Instance.AddItem(_dropItem.NameItemEN, 1))
                 {
                     Destroy(gameObject);
-                    Debug.Log("типа собрал");
                 }
                 else
                 {

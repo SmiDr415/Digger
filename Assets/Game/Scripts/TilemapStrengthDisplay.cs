@@ -16,6 +16,9 @@ namespace MultiTool
         private TilesData _tileData;
 
         [SerializeField]
+        private DropItemDatabase _dropItemDatabase;
+
+        [SerializeField]
         private PlayerController _playerController;
 
         [SerializeField] private GameObject _dropPrefab;
@@ -60,9 +63,8 @@ namespace MultiTool
                 _tileCurrentStrengthDict[pos] = strength;
 
                 GameObject textObj = Instantiate(_textPrefab, _tilemap.CellToWorld(pos) + new Vector3(0.5f, 0.5f, 0), Quaternion.identity, _tilemap.transform);
-                TextMesh textMesh = textObj.GetComponent<TextMesh>();
 
-                if(textMesh != null)
+                if(textObj.TryGetComponent<TextMesh>(out var textMesh))
                 {
                     textMesh.text = strength.ToString();
 
@@ -102,10 +104,9 @@ namespace MultiTool
                 if(_tileTextObjects.ContainsKey(pos))
                 {
                     float distance = Vector3.Distance(_tilemap.CellToWorld(pos), playerCell);
-                    if(distance <= radius  && PlayerController.Instance.IsReady)
+                    if(distance <= radius && PlayerController.Instance.IsReady)
                     {
-                        TextMesh textMesh = _tileTextObjects[pos].GetComponent<TextMesh>();
-                        if(textMesh != null)
+                        if(_tileTextObjects[pos].TryGetComponent<TextMesh>(out var textMesh))
                         {
                             int strength = int.Parse(textMesh.text);
                             if(strength > 0)
@@ -135,8 +136,7 @@ namespace MultiTool
                     }
                     else
                     {
-                        TextMesh textMesh = _tileTextObjects[pos].GetComponent<TextMesh>();
-                        if(textMesh != null)
+                        if(_tileTextObjects[pos].TryGetComponent<TextMesh>(out var textMesh))
                         {
                             textMesh.color = new Color(0, 0, 0, 0);
                         }
@@ -172,19 +172,24 @@ namespace MultiTool
 
                     if(currentStrength <= 0)
                     {
+                        var tile = _tilemap.GetTile(tilePos);
+                        var dropName = _dropItemDatabase.GetNameByTileName(tile.name);
+
+                        if(dropName != null)
+                        {
+                            Vector3 worldPos = _tilemap.CellToWorld(tilePos);
+                            var dropGO = Instantiate(_dropPrefab, worldPos, Quaternion.identity);
+                            dropGO.name = dropName;
+                        }
+
                         // Удаляем тайл или заменяем его поврежденным тайлом
                         _tilemap.SetTile(tilePos, null);
                         textMesh.text = "0";
                         textMesh.color = new Color(0, 0, 0, 0); // Скрываем текст
-                        //todo : здесь на месте нашего тайла должен выпасть дроп (префаб со скриптом который, будет инициироваться по имени тайла)
-
-                        Vector3 worldPos = _tilemap.CellToWorld(tilePos);
-                        var dropGO = Instantiate(_dropPrefab, worldPos, Quaternion.identity);
-                        dropGO.name = "Item_SubPlantain";
                     }
                     else
                     {
-                        var tile =  _tilemap.GetTile(tilePos);
+                        var tile = _tilemap.GetTile(tilePos);
                         var newTile = _tileData.GetTileByStrength(tile.name, currentStrength);
                         _tilemap.SetTile(tilePos, newTile);
                         textMesh.text = currentStrength.ToString();

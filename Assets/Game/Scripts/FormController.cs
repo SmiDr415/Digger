@@ -9,7 +9,6 @@ namespace MultiTool
         private readonly PlayerForm[] _forms;
         private int _currentFormIndex;
 
-        public event Action OnFormSwitched;
         public event Action<int, int> OnGetDamage;
 
         public PlayerForm CurrentForm => _currentForm;
@@ -30,7 +29,7 @@ namespace MultiTool
             for(int i = 0; i < _forms.Length; i++)
             {
                 var form = _forms[i];
-                if(formType.ToString() == form.FormName)
+                if(form.FormName.Contains(formType.ToString()))
                 {
                     _currentForm = form;
                     _currentFormIndex = i;
