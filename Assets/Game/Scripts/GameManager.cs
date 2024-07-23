@@ -54,12 +54,12 @@ namespace MultiTool
             if(Input.GetKeyDown(KeyCode.Alpha1))
             {
                 if(_formController.CurrentForm.Index != (int)FormType.Form_Sickle)
-                    PlayerController.Instance.SwitchForm(FormType.Form_Sickle);
+                    PlayerController.Instance.PlayerShapeshift.SwitchForm(FormType.Form_Sickle);
             }
             else if(Input.GetKeyDown(KeyCode.Alpha2))
             {
                 if(_formController.CurrentForm.Index != (int)FormType.Form_Pickaxe)
-                    PlayerController.Instance.SwitchForm(FormType.Form_Pickaxe);
+                    PlayerController.Instance.PlayerShapeshift.SwitchForm(FormType.Form_Pickaxe);
             }
         }
 

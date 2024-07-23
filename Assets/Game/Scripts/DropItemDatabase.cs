@@ -21,5 +21,16 @@ namespace MultiTool
             Debug.LogWarning($"DropItem with nameEN '{nameEN}' not found.");
             return null;
         }
+
+        public string GetNameByTileName(string tileName)
+        {
+            foreach(var item in _dropItems)
+            {
+                if(item.Tile.name == tileName)
+                    return item.NameItemEN;
+            }
+
+            return null;
+        }
     }
 }

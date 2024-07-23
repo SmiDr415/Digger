@@ -24,10 +24,10 @@ MonoBehaviour:
     _sellCost: 3
     _itemType: 1
     _sprite: {fileID: 21300000, guid: 32d78c59ef2faf8458e4452091d5e7a2, type: 3}
-    _tile: {fileID: 11400000, guid: eee501ee31b87f942be9cabcb83316e2, type: 2}
+    _tile: {fileID: 11400000, guid: a2bea500e7b582544a5d748d2a7c06f3, type: 2}
   - _nameItemRu: "\u0416\u0435\u043B\u0435\u0437\u043E"
     _nameItemEN: Item_Iron
     _sellCost: 5
     _itemType: 1
     _sprite: {fileID: 21300000, guid: fcec82bcfb14f5a41a39231309fb61f0, type: 3}
-    _tile: {fileID: 11400000, guid: b0261342d57e89446ba8ae37cc6d221a, type: 2}
+    _tile: {fileID: 11400000, guid: eee501ee31b87f942be9cabcb83316e2, type: 2}

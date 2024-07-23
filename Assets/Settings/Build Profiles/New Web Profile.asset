@@ -17,7 +17,9 @@ MonoBehaviour:
   m_PlatformId: 84a3bb9e7420477f885e98145999eb20
   m_PlatformBuildProfile:
     rid: 6427261410206548032
-  m_Scenes: []
+  m_Scenes:
+  - m_enabled: 1
+    m_path: Assets/1.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings:
@@ -32,8 +34,8 @@ MonoBehaviour:
     - line: '|   targetDevice: 2'
     - line: '|   useOnDemandResources: 0'
     - line: '|   accelerometerFrequency: 60'
-    - line: '|   companyName: DefaultCompany'
-    - line: '|   productName: Digger'
+    - line: '|   companyName: AnroiDevel'
+    - line: '|   productName: MultiTool'
     - line: '|   defaultCursor: {instanceID: 0}'
     - line: '|   cursorHotspot: {x: 0, y: 0}'
     - line: '|   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b:
@@ -67,7 +69,7 @@ MonoBehaviour:
     - line: '|   defaultScreenWidth: 1920'
     - line: '|   defaultScreenHeight: 1080'
     - line: '|   defaultScreenWidthWeb: 960'
-    - line: '|   defaultScreenHeightWeb: 600'
+    - line: '|   defaultScreenHeightWeb: 540'
     - line: '|   m_StereoRenderingPath: 0'
     - line: '|   m_ActiveColorSpace: 1'
     - line: '|   unsupportedMSAAFallback: 0'
@@ -612,7 +614,7 @@ MonoBehaviour:
     - line: '|   webGLDebugSymbols: 0'
     - line: '|   webGLEmscriptenArgs: '
     - line: '|   webGLModulesDirectory: '
-    - line: '|   webGLTemplate: APPLICATION:Default'
+    - line: '|   webGLTemplate: PROJECT:MyDefault'
     - line: '|   webGLAnalyzeBuildSize: 0'
     - line: '|   webGLUseEmbeddedResources: 0'
     - line: '|   webGLCompressionFormat: 0'
