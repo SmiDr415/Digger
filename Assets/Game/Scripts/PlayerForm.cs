@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,13 +15,16 @@ namespace MultiTool
         private int _damage;
         private readonly List<TileHarvestable> _tileHarvestables;
 
+        private float _timeStepRepair = 1f;
+        private float _lastTimeRepair;
+
         public PlayerForm(FormData data, int index)
         {
             _formName = data.FormType.ToString();
             _sprite = data.Sprite;
             _sizeInTiles = data.SizeInTiles;
             _index = index;
-            _strength = 100;
+            _strength = 10;
             _cooldown = data.Cooldown;
             _damage = data.Damage;
             _tileHarvestables = data.TileHarvestable;
@@ -32,7 +36,7 @@ namespace MultiTool
         public Sprite Sprite => _sprite;
         public int Strength => _strength;
         public float Cooldown => _cooldown;
-        public int Damage => _damage;   
+        public int Damage => _damage;
 
         public void UseAbility()
         {
@@ -59,6 +63,18 @@ namespace MultiTool
             return HarvestType.Unharvestable;
         }
 
+        internal void Repair()
+        {
+            if(_strength < 100)
+            {
+                if(Time.time - _lastTimeRepair > _timeStepRepair)
+                {
+                    _lastTimeRepair = Time.time;
+                    _strength = Math.Clamp(_strength + 10, 10, 100);
+                    UIController.Instance.SetStrenghtValue(_index, _strength);
+                }
 
+            }
+        }
     }
 }

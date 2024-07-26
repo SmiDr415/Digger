@@ -44,9 +44,12 @@ namespace MultiTool
         private void Start()
         {
             _formController = new FormController(_formsData);
-            PlayerController.Instance.SubscribeToEvents();
             _formController.OnGetDamage += UIController.Instance.SetStrenghtValue;
+            _formController.SwitchForm(FormType.Form_Pickaxe);
+            _formController.GetDamage(0);
             _formController.SwitchForm(FormType.Form_Sickle);
+            _formController.GetDamage(0);
+
         }
 
         private void Update()

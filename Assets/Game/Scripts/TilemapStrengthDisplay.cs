@@ -179,7 +179,7 @@ namespace MultiTool
             if(_tileTextObjects.ContainsKey(tilePos))
             {
                 TextMesh textMesh = _tileTextObjects[tilePos].GetComponent<TextMesh>();
-                if(textMesh != null && textMesh.color != Color.red && textMesh.color != _disableColor && _playerController.IsReady)
+                if(textMesh != null && textMesh.color != Color.red && textMesh.color != _disableColor && _playerController.IsReady && _playerController.Form.Strength > 0)
                 {
                     _playerController.GetDamage(1);
                     int currentStrength = int.Parse(textMesh.text);
