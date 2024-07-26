@@ -27,6 +27,8 @@ namespace MultiTool
         private Dictionary<Vector3Int, int> _tileCurrentStrengthDict;
         private Dictionary<Vector3Int, GameObject> _tileTextObjects;
 
+        private Color _disableColor = new(0, 0, 0, 0);
+
         private void Start()
         {
             InitializeTileStrengthDict();
@@ -70,7 +72,7 @@ namespace MultiTool
 
                     if(strength <= 0)
                     {
-                        textMesh.color = new Color(0, 0, 0, 0);
+                        textMesh.color = _disableColor;
                     }
                 }
 
@@ -95,7 +97,7 @@ namespace MultiTool
 
 
 
-        public void UpdateTileStrengthColor(Vector3 playerPosition, float radius, Color suitableColor, Color unsuitableColor, PlayerForm playerForm)
+        public void UpdateTileStrengthColor(Vector3 playerPosition, float radius, PlayerForm playerForm)
         {
             Vector3Int playerCell = _tilemap.WorldToCell(playerPosition);
 
@@ -112,7 +114,7 @@ namespace MultiTool
                             if(strength > 0)
                             {
                                 TileBase tile = _tilemap.GetTile(pos);
-                                TileBase tileUp = _tilemap.GetTile(pos +Vector3Int.up);
+                                TileBase tileUp = _tilemap.GetTile(pos + Vector3Int.up);
 
 
                                 if(tile != null)
@@ -120,23 +122,30 @@ namespace MultiTool
                                     if(tileUp != null && _tilemap.GetColliderType(pos + Vector3Int.up) == Tile.ColliderType.None)
                                         continue;
 
-                                    if(IsSuitableTile(tile, playerForm.SuitableResources))
+                                    var tileType = _tileData.GetTileType(tile.name);
+                                    var typeHarvestable = playerForm.GetHarvestType(tileType);
+
+                                    switch(typeHarvestable)
                                     {
-                                        textMesh.color = suitableColor;
+                                        case HarvestType.Perfect:
+                                            textMesh.color = Color.green;
+                                            break;
+                                        case HarvestType.Harvestable:
+                                            textMesh.color = Color.yellow;
+                                            break;
+                                        case HarvestType.Unharvestable:
+                                            textMesh.color = Color.red;
+                                            break;
+                                        default:
+                                            textMesh.color = Color.white;
+                                            break;
                                     }
-                                    else if(IsSuitableTile(tile, playerForm.UnsuitableResources))
-                                    {
-                                        textMesh.color = unsuitableColor;
-                                    }
-                                    else
-                                    {
-                                        textMesh.color = Color.white;
-                                    }
+
                                 }
                             }
                             else
                             {
-                                textMesh.color = new Color(0, 0, 0, 0);
+                                textMesh.color = _disableColor;
                             }
                         }
                     }
@@ -170,7 +179,7 @@ namespace MultiTool
             if(_tileTextObjects.ContainsKey(tilePos))
             {
                 TextMesh textMesh = _tileTextObjects[tilePos].GetComponent<TextMesh>();
-                if(textMesh != null && textMesh.color == Color.green)
+                if(textMesh != null && textMesh.color != Color.red && textMesh.color != _disableColor && _playerController.IsReady)
                 {
                     _playerController.GetDamage(1);
                     int currentStrength = int.Parse(textMesh.text);
