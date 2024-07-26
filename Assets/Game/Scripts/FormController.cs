@@ -21,7 +21,6 @@ namespace MultiTool
             {
                 _forms[i] = new PlayerForm(formsData.AllForms[i], i);
             }
-
         }
 
         public void SwitchForm(FormType formType)
