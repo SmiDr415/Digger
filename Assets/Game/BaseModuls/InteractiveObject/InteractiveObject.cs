@@ -35,10 +35,7 @@ namespace MultiTool
                     _helpInfo.SetActive(true);
                 }
 
-                if(collision.TryGetComponent<PlayerController>(out var playerController))
-                {
-                    playerController.ActivateReadyInteractible(this);
-                }
+                PlayerController.Instance.ActivateReadyInteractible(this);
             }
         }
 
@@ -51,10 +48,7 @@ namespace MultiTool
                     _helpInfo.SetActive(false);
                 }
 
-                if(collision.TryGetComponent<PlayerController>(out var playerController))
-                {
-                    playerController.ActivateReadyInteractible(null);
-                }
+                PlayerController.Instance.ActivateReadyInteractible(null);
 
             }
         }

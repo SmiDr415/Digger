@@ -6,5 +6,6 @@ namespace MultiTool
     public class FormsData : ScriptableObject
     {
         public FormData[] AllForms;
+
     }
 }

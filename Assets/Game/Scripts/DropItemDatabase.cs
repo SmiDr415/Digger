@@ -26,7 +26,8 @@ namespace MultiTool
         {
             foreach(var item in _dropItems)
             {
-                if(item.Tile.name == tileName)
+                var name = tileName.Split('_')[1];
+                if(item.Tile.name.Contains(name))
                     return item.NameItemEN;
             }
 

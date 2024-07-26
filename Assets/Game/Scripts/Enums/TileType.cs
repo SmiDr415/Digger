@@ -4,6 +4,7 @@ namespace MultiTool
     {
         Grass,
         Stone,
+        Ore,
         Undefinit,
         //  здесь новые типы тайлов
     }

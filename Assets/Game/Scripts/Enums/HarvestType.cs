@@ -4,7 +4,6 @@
     {
         Harvestable,
         Perfect,
-        Unharvestable,
-        Unbreakable
+        Unharvestable
     }
 }

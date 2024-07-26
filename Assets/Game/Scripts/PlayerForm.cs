@@ -1,4 +1,4 @@
-using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace MultiTool
@@ -9,31 +9,27 @@ namespace MultiTool
         private readonly string _formName;
         private readonly Vector2 _sizeInTiles;
         private readonly Sprite _sprite;
-        private readonly TileType[] _suitableResources;
-        private readonly TileType[] _unsuitableResources;
         private int _strength;
         private float _cooldown;
         private int _damage;
+        private readonly List<TileHarvestable> _tileHarvestables;
 
         public PlayerForm(FormData data, int index)
         {
             _formName = data.FormType.ToString();
             _sprite = data.Sprite;
             _sizeInTiles = data.SizeInTiles;
-            _suitableResources = data.SuitableResources;
-            _unsuitableResources = data.UnsuitableResources;
             _index = index;
             _strength = 100;
             _cooldown = data.Cooldown;
             _damage = data.Damage;
+            _tileHarvestables = data.TileHarvestable;
         }
 
         public int Index => _index;
         public string FormName => _formName;
         public Vector2 SizeInTiles => _sizeInTiles;
         public Sprite Sprite => _sprite;
-        public TileType[] SuitableResources => _suitableResources;
-        public TileType[] UnsuitableResources => _unsuitableResources;
         public int Strength => _strength;
         public float Cooldown => _cooldown;
         public int Damage => _damage;   
@@ -49,5 +45,20 @@ namespace MultiTool
         {
             _strength = Mathf.Clamp(_strength -= val, 0, 100);
         }
+
+        public HarvestType GetHarvestType(TileType tileType)
+        {
+            foreach(var harvest in _tileHarvestables)
+            {
+                if(harvest.TileType == tileType)
+                {
+                    return harvest.HarvestType;
+                }
+            }
+
+            return HarvestType.Unharvestable;
+        }
+
+
     }
 }

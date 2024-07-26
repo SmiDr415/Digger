@@ -101,6 +101,8 @@ namespace MultiTool
             if(GameManager.Instance.FormController != null)
                 _currentForm = GameManager.Instance.FormController.CurrentForm;
             UpdateTileStrengthDisplay();
+            _lastMineTime = Time.time;
+
         }
 
         private void OnValidate()
@@ -193,7 +195,7 @@ namespace MultiTool
             }
 
             if(_currentForm != null)
-                _tilemapStrengthDisplay.UpdateTileStrengthColor(transform.position, _breakRadius, Color.green, Color.red, _currentForm);
+                _tilemapStrengthDisplay.UpdateTileStrengthColor(transform.position, _breakRadius, _currentForm);
         }
 
         #endregion
