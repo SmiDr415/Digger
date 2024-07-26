@@ -112,8 +112,14 @@ namespace MultiTool
                             if(strength > 0)
                             {
                                 TileBase tile = _tilemap.GetTile(pos);
+                                TileBase tileUp = _tilemap.GetTile(pos +Vector3Int.up);
+
+
                                 if(tile != null)
                                 {
+                                    if(tileUp != null && _tilemap.GetColliderType(pos + Vector3Int.up) == Tile.ColliderType.None)
+                                        continue;
+
                                     if(IsSuitableTile(tile, playerForm.SuitableResources))
                                     {
                                         textMesh.color = suitableColor;
