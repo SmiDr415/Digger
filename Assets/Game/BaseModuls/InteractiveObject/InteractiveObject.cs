@@ -28,7 +28,7 @@ namespace MultiTool
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if(collision.CompareTag("Player"))
+            if(collision.CompareTag("Interactible"))
             {
                 if(_helpInfo != null)
                 {
@@ -44,7 +44,7 @@ namespace MultiTool
 
         private void OnTriggerExit2D(Collider2D collision)
         {
-            if(collision.CompareTag("Player"))
+            if(collision.CompareTag("Interactible"))
             {
                 if(_helpInfo != null)
                 {

@@ -168,7 +168,7 @@ namespace MultiTool
                 {
                     _playerController.GetDamage(1);
                     int currentStrength = int.Parse(textMesh.text);
-                    currentStrength--;
+                    currentStrength -= _playerController.Form.Damage;
 
                     if(currentStrength <= 0)
                     {
@@ -180,6 +180,7 @@ namespace MultiTool
                             Vector3 worldPos = _tilemap.CellToWorld(tilePos);
                             var dropGO = Instantiate(_dropPrefab, worldPos, Quaternion.identity);
                             dropGO.name = dropName;
+                            dropGO.GetComponent<GroundItem>().Init();
                         }
 
                         // Удаляем тайл или заменяем его поврежденным тайлом

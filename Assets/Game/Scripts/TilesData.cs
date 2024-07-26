@@ -27,7 +27,7 @@ namespace MultiTool
         {
             foreach(var tileData in tileDatas)
             {
-                for(int i = 0; i < tileData.Tiles.Length; i++)
+                for(int i = 0; i < tileData.Tiles.Length - 1; i++)
                 {
                     if(tileData.Tiles[i].name.Contains(tileName))
                     {
@@ -35,13 +35,17 @@ namespace MultiTool
                         {
                             return tileData.Tiles[i + 1];
                         }
+                        else
+                        {
+                            return tileData.Tiles[i];
+                        }
                     }
                 }
             }
             return null;
         }
 
-        public TileData GetTileDataByName(string tileName) 
+        public TileData GetTileDataByName(string tileName)
         {
             foreach(var tileData in tileDatas)
             {

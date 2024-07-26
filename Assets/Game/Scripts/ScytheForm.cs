@@ -13,6 +13,7 @@ namespace MultiTool
         private readonly TileType[] _unsuitableResources;
         private int _strength;
         private float _cooldown;
+        private int _damage;
 
         public PlayerForm(FormData data, int index)
         {
@@ -24,6 +25,7 @@ namespace MultiTool
             _index = index;
             _strength = 100;
             _cooldown = data.Cooldown;
+            _damage = data.Damage;
         }
 
         public int Index => _index;
@@ -34,6 +36,7 @@ namespace MultiTool
         public TileType[] UnsuitableResources => _unsuitableResources;
         public int Strength => _strength;
         public float Cooldown => _cooldown;
+        public int Damage => _damage;   
 
         public void UseAbility()
         {
