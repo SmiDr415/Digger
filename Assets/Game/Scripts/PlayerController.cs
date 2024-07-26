@@ -82,6 +82,8 @@ namespace MultiTool
         public PlayerShapeshift PlayerShapeshift => _playerShapeshift;
         public PlayerTeleportation PlayerTeleportation => _playerTeleportation;
         public InteractiveObject InteractiveSprite => _currentInteractive;
+        public int GatherRadius => _gatherRadius;
+        public PlayerForm Form => _currentForm;
 
 
         #region Initialization

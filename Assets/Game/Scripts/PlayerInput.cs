@@ -8,7 +8,7 @@ namespace MultiTool
         [SerializeField] private PlayerController _playerController;
         [SerializeField] private CameraController _cameraController;
 
-        [SerializeField] private float _topOffsetMultiply = 10;
+        [SerializeField] private float _topOffsetMultiply = 5;
         [SerializeField] private float _bottomOffsetMultiply = 5;
         [SerializeField] private float _leftRightOffsetMultiply = 3;
 
@@ -31,7 +31,7 @@ namespace MultiTool
 
         private void Update()
         {
-            if(_playerController != null && !GUIWindowManager.Instance.IsActive)
+            if(_playerController != null && !GUIWindowManager.Instance.IsActive && !_playerController.PlayerTeleportation.IsTeleporting)
             {
 
                 HandleMovementInput();

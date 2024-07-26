@@ -13,6 +13,7 @@ namespace MultiTool
 
         private void Start()
         {
+            transform.position = _player.position - Vector3.forward;
             _offset = transform.position - _player.position; // Вычисляем начальный отступ
         }
 
@@ -20,9 +21,6 @@ namespace MultiTool
         {
             if(_player != null)
             {
-                //_targetPosition = _player.position + _offset; // Желаемая позиция камеры
-
-                // Используем SmoothDamp для плавного следования камеры
                 Vector3 smoothedPosition = Vector3.Lerp(transform.position, _targetPosition, _smoothSpeed);
                 transform.position = smoothedPosition;
             }
