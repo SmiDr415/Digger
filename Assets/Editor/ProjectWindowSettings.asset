@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf187816b64959e4e877dfa083f31bf9, type: 3}
+  m_Name: ProjectWindowSettings
+  m_EditorClassIdentifier: 
+  _defaultTextColor: {r: 1, g: 0.82562953, b: 0, a: 1}
+  _editorFolderColor: {r: 1, g: 0.28715566, b: 0.02352941, a: 1}
+  _gameFolderColor: {r: 0, g: 1, b: 0.519994, a: 1}
+  _animationFolderColor: {r: 1, g: 0, b: 0, a: 1}
+  _scenesFolderColor: {r: 1, g: 0, b: 0.6825919, a: 1}
+  _selectedColor: {r: 0, g: 0.59445035, b: 0.9716981, a: 0.2}
+  _folderIcon: {fileID: 2800000, guid: f8789e0882f69fc44afce12e8b093b1d, type: 3}
+  _animFolder: {fileID: 2800000, guid: 349fd62330ee03e499960ed405433cde, type: 3}
+  _scenesFolder: {fileID: 2800000, guid: 1c5e8f111a1c5c14f941523745e2578a, type: 3}
+  _scriptsFolder: {fileID: 2800000, guid: 5579bc10a8c41834c8161221799a9dca, type: 3}
+  _editorFolder: {fileID: 2800000, guid: bb77dbbc0721c3e479bb66788ae4c729, type: 3}
+  _gameFolder: {fileID: 2800000, guid: 4fc3bf08a197a314587a2c58d49122d4, type: 3}
+  _materialsFolder: {fileID: 2800000, guid: f07e158420a71164fa60c81cfa06e290, type: 3}
+  _prefabsFolder: {fileID: 2800000, guid: 15b4ecac4fe3a0741911abd3e2627b53, type: 3}
+  _audioFolder: {fileID: 2800000, guid: 582b0b2b3cb73df478ca5b451212f3b5, type: 3}
+  _space: 3

@@ -21,7 +21,11 @@ namespace MultiTool
         [SerializeField]
         private PlayerController _playerController;
 
-        [SerializeField] private GameObject _dropPrefab;
+        [SerializeField] 
+        private GameObject _dropPrefab;
+
+        [SerializeField]
+        private BlockHitController _blockHitController;
 
         private Dictionary<TileBase, int> _tileStrengthDict;
         private Dictionary<Vector3Int, int> _tileCurrentStrengthDict;
@@ -196,6 +200,8 @@ namespace MultiTool
                             var dropGO = Instantiate(_dropPrefab, worldPos, Quaternion.identity);
                             dropGO.name = dropName;
                             dropGO.GetComponent<GroundItem>().Init();
+                            _blockHitController.TileDestroy(true, tilePos);
+
                         }
 
                         // Удаляем тайл или заменяем его поврежденным тайлом
@@ -209,7 +215,12 @@ namespace MultiTool
                         var newTile = _tileData.GetTileByStrength(tile.name, currentStrength);
                         _tilemap.SetTile(tilePos, newTile);
                         textMesh.text = currentStrength.ToString();
+                        _blockHitController.TileDestroy(false, tilePos);
+
                     }
+                }
+                else
+                {
                 }
             }
         }
