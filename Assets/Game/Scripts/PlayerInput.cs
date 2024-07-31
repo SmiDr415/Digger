@@ -20,31 +20,32 @@ namespace MultiTool
             _topOffsetMultiply = Mathf.Clamp(_topOffsetMultiply, 1, 10);
             _bottomOffsetMultiply = Mathf.Clamp(_bottomOffsetMultiply, 1, 10);
             _leftRightOffsetMultiply = Mathf.Clamp(_leftRightOffsetMultiply, 1, 10);
-
         }
 
         private void Start()
         {
             _camera = Camera.main;
+            if(_playerController == null)
+                _playerController = FindAnyObjectByType<PlayerController>();
         }
-
 
         private void Update()
         {
-            if(_playerController != null && !GUIWindowManager.Instance.IsActive && !_playerController.PlayerTeleportation.IsTeleporting)
+            if(IsReady())
             {
-
                 HandleMovementInput();
                 HandleJumpInput();
-
                 HandleInteractibleInput();
-
                 HandleTeleportInput();
                 HandleCancelInput();
+                HandleFormSwitchInput();
             }
-
         }
 
+        private bool IsReady()
+        {
+            return _playerController != null && !GUIWindowManager.Instance.IsActive && !_playerController.PlayerTeleportation.IsTeleporting;
+        }
 
         private void FixedUpdate()
         {
@@ -112,17 +113,14 @@ namespace MultiTool
             return playerPosition + worldOffset;
         }
 
-
         private void HandleMovementInput()
         {
-
             float moveInput = Input.GetAxis("Horizontal");
             _playerController.Move(moveInput);
         }
 
         private void HandleJumpInput()
         {
-
             if(Input.GetKeyDown(KeyCode.Space))
             {
                 _playerController.Jump();
@@ -139,7 +137,6 @@ namespace MultiTool
 
         private void HandleTeleportInput()
         {
-
             if(Input.GetKeyDown(KeyCode.H))
             {
                 _playerController.PlayerTeleportation.StartTeleport();
@@ -155,5 +152,22 @@ namespace MultiTool
             }
         }
 
+        private void HandleFormSwitchInput()
+        {
+            if(Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                if(GameManager.Instance.FormController.CurrentForm.Index != (int)FormType.Form_Sickle)
+                {
+                    PlayerController.Instance.PlayerShapeshift.SwitchForm(FormType.Form_Sickle);
+                }
+            }
+            else if(Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                if(GameManager.Instance.FormController.CurrentForm.Index != (int)FormType.Form_Pickaxe)
+                {
+                    PlayerController.Instance.PlayerShapeshift.SwitchForm(FormType.Form_Pickaxe);
+                }
+            }
+        }
     }
 }
