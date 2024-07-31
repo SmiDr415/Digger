@@ -32,7 +32,7 @@ namespace MultiTool
         public void HideWindow()
         {
             _interactionWindow.SetActive(false);
-            PlayerController.Instance.HideInteractableWindow();
+            //PlayerController.Instance.HideInteractableWindow();
         }
 
         public void ShowWindowAbovePosition(Vector3 position)

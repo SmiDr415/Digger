@@ -109,13 +109,15 @@ public class CustomProjectWindow : EditorWindow
 
         return true switch
         {
+            bool _ when lowerPath.Contains("sprites") => _settings.SpritesFolder,
+            bool _ when lowerPath.Contains("data") => _settings.DataFolder,
             bool _ when lowerPath.Contains("animations") => _settings.AnimFolder,
             bool _ when lowerPath.Contains("scenes") => _settings.ScenesFolder,
             bool _ when lowerPath.Contains("scripts") => _settings.ScriptsFolder,
             bool _ when lowerPath.Contains("prefabs") => _settings.PrefabsFolder,
             bool _ when lowerPath.Contains("audio") => _settings.AudioFolder,
             bool _ when lowerPath.Contains("materials") => _settings.MaterialsFolder,
-            bool _ when lowerPath.Contains("textures") => _settings.TexturesFolder,
+            bool _ when lowerPath.Contains("textures") => _settings.SpritesFolder,
             bool _ when lowerPath.Contains("models") => _settings.ModelsFolder,
             bool _ when lowerPath.Contains("shaders") => _settings.ShadersFolder,
             bool _ when lowerPath.Contains("editor") => _settings.EditorFolder,

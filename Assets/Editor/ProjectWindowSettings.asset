@@ -17,7 +17,7 @@ MonoBehaviour:
   _gameFolderColor: {r: 0, g: 1, b: 0.519994, a: 1}
   _animationFolderColor: {r: 1, g: 0, b: 0, a: 1}
   _scenesFolderColor: {r: 1, g: 0, b: 0.6825919, a: 1}
-  _selectedColor: {r: 0, g: 0.59445035, b: 0.9716981, a: 0.2}
+  _selectedColor: {r: 0.972549, g: 0.9627789, b: 0, a: 0.21960784}
   _folderIcon: {fileID: 2800000, guid: f8789e0882f69fc44afce12e8b093b1d, type: 3}
   _animFolder: {fileID: 2800000, guid: 349fd62330ee03e499960ed405433cde, type: 3}
   _scenesFolder: {fileID: 2800000, guid: 1c5e8f111a1c5c14f941523745e2578a, type: 3}
@@ -27,4 +27,5 @@ MonoBehaviour:
   _materialsFolder: {fileID: 2800000, guid: f07e158420a71164fa60c81cfa06e290, type: 3}
   _prefabsFolder: {fileID: 2800000, guid: 15b4ecac4fe3a0741911abd3e2627b53, type: 3}
   _audioFolder: {fileID: 2800000, guid: 582b0b2b3cb73df478ca5b451212f3b5, type: 3}
-  _space: 3
+  _dataFolder: {fileID: 2800000, guid: d710d257487297e418605a323d26b14f, type: 3}
+  _space: 2
