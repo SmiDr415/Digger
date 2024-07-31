@@ -277,13 +277,14 @@ namespace MultiTool
             TryShowInteractiveWindow(_currentInteractive);
         }
 
-        private static void TryShowInteractiveWindow(InteractiveObject interactiveSprite)
+        private void TryShowInteractiveWindow(InteractiveObject interactiveSprite)
         {
             if(interactiveSprite == null)
             {
                 return;
             }
 
+            _rigidbody2D.velocity = Vector3.zero;
             GUIWindowManager.Instance.ShowWindowAbovePosition(interactiveSprite.GetTopColliderPosition());
         }
 
