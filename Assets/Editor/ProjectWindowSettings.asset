@@ -28,4 +28,5 @@ MonoBehaviour:
   _prefabsFolder: {fileID: 2800000, guid: 15b4ecac4fe3a0741911abd3e2627b53, type: 3}
   _audioFolder: {fileID: 2800000, guid: 582b0b2b3cb73df478ca5b451212f3b5, type: 3}
   _dataFolder: {fileID: 2800000, guid: d710d257487297e418605a323d26b14f, type: 3}
+  _spritesFolder: {fileID: 2800000, guid: 44ea41baf9288e44c8a09f7ebd8e2bf0, type: 3}
   _space: 2
