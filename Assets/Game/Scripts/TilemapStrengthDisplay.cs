@@ -21,7 +21,7 @@ namespace MultiTool
         [SerializeField]
         private PlayerController _playerController;
 
-        [SerializeField] 
+        [SerializeField]
         private GameObject _dropPrefab;
 
         [SerializeField]
@@ -29,7 +29,7 @@ namespace MultiTool
 
         private Dictionary<TileBase, int> _tileStrengthDict;
         private Dictionary<Vector3Int, int> _tileCurrentStrengthDict;
-        private Dictionary<Vector3Int, GameObject> _tileTextObjects;
+        private Dictionary<Vector3Int, TextMesh> _tileTextObjects;
 
         private Color _disableColor = new(0, 0, 0, 0);
 
@@ -43,7 +43,7 @@ namespace MultiTool
         {
             _tileStrengthDict = new Dictionary<TileBase, int>();
             _tileCurrentStrengthDict = new Dictionary<Vector3Int, int>();
-            _tileTextObjects = new Dictionary<Vector3Int, GameObject>();
+            _tileTextObjects = new Dictionary<Vector3Int, TextMesh>();
 
             foreach(TileData tileData in _tileData.tileDatas)
             {
@@ -68,19 +68,20 @@ namespace MultiTool
 
                 _tileCurrentStrengthDict[pos] = strength;
 
-                GameObject textObj = Instantiate(_textPrefab, _tilemap.CellToWorld(pos) + new Vector3(0.5f, 0.5f, 0), Quaternion.identity, _tilemap.transform);
-
-                if(textObj.TryGetComponent<TextMesh>(out var textMesh))
+                GameObject textObj = _tilemap.GetInstantiatedObject(pos);
+                if(textObj == null)
+                    continue;
+                TextMesh textMesh = textObj.GetComponentInChildren<TextMesh>();
+                if(textMesh != null)
                 {
+                    _tileTextObjects[pos] = textObj.GetComponentInChildren<TextMesh>();
                     textMesh.text = strength.ToString();
-
                     if(strength <= 0)
                     {
                         textMesh.color = _disableColor;
                     }
                 }
 
-                _tileTextObjects[pos] = textObj;
             }
         }
 
@@ -123,11 +124,11 @@ namespace MultiTool
 
                                 if(tile != null)
                                 {
-                                    if(tileUp != null && _tilemap.GetColliderType(pos + Vector3Int.up) == Tile.ColliderType.None)
-                                        continue;
 
                                     var tileType = _tileData.GetTileType(tile.name);
                                     var typeHarvestable = playerForm.GetHarvestType(tileType);
+                                    if(tileUp != null && _tilemap.GetColliderType(pos + Vector3Int.up) == Tile.ColliderType.None)
+                                        typeHarvestable = HarvestType.Unharvestable;
 
                                     switch(typeHarvestable)
                                     {
@@ -182,7 +183,7 @@ namespace MultiTool
         {
             if(_tileTextObjects.ContainsKey(tilePos))
             {
-                TextMesh textMesh = _tileTextObjects[tilePos].GetComponent<TextMesh>();
+                TextMesh textMesh = _tileTextObjects[tilePos];
                 if(textMesh != null && textMesh.color != Color.red && textMesh.color != _disableColor && _playerController.IsReady && _playerController.Form.Strength > 0)
                 {
                     _playerController.GetDamage(1);
@@ -206,15 +207,19 @@ namespace MultiTool
 
                         // Удаляем тайл или заменяем его поврежденным тайлом
                         _tilemap.SetTile(tilePos, null);
-                        textMesh.text = "0";
-                        textMesh.color = new Color(0, 0, 0, 0); // Скрываем текст
+                        _tileTextObjects.Remove(tilePos);
+                        //textMesh.text = "0";
+                        //textMesh.color = new Color(0, 0, 0, 0); // Скрываем текст
                     }
                     else
                     {
                         var tile = _tilemap.GetTile(tilePos);
                         var newTile = _tileData.GetTileByStrength(tile.name, currentStrength);
                         _tilemap.SetTile(tilePos, newTile);
-                        textMesh.text = currentStrength.ToString();
+                        GameObject textObj = _tilemap.GetInstantiatedObject(tilePos);
+                        TextMesh newtextMesh = textObj.GetComponentInChildren<TextMesh>();
+                        newtextMesh.text = currentStrength.ToString();
+                        _tileTextObjects[tilePos] = newtextMesh;
                         _blockHitController.TileDestroy(false, tilePos);
 
                     }

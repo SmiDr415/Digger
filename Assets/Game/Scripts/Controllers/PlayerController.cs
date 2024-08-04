@@ -89,11 +89,12 @@ namespace MultiTool
         #region Initialization
         private void Awake()
         {
-            InitializeComponents();
             SetupSingleton();
+            InitializeComponents();
             SubscribeToEvents();
             UpdateColliderSize();
             CalculateJumpForce(); // Вычислить силу прыжка при инициализации
+            //gameObject.SetActive(false);
         }
 
         private void Start()
@@ -126,21 +127,9 @@ namespace MultiTool
 
         }
 
-        private static void SetupSingleton()
+        private void SetupSingleton()
         {
-            if(Instance == null)
-            {
-                Instance = FindFirstObjectByType<PlayerController>();
-                if(Application.isPlaying)
-                {
-                    DontDestroyOnLoad(Instance.gameObject);
-                }
-            }
-            else
-            {
-                Debug.LogWarning($"{nameof(PlayerController)}: Singleton  trying to initialize! Destroying duplicate object...", Instance.gameObject);
-                Destroy(Instance.gameObject);
-            }
+            Instance = this;
         }
 
         public void SubscribeToEvents()

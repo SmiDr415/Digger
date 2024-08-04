@@ -44,7 +44,7 @@ namespace MultiTool
 
         private bool IsReady()
         {
-            return _playerController != null && !GUIWindowManager.Instance.IsActive && !_playerController.PlayerTeleportation.IsTeleporting;
+            return _playerController.gameObject.activeInHierarchy && !GUIWindowManager.Instance.IsActive && !_playerController.PlayerTeleportation.IsTeleporting;
         }
 
         private void FixedUpdate()

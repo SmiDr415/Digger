@@ -17,6 +17,9 @@ namespace MultiTool
 
         private void Update()
         {
+            if(!PlayerController.Instance.gameObject.activeInHierarchy)
+                return;
+
             HighlightTileUnderCursor();
 
             if(Input.GetMouseButtonDown(0)) // Проверка нажатия левой кнопки мыши

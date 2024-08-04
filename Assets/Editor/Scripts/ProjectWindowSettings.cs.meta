@@ -1,2 +1,22 @@
 fileFormatVersion: 2
 guid: bf187816b64959e4e877dfa083f31bf9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _folderIcon: {fileID: 2800000, guid: 4fc3bf08a197a314587a2c58d49122d4, type: 3}
+  - _animFolder: {instanceID: 0}
+  - _scenesFolder: {instanceID: 0}
+  - _scriptsFolder: {instanceID: 0}
+  - _editorFolder: {instanceID: 0}
+  - _gameFolder: {instanceID: 0}
+  - _materialsFolder: {instanceID: 0}
+  - _prefabsFolder: {instanceID: 0}
+  - _audioFolder: {instanceID: 0}
+  - _dataFolder: {instanceID: 0}
+  - _spritesFolder: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
