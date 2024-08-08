@@ -11,6 +11,8 @@ namespace MultiTool
         [SerializeField] private Dictionary<DropItem, int> _items = new();
         [SerializeField] private int _maxSlots = 8;
 
+        public Dictionary<DropItem, int> Items => _items;
+
         private void Start()
         {
             Instance = this;

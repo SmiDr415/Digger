@@ -6,7 +6,7 @@ using UnityEngine;
 public class CustomProjectWindow : EditorWindow
 {
     private static ProjectWindowSettings _settings;
-    private static string _currentFilePath;
+    private static string _currentFilePath = string.Empty;
 
     static CustomProjectWindow()
     {

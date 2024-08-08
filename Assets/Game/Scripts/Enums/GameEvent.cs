@@ -5,5 +5,6 @@ namespace MultiTool
         OnChangeForm,
         OnItemAdded,
         OnItemRemoved,
+        OnChangeMoney
     }
 }
