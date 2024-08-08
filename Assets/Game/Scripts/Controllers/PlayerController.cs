@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 namespace MultiTool
@@ -77,6 +76,9 @@ namespace MultiTool
         private float _jumpVelocity;
         private float _lastMineTime;
 
+
+        public int MoneyAmount => _moneyAmount;
+
         public bool IsReady => !_playerTeleportation.IsTeleporting && !_playerShapeshift.IsShapeshifting && IsCooldown();
 
         public PlayerShapeshift PlayerShapeshift => _playerShapeshift;
@@ -144,6 +146,12 @@ namespace MultiTool
             //if(_rigidbody2D.velocity != Vector2.zero)
             UpdateTileStrengthDisplay();
             _gravityScale *= _gravityCurve.Evaluate(Time.time);
+        }
+
+        public void AddMoney(int moneyCount)
+        {
+            _moneyAmount += moneyCount;
+            GameEventManager.Instance.TriggerEvent(GameEvent.OnChangeMoney);
         }
 
         #region Movement

@@ -10,6 +10,7 @@ namespace MultiTool
         [SerializeField] private Image[] _formIconsBack;
         [SerializeField] private Color _selectedColor = Color.cyan;
         [SerializeField] private Text[] _formStrenghts;
+        [SerializeField] private Text _money;
 
         private Image _currentIcon;
 
@@ -19,6 +20,7 @@ namespace MultiTool
             {
                 Instance = this;
                 GameEventManager.Instance.Subscribe(GameEvent.OnChangeForm, UpdateFormUI);
+                GameEventManager.Instance.Subscribe(GameEvent.OnChangeMoney, UpdateMoneyUI);
                 DontDestroyOnLoad(gameObject);
             }
             else
@@ -29,6 +31,12 @@ namespace MultiTool
 
         }
 
+
+        private void Start()
+        {
+            _money.text = PlayerController.Instance.MoneyAmount.ToString();
+        }
+
         public void UpdateFormUI()
         {
             var formIndex = GameManager.Instance.FormController.CurrentForm.Index;
@@ -36,6 +44,12 @@ namespace MultiTool
                 _currentIcon.color = Color.white;
             _currentIcon = _formIconsBack[formIndex];
             _currentIcon.color = _selectedColor;
+        }
+
+
+        private void UpdateMoneyUI()
+        {
+            _money.text = PlayerController.Instance.MoneyAmount.ToString();
         }
 
         public void SetStrengthValue(int index, int val)
@@ -48,6 +62,7 @@ namespace MultiTool
             if(Instance == this)
             {
                 GameEventManager.Instance.Unsubscribe(GameEvent.OnChangeForm, UpdateFormUI);
+                GameEventManager.Instance.Unsubscribe(GameEvent.OnChangeMoney, UpdateMoneyUI);
             }
         }
     }

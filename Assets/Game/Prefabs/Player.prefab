@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6247708458688455133}
   m_Layer: 7
   m_Name: InteractibleTrigger
-  m_TagString: Player
+  m_TagString: Interactible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -497,10 +497,10 @@ GameObject:
   - component: {fileID: 2973025131455783287}
   - component: {fileID: 4470228970782613473}
   - component: {fileID: 5649260313178774464}
-  - component: {fileID: 6973916463459815286}
   - component: {fileID: 2658764348625953400}
   - component: {fileID: 930717594031402391}
   - component: {fileID: 6768451519378432192}
+  - component: {fileID: 4143529142590326691}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -591,7 +591,7 @@ MonoBehaviour:
   _gatherRadius: 3
   _breakRadius: 5
   _interactionRadius: 5
-  _moneyAmount: 1
+  _moneyAmount: 500
   _moveSpeed: 3.3
   _maxJumpHeight: 3
   _timeToJumpApex: 0.5
@@ -752,20 +752,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6973916463459815286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8848474196840882546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 328e68109ad628e46b4b7acde457adf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _itemDatabase: {fileID: 11400000, guid: 17997f71a9846df4187012ea0806aa53, type: 2}
-  _maxSlots: 8
 --- !u!114 &2658764348625953400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -805,3 +791,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _teleportationDelay: 3
   _hubPosition: {fileID: 0}
+--- !u!114 &4143529142590326691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8848474196840882546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c1359a982110b543b4d589ae1c4bcea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _offsetBorder: 0.05
+  _playerController: {fileID: 1054216818342762123}
+  _cameraController: {fileID: 0}
+  _topOffsetMultiply: 3
+  _bottomOffsetMultiply: 3
+  _leftRightOffsetMultiply: 2.6

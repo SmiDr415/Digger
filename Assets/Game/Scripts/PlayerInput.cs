@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace MultiTool
@@ -7,12 +8,14 @@ namespace MultiTool
         [SerializeField] private float _offsetBorder = 0.05f;
         [SerializeField] private PlayerController _playerController;
         [SerializeField] private CameraController _cameraController;
-
         [SerializeField] private float _topOffsetMultiply = 5;
         [SerializeField] private float _bottomOffsetMultiply = 5;
         [SerializeField] private float _leftRightOffsetMultiply = 3;
 
         private Camera _camera;
+
+        public static event Action<string> OnCursorEdgeReached;
+        public static event Action<string> OnPlayerMove;
 
         private void OnValidate()
         {
@@ -25,8 +28,8 @@ namespace MultiTool
         private void Start()
         {
             _camera = Camera.main;
-            if(_playerController == null)
-                _playerController = FindAnyObjectByType<PlayerController>();
+            _playerController ??= FindFirstObjectByType<PlayerController>();
+            _cameraController ??= FindFirstObjectByType<CameraController>();
         }
 
         private void Update()
@@ -44,13 +47,18 @@ namespace MultiTool
 
         private bool IsReady()
         {
-            return _playerController.gameObject.activeInHierarchy && !GUIWindowManager.Instance.IsActive && !_playerController.PlayerTeleportation.IsTeleporting;
+            return _playerController.gameObject.activeInHierarchy &&
+                   !GUIWindowManager.Instance.IsActive &&
+                   !_playerController.PlayerTeleportation.IsTeleporting;
         }
 
         private void FixedUpdate()
         {
             if(!GUIWindowManager.Instance.IsActive)
-                _cameraController.SetTargetPosition(CheckCursorPosition(_playerController.transform.position, _camera));
+            {
+                Vector3 targetPosition = CheckCursorPosition(_playerController.transform.position, _camera);
+                _cameraController.SetTargetPosition(targetPosition);
+            }
         }
 
         private Vector3 CheckCursorPosition(Vector3 playerPosition, Camera camera)
@@ -67,46 +75,30 @@ namespace MultiTool
             bool isTop = cursorPos.y >= screenHeight - edgeThresholdHeight;
             bool isBottom = cursorPos.y <= edgeThresholdHeight;
 
-            Vector3 offset;
+            Vector3 offset = Vector3.zero;
 
-            if(isLeft && isTop)
+            if(isLeft)
             {
-                offset = new Vector3(-screenWidth / _leftRightOffsetMultiply, screenHeight / _topOffsetMultiply, 0);
-            }
-            else if(isLeft && isBottom)
-            {
-                offset = new Vector3(-screenWidth / _leftRightOffsetMultiply, -screenHeight / _bottomOffsetMultiply, 0);
-            }
-            else if(isRight && isTop)
-            {
-                offset = new Vector3(screenWidth / _leftRightOffsetMultiply, screenHeight / _topOffsetMultiply, 0);
-            }
-            else if(isRight && isBottom)
-            {
-                offset = new Vector3(screenWidth / _leftRightOffsetMultiply, -screenHeight / _bottomOffsetMultiply, 0);
-            }
-            else if(isLeft)
-            {
-                offset = new Vector3(-screenWidth / _leftRightOffsetMultiply, 0, 0);
+                OnCursorEdgeReached?.Invoke("Посмотри слева");
+                offset.x = -screenWidth / _leftRightOffsetMultiply;
             }
             else if(isRight)
             {
-                offset = new Vector3(screenWidth / _leftRightOffsetMultiply, 0, 0);
+                OnCursorEdgeReached?.Invoke("Посмотра справа");
+                offset.x = screenWidth / _leftRightOffsetMultiply;
             }
-            else if(isTop)
+
+            if(isTop)
             {
-                offset = new Vector3(0, screenHeight / _topOffsetMultiply, 0);
+                OnCursorEdgeReached?.Invoke("Посмотри вверх");
+                offset.y = screenHeight / _topOffsetMultiply;
             }
             else if(isBottom)
             {
-                offset = new Vector3(0, -screenHeight / _bottomOffsetMultiply, 0);
-            }
-            else
-            {
-                return playerPosition;
+                OnCursorEdgeReached?.Invoke("Посмотри вниз");
+                offset.y = -screenHeight / _bottomOffsetMultiply;
             }
 
-            // Convert screen offset to world space
             Vector3 screenOffset = cursorPos + offset;
             Vector3 worldOffset = camera.ScreenToWorldPoint(new Vector3(screenOffset.x, screenOffset.y, camera.nearClipPlane)) - camera.ScreenToWorldPoint(new Vector3(cursorPos.x, cursorPos.y, camera.nearClipPlane));
 
@@ -116,6 +108,15 @@ namespace MultiTool
         private void HandleMovementInput()
         {
             float moveInput = Input.GetAxis("Horizontal");
+            if(moveInput >= 1)
+            {
+                OnPlayerMove?.Invoke("Пройдись вправо");
+            }
+            else if(moveInput <= -1)
+            {
+                OnPlayerMove?.Invoke("Пройдись влево");
+            }
+
             _playerController.Move(moveInput);
         }
 
@@ -123,6 +124,7 @@ namespace MultiTool
         {
             if(Input.GetKeyDown(KeyCode.Space))
             {
+                OnPlayerMove?.Invoke("Подпрыгни");
                 _playerController.Jump();
             }
         }
@@ -158,14 +160,14 @@ namespace MultiTool
             {
                 if(GameManager.Instance.FormController.CurrentForm.Index != (int)FormType.Form_Sickle)
                 {
-                    PlayerController.Instance.PlayerShapeshift.SwitchForm(FormType.Form_Sickle);
+                    _playerController.PlayerShapeshift.SwitchForm(FormType.Form_Sickle);
                 }
             }
             else if(Input.GetKeyDown(KeyCode.Alpha2))
             {
                 if(GameManager.Instance.FormController.CurrentForm.Index != (int)FormType.Form_Pickaxe)
                 {
-                    PlayerController.Instance.PlayerShapeshift.SwitchForm(FormType.Form_Pickaxe);
+                    _playerController.PlayerShapeshift.SwitchForm(FormType.Form_Pickaxe);
                 }
             }
         }
