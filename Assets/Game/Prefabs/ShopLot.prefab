@@ -557,6 +557,8 @@ MonoBehaviour:
   _icon: {fileID: 2087983567624565646}
   _sellOne: {fileID: 3932928690791804147}
   _sellTen: {fileID: 2027819290927164950}
+  _priceOne: {fileID: 7678349172766637446}
+  _priceTen: {fileID: 8282793893213174171}
 --- !u!1 &5499666237682506311
 GameObject:
   m_ObjectHideFlags: 0
