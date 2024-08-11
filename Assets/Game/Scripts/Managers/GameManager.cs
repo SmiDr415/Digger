@@ -15,6 +15,9 @@ namespace MultiTool
 
         private FormController _formController;
 
+        public FormController FormsController => _formController;
+        public UIController UIController => _uiController;
+
         private static GameManager _instance;
         public static GameManager Instance
         {

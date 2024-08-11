@@ -52,6 +52,11 @@ namespace MultiTool
 
             }
         }
+
+        private void OnMouseDown()
+        {
+            PlayerController.Instance.ReadyInteractible();
+        }
     }
 
 }

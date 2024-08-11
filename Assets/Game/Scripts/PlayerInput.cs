@@ -14,6 +14,9 @@ namespace MultiTool
 
         private Camera _camera;
 
+        private Vector3 _lastMousePosition;
+        private bool _isDragging;
+
         public static event Action<string> OnCursorEdgeReached;
         public static event Action<string> OnPlayerMove;
 
@@ -42,6 +45,8 @@ namespace MultiTool
                 HandleTeleportInput();
                 HandleCancelInput();
                 HandleFormSwitchInput();
+
+                HandleMouseInput();
             }
         }
 
@@ -119,6 +124,49 @@ namespace MultiTool
 
             _playerController.Move(moveInput);
         }
+
+        private void HandleMouseInput()
+        {
+            if(Input.GetMouseButtonDown(0))
+            {
+                _lastMousePosition = Input.mousePosition;
+                _isDragging = true;
+            }
+
+            if(_isDragging && Input.GetMouseButton(0))
+            {
+                Vector3 currentMousePosition = Input.mousePosition;
+                Vector3 mouseDelta = currentMousePosition - _lastMousePosition;
+
+                float moveInput = Mathf.Clamp(mouseDelta.x, -1f, 1f);
+                float jumpInput = Mathf.Clamp(mouseDelta.y, 0f, 1f);
+
+                if(moveInput >= 1f)
+                {
+                    OnPlayerMove?.Invoke("Пройдись вправо");
+                }
+                else if(moveInput <= -1f)
+                {
+                    OnPlayerMove?.Invoke("Пройдись влево");
+                }
+
+                if(jumpInput >= 1f)
+                {
+                    OnPlayerMove?.Invoke("Подпрыгни");
+                    _playerController.Jump();
+                }
+
+                _playerController.Move(moveInput);
+                //_lastMousePosition = currentMousePosition;
+            }
+
+            if(Input.GetMouseButtonUp(0))
+            {
+                _isDragging = false;
+                _playerController.Move(0f); // Останавливаем персонажа
+            }
+        }
+
 
         private void HandleJumpInput()
         {

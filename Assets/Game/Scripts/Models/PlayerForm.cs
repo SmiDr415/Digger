@@ -18,6 +18,10 @@ namespace MultiTool
         private float _timeStepRepair = 1f;
         private float _lastTimeRepair;
 
+        private int _damageLevel = 0;
+        private int _productionSpeedLevel = 0;
+        private int _productionLevel = 0;
+
         public PlayerForm(FormData data, int index)
         {
             _formName = data.FormType.ToString();
@@ -35,8 +39,9 @@ namespace MultiTool
         public Vector2 SizeInTiles => _sizeInTiles;
         public Sprite Sprite => _sprite;
         public int Strength => _strength;
-        public float Cooldown => _cooldown;
-        public int Damage => _damage;
+        public float Cooldown => _cooldown - (float)_productionSpeedLevel / 10;
+        public int Damage => _damage + _damageLevel;
+        public int Production => 1 + _productionLevel;
 
         public void UseAbility()
         {
@@ -75,6 +80,21 @@ namespace MultiTool
                 }
 
             }
+        }
+
+        public void DamageUpgrade()
+        {
+            _damageLevel++;
+        }
+
+        public void ProductionSpeedUpgrade()
+        {
+            _productionSpeedLevel++;
+        }
+
+        public void ProductionUpgrade()
+        {
+            _productionLevel++;
         }
     }
 }

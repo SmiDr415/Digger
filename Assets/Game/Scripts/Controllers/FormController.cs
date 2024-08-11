@@ -12,6 +12,7 @@ namespace MultiTool
         public event Action<int, int> OnGetDamage;
 
         public PlayerForm CurrentForm => _currentForm;
+        public PlayerForm[] AllForms => _forms;
 
         public FormController(FormsData formsData)
         {
