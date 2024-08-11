@@ -45,9 +45,27 @@ namespace MultiTool
             _shapeshiftCoroutine = StartCoroutine(ShapeshiftRoutine());
         }
 
+
+        public void SwithForm(int index)
+        {
+            var forms = GameManager.Instance.FormController.AllForms;
+            if(_currentForm != forms[index])
+            {
+                if(index == 0)
+                {
+                    SwitchForm(FormType.Form_Sickle);
+                }
+                else if(index == 1)
+                {
+                    SwitchForm(FormType.Form_Pickaxe);
+                }
+            }
+        }
+
         private IEnumerator ShapeshiftRoutine()
         {
             _playerAnimation.Shapeshift(true);
+            GameManager.Instance.UIController.ShowCancelButton();
             yield return new WaitForSeconds(_shapeshiftDelay);
             if(_isShapeshifting)
             {

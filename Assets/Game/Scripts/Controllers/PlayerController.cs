@@ -269,7 +269,7 @@ namespace MultiTool
             UIController.Instance.SetStrengthValue(_currentForm.Index, _currentForm.Strength);
         }
 
-        internal void ReadyInteractible()
+        public void ReadyInteractible()
         {
             TryShowInteractiveWindow(_currentInteractive);
         }

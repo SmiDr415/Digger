@@ -13,22 +13,21 @@ namespace MultiTool
 
         private PlayerController _playerController;
         private Transform _player;
-        [SerializeField]private float _speed = 1;
+        [SerializeField] private float _speed = 1;
         private Coroutine _coroutineWay;
+        private int _count = 1;
 
-
-        private void Start()
-        {
-            _player = PlayerController.Instance.transform;
-            _playerController = _player.GetComponent<PlayerController>();
-        }
 
         public void Init()
         {
+            _player = PlayerController.Instance.transform;
+            _playerController = _player.GetComponent<PlayerController>();
+            _count = _playerController.Form.Production;
+
             _dropItem = GameManager.Instance.DropItemDatabase.GetDropItemByNameEN(name);
             _spriteRenderer.sprite = _dropItem.Sprite;
             var collider = _spriteRenderer.GetComponent<CircleCollider2D>();
-            collider.radius = _spriteRenderer.sprite.bounds.size.x/2;
+            collider.radius = _spriteRenderer.sprite.bounds.size.x / 2;
 
             var rb = GetComponent<Rigidbody2D>();
             rb.AddForce(Vector2.up * Random.Range(1, 10));
@@ -63,7 +62,7 @@ namespace MultiTool
         {
             if(other.CompareTag("Player"))
             {
-                if(InventoryManager.Instance.AddItem(_dropItem.NameItemEN, 1))
+                if(InventoryManager.Instance.AddItem(_dropItem.NameItemEN, _count))
                 {
                     Destroy(gameObject);
                 }

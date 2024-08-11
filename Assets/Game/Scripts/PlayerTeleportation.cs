@@ -33,6 +33,7 @@ namespace MultiTool
         private IEnumerator TeleportRoutine()
         {
             _playerAnimation.Teleport(true);
+            GameManager.Instance.UIController.ShowCancelButton();
             yield return new WaitForSeconds(_teleportationDelay);
             if(_isTeleporting)
             {

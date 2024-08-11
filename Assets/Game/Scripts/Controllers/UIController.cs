@@ -12,6 +12,9 @@ namespace MultiTool
         [SerializeField] private Text[] _formStrenghts;
         [SerializeField] private Text _money;
 
+        [SerializeField] private GameObject _teleportButtonGO;
+        [SerializeField] private GameObject _cancelButtonGO;
+
         private Image _currentIcon;
 
         private void Awake()
@@ -64,6 +67,12 @@ namespace MultiTool
                 GameEventManager.Instance.Unsubscribe(GameEvent.OnChangeForm, UpdateFormUI);
                 GameEventManager.Instance.Unsubscribe(GameEvent.OnChangeMoney, UpdateMoneyUI);
             }
+        }
+
+        public void ShowCancelButton()
+        {
+            _teleportButtonGO.SetActive(false);
+            _cancelButtonGO.SetActive(true);
         }
     }
 }
