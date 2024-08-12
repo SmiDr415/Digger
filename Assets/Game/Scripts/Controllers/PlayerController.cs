@@ -96,7 +96,6 @@ namespace MultiTool
             SubscribeToEvents();
             UpdateColliderSize();
             CalculateJumpForce(); // Вычислить силу прыжка при инициализации
-            //gameObject.SetActive(false);
         }
 
         private void Start()
@@ -105,7 +104,6 @@ namespace MultiTool
                 _currentForm = GameManager.Instance.FormController.CurrentForm;
             UpdateTileStrengthDisplay();
             _lastMineTime = Time.time;
-
         }
 
         private void OnValidate()

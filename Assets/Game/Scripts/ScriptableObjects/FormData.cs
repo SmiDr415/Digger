@@ -15,6 +15,7 @@ namespace MultiTool
         [SerializeField, Tooltip("Количество ресурса, которые выпадает с тайла/спрайта за один удар")] private int _extractedResourceAmount;
         [SerializeField, Tooltip("Количество прочности, на которое уменьшается прочность ресурса за один удар по ресурсу")] private int _cost;
         [SerializeField, Tooltip("Количество времени, через которое игрок может ударить ресурс снова")] private float _cooldown;
+        [SerializeField, Tooltip("Прочность")] private int _durability;
 
         public FormType FormType => _formType;
         public Vector2 SizeInTiles => _sizeInTiles;
@@ -25,5 +26,6 @@ namespace MultiTool
         public float Cooldown => _cooldown;
         public List<TileHarvestable> TileHarvestable => _tileHarvestables;
 
+        public int Durability => _durability;
     }
 }

@@ -65,13 +65,14 @@ namespace MultiTool
         private IEnumerator ShapeshiftRoutine()
         {
             _playerAnimation.Shapeshift(true);
-            GameManager.Instance.UIController.ShowCancelButton();
+            GameManager.Instance.UIController.ShowCancelButton(true);
             yield return new WaitForSeconds(_shapeshiftDelay);
             if(_isShapeshifting)
             {
                 PerformShapeshift(_targetFormType);
                 _isShapeshifting = false;
                 _playerAnimation.Shapeshift(false);
+                GameManager.Instance.UIController.ShowCancelButton(false);
             }
         }
 
