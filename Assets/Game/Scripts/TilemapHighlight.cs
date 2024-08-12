@@ -6,18 +6,20 @@ namespace MultiTool
     public class TilemapHighlight : MonoBehaviour
     {
         [SerializeField]
-        private Tilemap _tilemap; // —сылка на Tilemap
+        private Tilemap _tilemap;
 
         [SerializeField]
         private TilemapStrengthDisplay _strengthDisplay;
 
+        [SerializeField]
+        private PlayerController _playerController;
 
         private Vector3Int _previousHighlightPos;
         private GameObject _previousHighlightObject;
 
         private void Update()
         {
-            if(!PlayerController.Instance.gameObject.activeInHierarchy)
+            if(!_playerController.gameObject.activeInHierarchy)
                 return;
 
             HighlightTileUnderCursor();

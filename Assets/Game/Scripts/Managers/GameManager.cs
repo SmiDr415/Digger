@@ -88,11 +88,11 @@ namespace MultiTool
 
         private void Start()
         {
+            SubscribeToEvents();
             _formController.SwitchForm(FormType.Form_Pickaxe);
             _formController.GetDamage(0);
             _formController.SwitchForm(FormType.Form_Sickle);
             _formController.GetDamage(0);
-            SubscribeToEvents();
         }
 
         private void OnDestroy()

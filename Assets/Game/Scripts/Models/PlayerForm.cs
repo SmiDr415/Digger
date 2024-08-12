@@ -13,6 +13,8 @@ namespace MultiTool
         private int _strength;
         private float _cooldown;
         private int _damage;
+        private int _cost;
+        private int _durability;
         private readonly List<TileHarvestable> _tileHarvestables;
 
         private float _timeStepRepair = 1f;
@@ -21,6 +23,7 @@ namespace MultiTool
         private int _damageLevel = 0;
         private int _productionSpeedLevel = 0;
         private int _productionLevel = 0;
+        private int _repairStepValue = 10;
 
         public PlayerForm(FormData data, int index)
         {
@@ -28,10 +31,12 @@ namespace MultiTool
             _sprite = data.Sprite;
             _sizeInTiles = data.SizeInTiles;
             _index = index;
-            _strength = 10;
+            _strength = 0;
             _cooldown = data.Cooldown;
             _damage = data.Damage;
             _tileHarvestables = data.TileHarvestable;
+            _cost = data.Cost;
+            _durability = data.Durability;
         }
 
         public int Index => _index;
@@ -42,17 +47,12 @@ namespace MultiTool
         public float Cooldown => _cooldown - (float)_productionSpeedLevel / 10;
         public int Damage => _damage + _damageLevel;
         public int Production => 1 + _productionLevel;
-
-        public void UseAbility()
-        {
-            // Реализация способности "Серпа"
-            Debug.Log("Using Scythe Ability: Destroying Grass tiles");
-            // Добавить логику для разрушения тайлов типа "Grass"
-        }
+        public int Cost => _cost;
+        public int Durability => _durability;
 
         internal void GetDamage(int val)
         {
-            _strength = Mathf.Clamp(_strength -= val, 0, 100);
+            _strength = Mathf.Clamp(_strength -= _cost * val, 0, _durability);
         }
 
         public HarvestType GetHarvestType(TileType tileType)
@@ -70,12 +70,12 @@ namespace MultiTool
 
         internal void Repair()
         {
-            if(_strength < 100)
+            if(_strength < _durability)
             {
                 if(Time.time - _lastTimeRepair > _timeStepRepair)
                 {
                     _lastTimeRepair = Time.time;
-                    _strength = Math.Clamp(_strength + 10, 10, 100);
+                    _strength = Math.Clamp(_strength + _repairStepValue, 0, _durability);
                     UIController.Instance.SetStrengthValue(_index, _strength);
                 }
 

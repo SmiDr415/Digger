@@ -12,8 +12,12 @@ namespace MultiTool
         [SerializeField] private Text[] _formStrenghts;
         [SerializeField] private Text _money;
 
+        [SerializeField] private PlayerController _playerController;
+
         [SerializeField] private GameObject _teleportButtonGO;
         [SerializeField] private GameObject _cancelButtonGO;
+
+        private FormController _formController;
 
         private Image _currentIcon;
 
@@ -37,12 +41,17 @@ namespace MultiTool
 
         private void Start()
         {
-            _money.text = PlayerController.Instance.MoneyAmount.ToString();
+            _money.text = _playerController.MoneyAmount.ToString();
+            _formController = GameManager.Instance.FormController;
         }
+
 
         public void UpdateFormUI()
         {
-            var formIndex = GameManager.Instance.FormController.CurrentForm.Index;
+            if(_formController == null)
+                _formController = GameManager.Instance.FormController;
+
+            var formIndex = _formController.CurrentForm.Index;
             if(_currentIcon != null)
                 _currentIcon.color = Color.white;
             _currentIcon = _formIconsBack[formIndex];
@@ -52,12 +61,12 @@ namespace MultiTool
 
         private void UpdateMoneyUI()
         {
-            _money.text = PlayerController.Instance.MoneyAmount.ToString();
+            _money.text = _playerController.MoneyAmount.ToString();
         }
 
         public void SetStrengthValue(int index, int val)
         {
-            _formStrenghts[index].text = $"{val}%";
+            _formStrenghts[index].text = $"{val}/{_formController.AllForms[index].Durability}";
         }
 
         private void OnDestroy()
@@ -69,10 +78,12 @@ namespace MultiTool
             }
         }
 
-        public void ShowCancelButton()
+        public void ShowCancelButton(bool isShow)
         {
-            _teleportButtonGO.SetActive(false);
-            _cancelButtonGO.SetActive(true);
+            _teleportButtonGO.SetActive(!isShow);
+            _cancelButtonGO.SetActive(isShow);
         }
+
+
     }
 }
