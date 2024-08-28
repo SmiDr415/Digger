@@ -3,14 +3,16 @@ using UnityEngine.Tilemaps;
 
 namespace MultiTool
 {
-    [CreateAssetMenu(fileName = "TilesData", menuName = "Tiles Data", order = 1)]
+    [CreateAssetMenu(fileName = "Tile Data SO", menuName = "ScriptableObjects/Tile Data SO", order = 1)]
     public class TilesData : ScriptableObject
     {
-        public TileData[] tileDatas;
+        [SerializeField] private TileData[] _tileDatas;
+
+        public TileData[] TileDatas => _tileDatas;
 
         public TileType GetTileType(string tileName)
         {
-            foreach(var tile in tileDatas)
+            foreach(var tile in _tileDatas)
             {
                 foreach(var tileData in tile.Tiles)
                 {
@@ -25,7 +27,7 @@ namespace MultiTool
 
         public TileBase GetTileByStrength(string tileName, int strength)
         {
-            foreach(var tileData in tileDatas)
+            foreach(var tileData in _tileDatas)
             {
                 for(int i = 0; i < tileData.Tiles.Length - 1; i++)
                 {
@@ -47,9 +49,9 @@ namespace MultiTool
 
         public TileData GetTileDataByName(string tileName)
         {
-            foreach(var tileData in tileDatas)
+            foreach(var tileData in _tileDatas)
             {
-                if(tileData.NameEn.Contains(tileName))
+                if(tileName.Contains(tileData.NameEn) || tileData.NameEn.Contains(tileName))
                 {
                     return tileData;
                 }

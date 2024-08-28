@@ -47,11 +47,18 @@ namespace MultiTool
                 GameObject highlightObject = _tilemap.GetInstantiatedObject(tilePos);
                 if(highlightObject != null)
                 {
-                    highlightObject.GetComponent<SpriteRenderer>().enabled = true;
+                    if(highlightObject.TryGetComponent(out SpriteRenderer spriteRenderer))
+                    {
+                        spriteRenderer.enabled = true;
+                        _previousHighlightPos = tilePos;
+                        _previousHighlightObject = highlightObject;
+                    }
+                }
+                else
+                {
+                    _previousHighlightObject = null;
                 }
 
-                _previousHighlightPos = tilePos;
-                _previousHighlightObject = highlightObject;
             }
             else if(_previousHighlightObject != null)
             {

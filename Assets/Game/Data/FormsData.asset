@@ -38,8 +38,8 @@ MonoBehaviour:
       _harvestType: 1
     - _tileType: 2
       _harvestType: 1
-    _damage: 3
+    _damage: 1
     _extractedResourceAmount: 1
-    _cost: 2
+    _cost: 1
     _cooldown: 1
     _durability: 200

@@ -13,6 +13,9 @@ namespace MultiTool
         private GameObject _textPrefab;
 
         [SerializeField]
+        private GameObject _dropPrefab;
+
+        [SerializeField]
         private TilesData _tileData;
 
         [SerializeField]
@@ -21,8 +24,6 @@ namespace MultiTool
         [SerializeField]
         private PlayerController _playerController;
 
-        [SerializeField]
-        private GameObject _dropPrefab;
 
         [SerializeField]
         private BlockHitController _blockHitController;
@@ -33,26 +34,24 @@ namespace MultiTool
 
         private Color _disableColor = new(0, 0, 0, 0);
 
-        private void Start()
-        {
-            InitializeTileStrengthDict();
-            DisplayStrengthOnTiles();
-        }
 
-        private void InitializeTileStrengthDict()
+        public void InitializeTileStrengthDict()
         {
             _tileStrengthDict = new Dictionary<TileBase, int>();
             _tileCurrentStrengthDict = new Dictionary<Vector3Int, int>();
             _tileTextObjects = new Dictionary<Vector3Int, TextMesh>();
 
-            foreach(TileData tileData in _tileData.tileDatas)
+            foreach(TileData tileData in _tileData.TileDatas)
             {
                 for(int i = 0; i < tileData.Tiles.Length; i++)
                 {
                     TileBase tile = tileData.Tiles[i];
-                    _tileStrengthDict[tile] = tileData.Durability[i];
+                    if(tileData.Durability.Length > 0)
+                        _tileStrengthDict[tile] = tileData.Durability[i];
                 }
             }
+
+            DisplayStrengthOnTiles();
 
         }
 
@@ -108,7 +107,7 @@ namespace MultiTool
 
             foreach(Vector3Int pos in _tilemap.cellBounds.allPositionsWithin)
             {
-                if(_tileTextObjects.ContainsKey(pos))
+                if(_tileTextObjects != null && _tileTextObjects.ContainsKey(pos))
                 {
                     float distance = Vector3.Distance(_tilemap.CellToWorld(pos), playerCell);
                     if(distance <= radius && PlayerController.Instance.IsReady)
@@ -178,7 +177,6 @@ namespace MultiTool
         }
 
 
-        // Метод для уменьшения прочности тайла
         public void ReduceTileStrength(Vector3Int tilePos)
         {
             if(_tileTextObjects.ContainsKey(tilePos))
@@ -204,12 +202,8 @@ namespace MultiTool
                             _blockHitController.TileDestroy(true, tilePos);
 
                         }
-
-                        // Удаляем тайл или заменяем его поврежденным тайлом
                         _tilemap.SetTile(tilePos, null);
                         _tileTextObjects.Remove(tilePos);
-                        //textMesh.text = "0";
-                        //textMesh.color = new Color(0, 0, 0, 0); // Скрываем текст
                     }
                     else
                     {
@@ -223,9 +217,6 @@ namespace MultiTool
                         _blockHitController.TileDestroy(false, tilePos);
 
                     }
-                }
-                else
-                {
                 }
             }
         }

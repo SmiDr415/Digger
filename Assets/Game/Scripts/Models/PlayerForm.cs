@@ -31,7 +31,7 @@ namespace MultiTool
             _sprite = data.Sprite;
             _sizeInTiles = data.SizeInTiles;
             _index = index;
-            _strength = 0;
+            _strength = data.Durability;
             _cooldown = data.Cooldown;
             _damage = data.Damage;
             _tileHarvestables = data.TileHarvestable;

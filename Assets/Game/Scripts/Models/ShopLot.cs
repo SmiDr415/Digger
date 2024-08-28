@@ -1,3 +1,4 @@
+using StarterPack.Audio;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
@@ -38,6 +39,7 @@ namespace MultiTool
         public void SellItem(int count)
         {
             OnInventoryItemSell?.Invoke(_item, count);
+            AudioManager.Instance.GetMoneySfx();
         }
     }
 

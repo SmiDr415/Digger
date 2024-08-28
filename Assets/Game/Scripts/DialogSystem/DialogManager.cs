@@ -15,15 +15,16 @@ namespace DialogSystem
         [SerializeField] private ObjectiveManager _objectiveManager;
         [SerializeField] private Animator _animator;
         [SerializeField] private MissionManager _missionManager;
+        [SerializeField] private AudioSource _audioSource;
 
-        private Queue<string> _sentences;
+        private Queue<Voice> _voices;
         private Coroutine _coroutine;
 
         private Dialog _currentDialog;
 
         private void Start()
         {
-            _sentences = new Queue<string>();
+            _voices = new Queue<Voice>();
         }
 
         public void StartDialog(string name)
@@ -38,17 +39,18 @@ namespace DialogSystem
 
             PlayerController.Instance.gameObject.SetActive(false);
             _dialogPanel.SetActive(true);
-            _characterImage.sprite = _currentDialog.CharacterSprite;
 
-            _sentences.Clear();
-            foreach(string sentence in _currentDialog.Sentences)
+            _voices.Clear();
+            foreach(var v in _currentDialog.Voices)
             {
-                _sentences.Enqueue(sentence);
+                _voices.Enqueue(v);
             }
 
-            _dialogText.text = _sentences.Dequeue();
-
-            Invoke(nameof(DisplayNextSentence), 3.0f);
+            var voice = _voices.Dequeue();
+            _dialogText.text = voice.Text;
+            _characterImage.sprite = voice.PersonImage;
+            _audioSource.PlayOneShot(voice.Audio);
+            Invoke(nameof(DisplayNextSentence), 5.0f);
         }
 
         public void DisplayNextSentence()
@@ -57,28 +59,38 @@ namespace DialogSystem
         }
 
 
+        public void FastNext()
+        {
+            StopAllCoroutines();
+            _coroutine = StartCoroutine(NextSentence());
+        }
+
+
         private IEnumerator NextSentence()
         {
 
             _animator.SetTrigger("Next");
-            if(_sentences.Count == 0)
+            if(_voices.Count == 0)
             {
                 EndDialog();
                 yield break;
             }
 
             yield return new WaitForSeconds(1.0f);
-            string sentence = _sentences.Dequeue();
-            _dialogText.text = sentence;
-            _coroutine = null;
+            var voice = _voices.Dequeue();
+            _dialogText.text = voice.Text;
+            _characterImage.sprite = voice.PersonImage;
+            _audioSource.Stop();
+            _audioSource.PlayOneShot(voice.Audio);
 
-            yield return new WaitForSeconds(3.0f);
+            yield return new WaitWhile(() => _audioSource.isPlaying);
             {
-                if(_sentences.Count > 0 && _coroutine == null)
+                if(_voices.Count > 0 && _coroutine == null)
                 {
                     DisplayNextSentence();
                 }
             }
+            _coroutine = null;
         }
 
         private void EndDialog()
@@ -88,6 +100,8 @@ namespace DialogSystem
             if(_currentDialog.MissionName != "Конец")
             {
                 _missionManager.StartMission(_currentDialog.MissionName);
+                _audioSource.Stop();
+
             }
         }
     }

@@ -8,7 +8,7 @@ namespace MultiTool
         [SerializeField] private Sprite _hand;
         public string DeviceType { get; private set; }
 
-        void Start()
+        private void Start()
         {
             DeviceType = "Unknown"; // Значение по умолчанию
         }

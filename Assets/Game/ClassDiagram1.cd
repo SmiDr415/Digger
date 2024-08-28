@@ -4,98 +4,84 @@
     <Position X="8" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAAiAAAQAAIAAACAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Game\Scripts\CameraController.cs</FileName>
+      <FileName>Assets\Game\Scripts\Controllers\CameraController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MultiTool.DropItem" Collapsed="true">
     <Position X="9.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAABAAACAAAAAAAAAAAgEAAAQAAEAAIAAAwA=</HashCode>
-      <FileName>Assets\Game\Scripts\DropItem.cs</FileName>
+      <FileName>Assets\Game\Scripts\ScriptableObjects\DropItem.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MultiTool.DropItemDatabase" Collapsed="true">
     <Position X="11.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAQAAAAAACAABAAAAAA=</HashCode>
-      <FileName>Assets\Game\Scripts\DropItemDatabase.cs</FileName>
+      <FileName>Assets\Game\Scripts\ScriptableObjects\DropItemDatabase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MultiTool.FormController" Collapsed="true">
     <Position X="13.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAABIBAAiAAAAAAAAAIAAAAAAAAAAAAAAAAAAABAA=</HashCode>
-      <FileName>Assets\Game\Scripts\FormController.cs</FileName>
+      <HashCode>AAAAABIBAAiAAAAAAAAAIAAAAAAAAAAAAAAAAAAABAE=</HashCode>
+      <FileName>Assets\Game\Scripts\Controllers\FormController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MultiTool.FormData" Collapsed="true">
     <Position X="15" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAACDAACAACAAAAAAAIBACAAAABAAwABEEAIAAACA=</HashCode>
-      <FileName>Assets\Game\Scripts\FormData.cs</FileName>
+      <HashCode>AAAAACDAACAACAAAAAAAIBQCAAAABAAwABEEAJAAACA=</HashCode>
+      <FileName>Assets\Game\Scripts\ScriptableObjects\FormData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MultiTool.FormsData" Collapsed="true">
     <Position X="16.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
-      <FileName>Assets\Game\Scripts\FormsData.cs</FileName>
+      <FileName>Assets\Game\Scripts\ScriptableObjects\FormsData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MultiTool.GameEventManager" Collapsed="true">
     <Position X="8" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAAEAAAAAAAAAAAAAAAAAAABAAACAAAAQAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Game\Scripts\GameEventManager.cs</FileName>
+      <FileName>Assets\Game\Scripts\Managers\GameEventManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MultiTool.GameManager" Collapsed="true">
     <Position X="9.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQlAAAAACAAAAACAIAAAAAAAQAAAAABQAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Game\Scripts\GameManager.cs</FileName>
+      <HashCode>AAAgAAIAACEAAAACAIAAQAAAAQAAAAAJQAAAAAAAiFA=</HashCode>
+      <FileName>Assets\Game\Scripts\Managers\GameManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MultiTool.GroundItem" Collapsed="true">
     <Position X="11.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAgAiAAAAAEAAAACAAAAEAAAAAABCACCAAQAIA=</HashCode>
-      <FileName>Assets\Game\Scripts\GroundItem.cs</FileName>
+      <HashCode>AAAAAAAgAgAAAAAEAAAACAAAAEAAAAAABCCCCAAQAIA=</HashCode>
+      <FileName>Assets\Game\Scripts\ScriptableObjects\GroundItem.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MultiTool.GUIWindowManager" Collapsed="true">
     <Position X="13.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAAAAAAEBAAABAAAAAAAAAAQAAAAAAgAEA=</HashCode>
-      <FileName>Assets\Game\Scripts\GUIWindowManager.cs</FileName>
+      <FileName>Assets\Game\Scripts\Managers\GUIWindowManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MultiTool.HubManager" Collapsed="true">
     <Position X="15" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAACAAgAAAAAEAAAAAAAAAEAAAAAAAAAAAQAAAAA=</HashCode>
-      <FileName>Assets\Game\Scripts\HubManager.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="MultiTool.InventoryItem" Collapsed="true">
-    <Position X="16.75" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAEAAAAQABAAAAAAAAAAAQEAAAAAAAQAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Game\Scripts\InventoryItem.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="MultiTool.InventoryItemDatabase" Collapsed="true">
-    <Position X="8" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAQgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Game\Scripts\InventoryItemDatabase.cs</FileName>
+      <FileName>Assets\Game\Scripts\Managers\HubManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MultiTool.InventoryManager" Collapsed="true">
     <Position X="9.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAACAAAEBAAAAAAAAAgDAAAwAEQAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Game\Scripts\InventoryManager.cs</FileName>
+      <HashCode>AACAAAAAACAACEBAAAAAAAAAgDAAAwAEQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Game\Scripts\Managers\InventoryManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MultiTool.InventorySlot" Collapsed="true">
@@ -109,7 +95,7 @@
     <Position X="13.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEABAAAAACAEAIAAAAAAAAAACAAAAAAAAAABAAAAAAg=</HashCode>
-      <FileName>Assets\Game\Scripts\InventoryUI.cs</FileName>
+      <FileName>Assets\Game\Scripts\UI\InventoryUI.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MultiTool.PlayerAnimation" Collapsed="true">
@@ -122,28 +108,28 @@
   <Class Name="MultiTool.PlayerController" Collapsed="true">
     <Position X="16.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QADJAIEoAriAMgIABAGAajAgAABgAgwiSAAgCI0ggFA=</HashCode>
-      <FileName>Assets\Game\Scripts\PlayerController.cs</FileName>
+      <HashCode>QADJAIMoAriAMgIABAWAajAgAABgAgwiSAAgCI0ggFA=</HashCode>
+      <FileName>Assets\Game\Scripts\Controllers\PlayerController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MultiTool.PlayerForm" Collapsed="true">
     <Position X="8" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAADAAAkACAAAAEAgAAAAICBCBAAwABEAAAIAACE=</HashCode>
-      <FileName>Assets\Game\Scripts\PlayerForm.cs</FileName>
+      <HashCode>AAACAADAAKkACABAEEggARQAACBCBAAwABEAABYAACE=</HashCode>
+      <FileName>Assets\Game\Scripts\Models\PlayerForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MultiTool.PlayerInput" Collapsed="true">
     <Position X="9.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAABgAAiAAAAAEAAUIAAAABAQAAAAIAAAAADgBAgA=</HashCode>
+      <HashCode>AAQAABgAAiBAAAgEAAUIAAIABAQAAAYICAAAALgBAgA=</HashCode>
       <FileName>Assets\Game\Scripts\PlayerInput.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MultiTool.PlayerShapeshift" Collapsed="true">
     <Position X="11.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAIEIAAAAAAIgCAAEAIggAAAAAAAAAAAAgAAAAAEE=</HashCode>
+      <HashCode>AQAAIEIAAAAAAIgCAAEAIggAAAAACAAAAAAgAAAAAEE=</HashCode>
       <FileName>Assets\Game\Scripts\PlayerShapeshift.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -158,27 +144,27 @@
     <Position X="15" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAgBAIAABCAAQACCACAAQAAAAAAAIAACAAABAAAAA=</HashCode>
-      <FileName>Assets\Game\Scripts\TileData.cs</FileName>
+      <FileName>Assets\Game\Scripts\ScriptableObjects\TileData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MultiTool.TileHarvestable" Collapsed="true">
     <Position X="16.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAIAAAAAAAACAACAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
-      <FileName>Assets\Game\Scripts\TileHarvestable.cs</FileName>
+      <FileName>Assets\Game\Scripts\ScriptableObjects\TileHarvestable.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MultiTool.TilemapHighlight" Collapsed="true">
     <Position X="8" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQgAAQAAAAAEAAAAAAAAAAAAAAABAAAAAAAAAAIAAA=</HashCode>
+      <HashCode>AgQgAAQAAAAAEAAEAAAAAAAAAAAABAAAAAAAAAAIAAA=</HashCode>
       <FileName>Assets\Game\Scripts\TilemapHighlight.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MultiTool.TilemapStrengthDisplay" Collapsed="true">
     <Position X="9.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEAIAAQCAAADAEIIAAAAAAADAAIwAACAAAAAAIEAg=</HashCode>
+      <HashCode>AAAEAIAAQCAAADAEIYAAAAAAADAAIwAACAAAAAAIEAg=</HashCode>
       <FileName>Assets\Game\Scripts\TilemapStrengthDisplay.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -186,14 +172,14 @@
     <Position X="11.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAACAABAAAAAAAAABAAAAAAAA=</HashCode>
-      <FileName>Assets\Game\Scripts\TilesData.cs</FileName>
+      <FileName>Assets\Game\Scripts\ScriptableObjects\TilesData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MultiTool.UIController" Collapsed="true">
     <Position X="13.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAABAAAAAAAAAAAAAAAACAAAAAACAAEAQAAAAAAAREA=</HashCode>
-      <FileName>Assets\Game\Scripts\UIController.cs</FileName>
+      <HashCode>CAAhBgAAACAAAAAECAgACEAAAAACAAEAQAAAAAEABEA=</HashCode>
+      <FileName>Assets\Game\Scripts\Controllers\UIController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="MultiTool.CursorPosition" Collapsed="true">
@@ -213,7 +199,7 @@
   <Enum Name="MultiTool.GameEvent" Collapsed="true">
     <Position X="11.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAQAACAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <HashCode>AAAAAAABAAAAAAAAAQAACAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
       <FileName>Assets\Game\Scripts\Enums\GameEvent.cs</FileName>
     </TypeIdentifier>
   </Enum>
