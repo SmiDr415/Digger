@@ -1,11 +1,14 @@
+using System;
 using UnityEngine;
 
 namespace MultiTool
 {
     [RequireComponent(typeof(BoxCollider2D), typeof(Rigidbody2D), typeof(SpriteRenderer))]
-    [ExecuteInEditMode]
+    //[ExecuteInEditMode]
     public class PlayerController : MonoBehaviour
     {
+        [SerializeField] private AudioSource _audioSourceJump;
+
         [SerializeField] private AnimationCurve _gravityCurve;
         [SerializeField] private AnimationCurve _jumpVelocityCurve;
 
@@ -52,7 +55,7 @@ namespace MultiTool
         [Tooltip("Время, за которое герой достигает максимальной высоты прыжка")]
         [SerializeField]
         private float _timeToJumpApex = 0.4f;
-
+        private AudioClip _jumpSfx;
         [Space]
 
         private PlayerAnimation _playerAnimation;
@@ -174,6 +177,8 @@ namespace MultiTool
             if(_isGrounded)
             {
                 _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _jumpVelocity) * _jumpVelocityCurve.Evaluate(Time.time);
+                _audioSourceJump.Play();
+
             }
         }
 
@@ -184,7 +189,7 @@ namespace MultiTool
 
         private void UpdateTileStrengthDisplay()
         {
-            if(_tilemapStrengthDisplay == null)
+            if(_tilemapStrengthDisplay == null || !_tilemapStrengthDisplay.gameObject.activeInHierarchy)
             {
                 return;
             }
@@ -316,6 +321,11 @@ namespace MultiTool
             _jumpVelocity = Mathf.Sqrt(2 * _gravityScale * _maxJumpHeight);
 
             _rigidbody2D.gravityScale = _gravityScale / Mathf.Abs(Physics2D.gravity.y);
+        }
+
+        internal void Stop()
+        {
+            Debug.Log("Финиш");
         }
         #endregion
     }

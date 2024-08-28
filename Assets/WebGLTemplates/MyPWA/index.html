@@ -10,15 +10,35 @@
 
     <meta property="og:title" content="MultiTool">
     <meta property="og:description" content="MultiTool">
-    <meta property="og:image" content="https://igromaker.ru/Games/Digger/bannerMultiTool2.png">
-    <meta property="og:url" content="https://igromaker.ru/Games/Digger/index.html">
+    <meta property="og:image" content="https://igromaker.ru/Games/MultiTool/bannerMultiTool2.png">
+    <meta property="og:url" content="https://igromaker.ru/Games/MultiTool/index.html">
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="MultiTool">
     <meta name="twitter:description" content="MultiTool">
-    <meta name="twitter:image" content="https://igromaker.ru/Games/Digger/bannerMultiTool2.png">
-    <meta name="twitter:url" content="https://igromaker.ru/Games/Digger/index.html">
+    <meta name="twitter:image" content="https://igromaker.ru/Games/MultiTool/bannerMultiTool2.png">
+    <meta name="twitter:url" content="https://igromaker.ru/Games/MultiTool/index.html">
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(98142547, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/98142547" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 
 </head>
 <body>
@@ -35,7 +55,35 @@
     <script>
       window.addEventListener("load", function () {
         if ("serviceWorker" in navigator) {
-          navigator.serviceWorker.register("ServiceWorker.js");
+          navigator.serviceWorker.register("ServiceWorker.js").then(function(registration) {
+            // Отслеживаем изменения состояния сервисного работника
+            registration.onupdatefound = function () {
+              const installingWorker = registration.installing;
+              installingWorker.onstatechange = function () {
+                if (installingWorker.state === 'installed') {
+                  if (navigator.serviceWorker.controller) {
+                    // Новая версия доступна, предлагаем обновить страницу
+                    if (confirm('Новая версия доступна. Перезагрузить страницу?')) {
+                      window.location.reload();
+                    }
+                  } else {
+                    // Контент закеширован для оффлайн использования
+                    console.log('Content is now available offline!');
+                  }
+                }
+              };
+            };
+          }).catch(function(error) {
+            console.log('Service worker registration failed:', error);
+          });
+
+          // Событие срабатывает при смене контроллера
+          let refreshing;
+          navigator.serviceWorker.addEventListener('controllerchange', function () {
+            if (refreshing) return;
+            refreshing = true;
+            window.location.reload();
+          });
         }
       });
 
@@ -45,12 +93,6 @@
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var warningBanner = document.querySelector("#unity-warning");
 
-      // Shows a temporary message banner/ribbon for a few seconds, or
-      // a permanent error message on top of the canvas if type=='error'.
-      // If type=='warning', a yellow highlight color is used.
-      // Modify or remove this function to customize the visually presented
-      // way that non-critical warnings and error messages are presented to the
-      // user.
       function unityShowBanner(msg, type) {
         function updateBannerVisibility() {
           warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
@@ -91,15 +133,7 @@
         showBanner: unityShowBanner,
       };
 
-      // By default Unity keeps WebGL canvas render target size matched with
-      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-      // Set this to false if you want to decouple this synchronization from
-      // happening inside the engine, and you would instead like to size up
-      // the canvas DOM size and WebGL render target sizes yourself.
-      // config.matchWebGLToCanvasSize = false;
-
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
         var meta = document.createElement('meta');
         meta.name = 'viewport';
         meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
@@ -118,11 +152,11 @@
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
             loadingBar.style.display = "none";
-            
+
             setTimeout(() => {
                 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
                 unityInstance.SendMessage('PlatformDetector', 'ReceiveDeviceType', isMobile ? 'Mobile' : 'Desktop');
-            }, 1000); 
+            }, 1000);
 
         }).catch((message) => {
           alert(message);

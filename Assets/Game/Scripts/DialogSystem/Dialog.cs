@@ -7,11 +7,15 @@ namespace DialogSystem
     {
         [SerializeField] private string _missionName;
         [SerializeField] private Sprite _characterSprite;
+
         [SerializeField, TextArea(1, 5)]
         private string[] _sentences;
+
+        [SerializeField] private Voice[] _voices;
 
         public Sprite CharacterSprite => _characterSprite;
         public string[] Sentences => _sentences;
         public string MissionName => _missionName;
+        public Voice[] Voices => _voices;
     }
 }

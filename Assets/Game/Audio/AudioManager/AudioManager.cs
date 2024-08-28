@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Events;
@@ -7,9 +8,12 @@ namespace StarterPack.Audio
 {
     public class AudioManager : MonoBehaviour
     {
+        public static AudioManager Instance;
+
         private const string ALLSOUNDS = "AllSounds";
         private const string MUSIC = "Music";
         private const string SFX = "Sfx";
+        private const string ASFX = "AmbientSfx";
         private const string MUSICSOURCENAME = "MusicSource";
         private const string EFFECTSSOURCENAME = "EffectsSource";
 
@@ -20,10 +24,13 @@ namespace StarterPack.Audio
         [SerializeField] private Slider _musicVolumeSlider;
         [SerializeField] private Slider _effectsVolumeSlider;
 
+        [SerializeField] private AudioClip _getMoneySfx;
+
         public UnityEvent<bool> OnMuteEvent { get; private set; } = new();
 
-        protected  void Awake()
+        protected void Awake()
         {
+            Instance = this;
             EnsureAudioSources();
         }
 
@@ -93,6 +100,13 @@ namespace StarterPack.Audio
             OnMuteEvent.Invoke(false);
         }
 
+        public void ControlAmbientSfx(float value)
+        {
+            PlayerPrefs.SetFloat(ASFX, value);
+            _mixer.SetFloat(ASFX, value);
+
+            OnMuteEvent.Invoke(false);
+        }
 
         public void LoadSettings()
         {
@@ -116,6 +130,9 @@ namespace StarterPack.Audio
 
         }
 
-
+        internal void GetMoneySfx()
+        {
+            PlayEffect(_getMoneySfx);
+        }
     }
 }

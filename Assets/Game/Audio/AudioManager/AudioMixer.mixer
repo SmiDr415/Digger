@@ -64,10 +64,12 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
-  - guid: f358c5d05408fa440a5c9a2239003d52
-    name: Music
+  - guid: 810d963c62f566d4dbc07dbebf0fc986
+    name: AmbientSfx
   - guid: e5ce6b0ce0777234dbcdf2a83c79dd67
     name: AllSounds
+  - guid: f358c5d05408fa440a5c9a2239003d52
+    name: Music
   - guid: 8b4c3666a5f987f428f126a4007c0607
     name: Sfx
   m_AudioMixerGroupViews:

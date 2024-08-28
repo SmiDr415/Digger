@@ -35,7 +35,7 @@ namespace MultiTool
 
         private void Start()
         {
-            _formController = GameManager.Instance.FormsController;
+            _formController = GameManager.Instance.FormController;
         }
 
 

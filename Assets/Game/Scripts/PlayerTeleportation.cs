@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace MultiTool
 {
@@ -7,7 +8,7 @@ namespace MultiTool
     {
         [Header("Время каста телепортации")]
         [Tooltip("Столько секунд кастуется телепорт в хаб")]
-        [Range(0,10)]
+        [Range(0, 10)]
         [SerializeField] private float _teleportationDelay = 3f;
         [SerializeField] private Transform _hubPosition;
 
@@ -37,10 +38,11 @@ namespace MultiTool
             yield return new WaitForSeconds(_teleportationDelay);
             if(_isTeleporting)
             {
-                transform.position = _hubPosition.position;
+                //transform.position = _hubPosition.position;
                 _isTeleporting = false;
                 _playerAnimation.Teleport(false);
                 GameManager.Instance.UIController.ShowCancelButton(false);
+                GameManager.Instance.Win();
             }
         }
 

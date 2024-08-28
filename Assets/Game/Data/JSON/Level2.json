@@ -1,0 +1,1652 @@
+{
+    "gridWidth": 25,
+    "gridHeight": 11,
+    "startPosition": {
+        "x": 7,
+        "y": -5
+    },
+    "finishPosition": {
+        "x": -13,
+        "y": 0
+    },
+    "cells": [
+        {
+            "position": {
+                "x": -15,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -15,
+                "y": -6
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -15,
+                "y": -5
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -15,
+                "y": -4
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -15,
+                "y": -3
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -15,
+                "y": -2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -15,
+                "y": -1
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -15,
+                "y": 0
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -15,
+                "y": 1
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -15,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -14,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -14,
+                "y": -6
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -14,
+                "y": -5
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -14,
+                "y": -4
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -14,
+                "y": -3
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -14,
+                "y": -2
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -14,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -13,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -13,
+                "y": -6
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -13,
+                "y": -5
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -13,
+                "y": -4
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -13,
+                "y": -3
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -13,
+                "y": -2
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -13,
+                "y": 0
+            },
+            "tileName": "Finish"
+        },
+        {
+            "position": {
+                "x": -13,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -12,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -12,
+                "y": -6
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -12,
+                "y": -5
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -12,
+                "y": -4
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -12,
+                "y": -3
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -12,
+                "y": -2
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -12,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -11,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -11,
+                "y": -6
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -11,
+                "y": -5
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -11,
+                "y": -4
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -11,
+                "y": -3
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -11,
+                "y": -2
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -11,
+                "y": -1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -11,
+                "y": 0
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -11,
+                "y": 1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -11,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -10,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -10,
+                "y": -6
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -10,
+                "y": -5
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -10,
+                "y": -4
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -10,
+                "y": -3
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -10,
+                "y": -2
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -10,
+                "y": -1
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -10,
+                "y": 0
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -10,
+                "y": 1
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -10,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -9,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -9,
+                "y": -6
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -9,
+                "y": -5
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -9,
+                "y": -4
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -9,
+                "y": -3
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -9,
+                "y": -2
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -9,
+                "y": -1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -9,
+                "y": 0
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -9,
+                "y": 1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -9,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -8,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -8,
+                "y": -6
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -8,
+                "y": -5
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -8,
+                "y": -4
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -8,
+                "y": -3
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -8,
+                "y": -2
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -8,
+                "y": -1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -8,
+                "y": 0
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -8,
+                "y": 1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -8,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -7,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -7,
+                "y": -6
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -7,
+                "y": -5
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -7,
+                "y": -4
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -7,
+                "y": -3
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -7,
+                "y": -2
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -7,
+                "y": -1
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -7,
+                "y": 0
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -7,
+                "y": 1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -7,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -6,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -6,
+                "y": -6
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -6,
+                "y": -5
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -6,
+                "y": -4
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -6,
+                "y": -3
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -6,
+                "y": -2
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -6,
+                "y": -1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -6,
+                "y": 0
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -6,
+                "y": 1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -6,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -5,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -5,
+                "y": -6
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -5,
+                "y": -5
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -5,
+                "y": -4
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -5,
+                "y": -3
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -5,
+                "y": -2
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -5,
+                "y": -1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -5,
+                "y": 0
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -5,
+                "y": 1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -5,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -4,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -4,
+                "y": -6
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -4,
+                "y": -5
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -4,
+                "y": -4
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -4,
+                "y": -3
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -4,
+                "y": -2
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -4,
+                "y": -1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -4,
+                "y": 0
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -4,
+                "y": 1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -4,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -3,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -3,
+                "y": -6
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -3,
+                "y": -5
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -3,
+                "y": -4
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -3,
+                "y": -3
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -3,
+                "y": -2
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -3,
+                "y": -1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -3,
+                "y": 0
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -3,
+                "y": 1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -3,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -2,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -2,
+                "y": -6
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -2,
+                "y": -5
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -2,
+                "y": -4
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -2,
+                "y": -3
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -2,
+                "y": -2
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -2,
+                "y": -1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -2,
+                "y": 0
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -2,
+                "y": 1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -2,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -1,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": -1,
+                "y": -6
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -1,
+                "y": -5
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": -1,
+                "y": -4
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -1,
+                "y": -3
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -1,
+                "y": -2
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -1,
+                "y": -1
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -1,
+                "y": 0
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -1,
+                "y": 1
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": -1,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 0,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 0,
+                "y": -6
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 0,
+                "y": -5
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 0,
+                "y": -4
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 0,
+                "y": -3
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 0,
+                "y": -2
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 0,
+                "y": -1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 0,
+                "y": 1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 0,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 1,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 1,
+                "y": -6
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 1,
+                "y": -5
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 1,
+                "y": -4
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 1,
+                "y": -3
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 1,
+                "y": -2
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 1,
+                "y": -1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 1,
+                "y": 0
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 1,
+                "y": 1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 1,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 2,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 2,
+                "y": -6
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": 2,
+                "y": -5
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": 2,
+                "y": -4
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": 2,
+                "y": -3
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": 2,
+                "y": -2
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": 2,
+                "y": -1
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": 2,
+                "y": 0
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 2,
+                "y": 1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 2,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 3,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 3,
+                "y": -6
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 3,
+                "y": -5
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 3,
+                "y": -4
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 3,
+                "y": -3
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 3,
+                "y": -2
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 3,
+                "y": -1
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": 3,
+                "y": 0
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 3,
+                "y": 1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 3,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 4,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 4,
+                "y": -6
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 4,
+                "y": -5
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 4,
+                "y": -4
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 4,
+                "y": -3
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 4,
+                "y": -2
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 4,
+                "y": -1
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": 4,
+                "y": 0
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 4,
+                "y": 1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 4,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 5,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 5,
+                "y": -6
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 5,
+                "y": -5
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 5,
+                "y": -4
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 5,
+                "y": -3
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 5,
+                "y": -2
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 5,
+                "y": -1
+            },
+            "tileName": "Tile_Stone"
+        },
+        {
+            "position": {
+                "x": 5,
+                "y": 0
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 5,
+                "y": 1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 5,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 6,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 6,
+                "y": -3
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 6,
+                "y": -2
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 6,
+                "y": -1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 6,
+                "y": 0
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 6,
+                "y": 1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 6,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 7,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 7,
+                "y": -5
+            },
+            "tileName": "Start"
+        },
+        {
+            "position": {
+                "x": 7,
+                "y": -3
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 7,
+                "y": -2
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 7,
+                "y": -1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 7,
+                "y": 0
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 7,
+                "y": 1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 7,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 8,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 8,
+                "y": -3
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 8,
+                "y": -2
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 8,
+                "y": -1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 8,
+                "y": 0
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 8,
+                "y": 1
+            },
+            "tileName": "Tile_Dirt"
+        },
+        {
+            "position": {
+                "x": 8,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 9,
+                "y": -7
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 9,
+                "y": -6
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 9,
+                "y": -5
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 9,
+                "y": -4
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 9,
+                "y": -3
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 9,
+                "y": -2
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 9,
+                "y": -1
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 9,
+                "y": 0
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 9,
+                "y": 1
+            },
+            "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 9,
+                "y": 2
+            },
+            "tileName": "NotDestroy"
+        }
+    ]
+}

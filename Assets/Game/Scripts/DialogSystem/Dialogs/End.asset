@@ -17,3 +17,8 @@ MonoBehaviour:
   _sentences:
   - "\u041D\u0430 \u044D\u0442\u043E\u043C \u043F\u043E\u043A\u0430 \u0432\u0441\u0435.
     \u041E\u0441\u0432\u0430\u0438\u0432\u0430\u0439\u0441\u044F \u0442\u0443\u0442."
+  _voices:
+  - _text: "\u041D\u0430 \u044D\u0442\u043E\u043C \u043F\u043E\u043A\u0430 \u0432\u0441\u0435.
+      \u041E\u0441\u0432\u0430\u0438\u0432\u0430\u0439\u0441\u044F \u0442\u0443\u0442."
+    _audio: {fileID: 8300000, guid: 9ee229d196d939c4482bbf0aea925089, type: 3}
+    _personImage: {fileID: 21300000, guid: f6763135376fd124aafa0e38fa4417e3, type: 3}
