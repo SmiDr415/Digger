@@ -16,11 +16,7 @@ namespace MultiTool
         [SerializeField]
         private PlayerController _playerController;
         [SerializeField]
-        private GameObject _mainMenu;
-        [SerializeField]
         private GameObject _menuParentObjects;
-        [SerializeField]
-        private GameObject _gameUI;
         [SerializeField]
         private DialogManager _dialogManager;
         [SerializeField]
@@ -38,6 +34,8 @@ namespace MultiTool
 
 
         private bool _isPlaying;
+
+        public bool IsPlaying => _isPlaying;
 
         private void Awake()
         {
@@ -71,19 +69,16 @@ namespace MultiTool
             _formController.SwitchForm(FormType.Form_Sickle);
             _formController.GetDamage(0);
 
-            _gameUI.SetActive(false);
             _playerController.gameObject.SetActive(false);
-            _mainMenu.SetActive(true);
             _menuParentObjects.SetActive(true);
         }
 
 
         public void StartGame()
         {
+            _uiController.ShowGameUI(true);
             _tileMap.gameObject.SetActive(true);
-            _gameUI.SetActive(true);
             //_dialogManager.StartDialog("Осмотрись");
-            _mainMenu.SetActive(false);
             _menuParentObjects.SetActive(false);
             _isPlaying = true;
             _playerController.gameObject.SetActive(true);
@@ -96,17 +91,16 @@ namespace MultiTool
             _playerController.transform.position = Vector3.zero;
             _playerController.gameObject.SetActive(false);
             _winPanel.SetActive(true);
-            _gameUI.SetActive(false);
-            _mainMenu.SetActive(true);
             _tileMap.ClearTileMap();
             _tileMap.gameObject.SetActive(false);
+            _uiController.ShowMainMenu(true);
         }
 
 
         public void ShowOptions(bool isShow)
         {
             _settingPanel.SetActive(isShow);
-            _gameUI.SetActive(!isShow && _isPlaying);
+            _uiController.ShowOptionsUI(!isShow && _isPlaying);
             _playerController.gameObject.SetActive(!isShow && _isPlaying);
             //_mainMenu?.SetActive(!isShow && _isPlaying);
             //_menuParentObjects?.SetActive(!isShow && _isPlaying);

@@ -7,6 +7,7 @@ namespace MultiTool
     //[ExecuteInEditMode]
     public class PlayerController : MonoBehaviour
     {
+        [SerializeField] private Animator _animator;
         [SerializeField] private AudioSource _audioSourceJump;
 
         [SerializeField] private AnimationCurve _gravityCurve;
@@ -69,7 +70,7 @@ namespace MultiTool
         [SerializeField] private BoxCollider2D _gatherTrigger;
 
         private BoxCollider2D _playerBoxCollider;
-        private Rigidbody2D _rigidbody2D;
+        [SerializeField] private Rigidbody2D _rigidbody2D;
         private SpriteRenderer _spriteRenderer;
         private bool _isGrounded;
         private PlayerForm _currentForm;
@@ -82,7 +83,7 @@ namespace MultiTool
 
         public int MoneyAmount => _moneyAmount;
 
-        public bool IsReady => !_playerTeleportation.IsTeleporting && !_playerShapeshift.IsShapeshifting && IsCooldown();
+        public bool IsReady => !_playerTeleportation.IsTeleporting && !_playerShapeshift.IsShapeshifting && IsCooldown() && gameObject.activeInHierarchy;
 
         public PlayerShapeshift PlayerShapeshift => _playerShapeshift;
         public PlayerTeleportation PlayerTeleportation => _playerTeleportation;
@@ -125,7 +126,6 @@ namespace MultiTool
             _playerTeleportation = GetComponent<PlayerTeleportation>();
 
             _playerBoxCollider = GetComponent<BoxCollider2D>();
-            _rigidbody2D = GetComponent<Rigidbody2D>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
 
         }
@@ -168,7 +168,9 @@ namespace MultiTool
 
             _playerAnimation.SetJump(Mathf.Abs(moveVelocity.y) > 1f);
             _playerAnimation.SetWalk(Mathf.Abs(moveVelocity.x) > 1f);
+            _animator.applyRootMotion = Mathf.Abs(moveVelocity.x) < 0.001f;
         }
+
 
         public void Jump()
         {
@@ -180,6 +182,7 @@ namespace MultiTool
                 _audioSourceJump.Play();
 
             }
+            _animator.applyRootMotion = true;
         }
 
         private void CheckIfGrounded()

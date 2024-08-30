@@ -136,8 +136,7 @@ namespace MultiTool
             if(_isDragging && Input.GetMouseButton(0))
             {
                 Vector3 currentMousePosition = Input.mousePosition;
-                Vector3 mouseDelta = currentMousePosition - _lastMousePosition;
-
+                Vector3 mouseDelta = currentMousePosition - _lastMousePosition - Vector3.up * Screen.height / 5;
                 float moveInput = Mathf.Clamp(mouseDelta.x, -1f, 1f);
                 float jumpInput = Mathf.Clamp(mouseDelta.y, 0f, 1f);
 
@@ -154,6 +153,7 @@ namespace MultiTool
                 {
                     OnPlayerMove?.Invoke("Подпрыгни");
                     _playerController.Jump();
+                    _lastMousePosition = Input.mousePosition;
                 }
 
                 _playerController.Move(moveInput);

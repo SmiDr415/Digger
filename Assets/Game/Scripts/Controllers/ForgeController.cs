@@ -48,7 +48,7 @@ namespace MultiTool
             _currentProductionText.text = _selectedPlayerForm?.Production.ToString();
 
             _upgradeValueDamageText.text = $"+{_defaultUpgradeValue}";
-            _upgradeValueProductionSpeedText.text = $"-0.1c";
+            _upgradeValueProductionSpeedText.text = $" -0.1c ";
             _upgradeValueProductionText.text = $"+{_defaultUpgradeValue}";
 
             _priceDamageUpgradeText.text = _defaultPriceUpgrade.ToString();
@@ -60,7 +60,7 @@ namespace MultiTool
                 Button button = _upgradeButtons[i];
                 if(i == 1)
                 {
-                    button.interactable = PlayerController.Instance.MoneyAmount >= _defaultPriceUpgrade && _selectedPlayerForm.Cooldown > 0.1f;
+                    button.interactable = PlayerController.Instance.MoneyAmount >= _defaultPriceUpgrade && _selectedPlayerForm.Cooldown > 0.15f;
                 }
                 else
                 {
