@@ -76,6 +76,8 @@ namespace MultiTool
 
             if(_tilemap.HasTile(tilePos))
             {
+                int flip = tilePos.x > _playerController.transform.position.x ? 1 : -1;
+                _playerController.Move(flip);
                 _strengthDisplay.ReduceTileStrength(tilePos);
             }
         }

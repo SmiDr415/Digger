@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      wood_AmbientOcclusionMap_0: 3394752765406834316
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

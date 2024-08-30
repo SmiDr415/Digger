@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Form_Sickle02_1_0: 4800936998224869048
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

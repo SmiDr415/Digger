@@ -168,7 +168,7 @@ namespace MultiTool
 
             _playerAnimation.SetJump(Mathf.Abs(moveVelocity.y) > 1f);
             _playerAnimation.SetWalk(Mathf.Abs(moveVelocity.x) > 1f);
-            _animator.applyRootMotion = Mathf.Abs(moveVelocity.x) < 0.001f;
+            //_animator.applyRootMotion = Mathf.Abs(moveVelocity.x) < 0.001f;
         }
 
 
@@ -182,7 +182,7 @@ namespace MultiTool
                 _audioSourceJump.Play();
 
             }
-            _animator.applyRootMotion = true;
+            //_animator.applyRootMotion = true;
         }
 
         private void CheckIfGrounded()
