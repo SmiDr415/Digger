@@ -28,7 +28,7 @@ namespace MultiTool
 
         public void UpLevel()
         {
-            _maxLevel++;
+            _maxLevel = Mathf.Clamp(_maxLevel + 1, 0, 2);
             PlayerPrefs.SetInt("MaxLevel", _maxLevel);
             ShowOpenLevels();
         }
@@ -37,11 +37,19 @@ namespace MultiTool
         {
             _currentLevel = level;
             _tileMapGenerator.SetLevel(level);
+            GameManager.Instance.StartGame();
         }
 
         public void RestartLevel()
         {
+            _tileMapGenerator.SetLevel(_currentLevel);
+            GameManager.Instance.StartGame();
+        }
+
+        public void StartNextLevel()
+        {
             _tileMapGenerator.SetLevel(++_currentLevel);
+            GameManager.Instance.StartGame();
         }
 
         public void ResetProgress()

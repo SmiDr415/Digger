@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Events;
@@ -122,10 +121,10 @@ namespace StarterPack.Audio
         }
 
 
-        public void Mute(bool isOnMusic)
+        public void Mute(bool isOffMusic)
         {
             var maxVal = PlayerPrefs.GetFloat(ALLSOUNDS, 0);
-            var value = !isOnMusic ? _allSoundsVolumeSlider.minValue : maxVal;
+            var value = isOffMusic ? _allSoundsVolumeSlider.minValue : maxVal;
             _mixer.SetFloat(ALLSOUNDS, value);
 
         }

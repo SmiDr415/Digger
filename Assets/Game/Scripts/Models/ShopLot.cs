@@ -8,12 +8,14 @@ namespace MultiTool
     public class ShopLot : MonoBehaviour
     {
         [SerializeField] private Image _icon;
-        [SerializeField] private Button _sellOne;
-        [SerializeField] private Button _sellTen;
-        [SerializeField] private Text _priceOne;
-        [SerializeField] private Text _priceTen;
+
+        [SerializeField] private Slider _itemsCountSlider;
+        [SerializeField] private Text _itemCountText;
+        [SerializeField] private Text _price;
+        [SerializeField] private Text _priceResult;
 
         private DropItem _item;
+        private int _count;
         public event Action<DropItem, int> OnInventoryItemSell;
 
         public DropItem Item => _item;
@@ -22,23 +24,27 @@ namespace MultiTool
         {
             _item = item;
             _icon.sprite = item.Sprite;
-            _priceOne.text = item.SellCost.ToString();
-            _priceTen.text = (item.SellCost * 10).ToString();
-            if(count > 0)
-            {
-                _sellOne.interactable = count > 0;
-                _sellTen.interactable = count >= 10;
-                gameObject.SetActive(true);
-            }
-            else
-            {
-                gameObject.SetActive(false);
-            }
+            _price.text = item.SellCost.ToString();
+
+            _itemsCountSlider.maxValue = count;
+            _itemsCountSlider.value = count;
+
+            ChangeCount(count);
+
+            gameObject.SetActive(count > 0);
         }
 
-        public void SellItem(int count)
+
+        public void ChangeCount(float count)
         {
-            OnInventoryItemSell?.Invoke(_item, count);
+            _count = (int)count;
+            _itemCountText.text = _count.ToString();
+            _priceResult.text = (_item.SellCost * _count).ToString();
+        }
+
+        public void SellItem()
+        {
+            OnInventoryItemSell?.Invoke(_item, _count);
             AudioManager.Instance.GetMoneySfx();
         }
     }

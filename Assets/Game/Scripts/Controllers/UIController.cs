@@ -7,6 +7,14 @@ namespace MultiTool
     {
         public static UIController Instance { get; private set; }
 
+        [SerializeField] private Canvas _mainMenuCanvas;
+        [SerializeField] private Canvas _gameCanvas;
+
+        [SerializeField] private GameObject _gameUIPanel;
+        [SerializeField] private GameObject _levelsPanel;
+        [SerializeField] private GameObject _optionsPanel;
+        [SerializeField] private GameObject _hotTopPanel;
+
         [SerializeField] private Image[] _formIconsBack;
         [SerializeField] private Color _selectedColor = Color.cyan;
         [SerializeField] private Text[] _formStrenghts;
@@ -43,8 +51,44 @@ namespace MultiTool
         {
             _money.text = _playerController.MoneyAmount.ToString();
             _formController = GameManager.Instance.FormController;
+            ShowMainMenu(true);
         }
 
+
+        public void ShowMainMenu(bool isShow)
+        {
+            _mainMenuCanvas.gameObject.SetActive(isShow);
+            _gameCanvas.gameObject.SetActive(!isShow);
+            _gameUIPanel.SetActive(isShow);
+            _levelsPanel.SetActive(!isShow);
+        }
+
+        public void ShowGameUI(bool isShow)
+        {
+            _mainMenuCanvas.gameObject.SetActive(!isShow);
+            _gameCanvas.gameObject.SetActive(isShow);
+            _gameUIPanel.SetActive(isShow);
+            _hotTopPanel.SetActive(isShow);
+
+        }
+
+
+        public void ShowOptionsUI(bool isShow)
+        {
+            _optionsPanel.SetActive(isShow);
+            if(GameManager.Instance.IsPlaying)
+            {
+                _gameUIPanel.SetActive(!isShow);
+                _hotTopPanel.SetActive(!isShow);
+                _playerController.gameObject.SetActive(!isShow);
+            }
+            else
+            {
+                _gameCanvas.gameObject.SetActive(isShow);
+                _gameUIPanel.SetActive(!isShow);
+                _hotTopPanel.SetActive(!isShow);
+            }
+        }
 
         public void UpdateFormUI()
         {
