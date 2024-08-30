@@ -136,7 +136,7 @@ namespace MultiTool
             if(_isDragging && Input.GetMouseButton(0))
             {
                 Vector3 currentMousePosition = Input.mousePosition;
-                Vector3 mouseDelta = currentMousePosition - _lastMousePosition - Vector3.up * Screen.height / 5;
+                Vector3 mouseDelta = currentMousePosition - _lastMousePosition - Vector3.up * Screen.height / 10;
                 float moveInput = Mathf.Clamp(mouseDelta.x, -1f, 1f);
                 float jumpInput = Mathf.Clamp(mouseDelta.y, 0f, 1f);
 
@@ -156,7 +156,8 @@ namespace MultiTool
                     _lastMousePosition = Input.mousePosition;
                 }
 
-                _playerController.Move(moveInput);
+                if(Mathf.Abs(mouseDelta.x) > Screen.width / 10)
+                    _playerController.Move(moveInput);
                 //_lastMousePosition = currentMousePosition;
             }
 
