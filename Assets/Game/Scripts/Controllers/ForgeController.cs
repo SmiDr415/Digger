@@ -60,7 +60,12 @@ namespace MultiTool
                 Button button = _upgradeButtons[i];
                 if(i == 1)
                 {
-                    button.interactable = PlayerController.Instance.MoneyAmount >= _defaultPriceUpgrade && _selectedPlayerForm.Cooldown > 0.15f;
+                    var isMaxUpgrade = _selectedPlayerForm.Cooldown < 0.15f;
+                    button.interactable = PlayerController.Instance.MoneyAmount >= _defaultPriceUpgrade && !isMaxUpgrade;
+                    if(isMaxUpgrade)
+                    {
+                        
+                    }
                 }
                 else
                 {

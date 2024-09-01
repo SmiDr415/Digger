@@ -156,7 +156,7 @@ namespace MultiTool
                     _lastMousePosition = Input.mousePosition;
                 }
 
-                if(Mathf.Abs(mouseDelta.x) > Screen.width / 10)
+                if(Mathf.Abs(mouseDelta.x) > Screen.width / 20)
                     _playerController.Move(moveInput);
                 //_lastMousePosition = currentMousePosition;
             }

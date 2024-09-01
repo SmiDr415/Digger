@@ -76,7 +76,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 8769605735079968575}
   _phisicCollider: {fileID: 4694890385043760723}
-  _speed: 2
+  _speed: 5
 --- !u!61 &9184112499753795807
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -42,7 +42,7 @@ namespace MultiTool
                 _isTeleporting = false;
                 _playerAnimation.Teleport(false);
                 GameManager.Instance.UIController.ShowCancelButton(false);
-                GameManager.Instance.Win();
+                GameManager.Instance.ShowLevelsMenu();
             }
         }
 

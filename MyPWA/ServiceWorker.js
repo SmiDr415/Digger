@@ -1,9 +1,9 @@
 const cacheName = '"AnroiDevel-MultiTool-1.0"';
 const contentToCache = [
-    "Build/c6ba0bf6a1939bdc310bf3b115d39cc1.loader.js",
-    "Build/3b5fdfce7e74c7d054d300e668794f65.framework.js.unityweb",
-    "Build/e686a51a7f6e376cb8c9d6ca88e06088.data.unityweb",
-    "Build/32d1bdb803a05f6a97fc52d86c80f27d.wasm.unityweb",
+    "Build/40b0f14b1efdf376baccf14d6c0ef188.loader.js",
+    "Build/11a65cc0e8628c0a9edd1220c2afc1f4.framework.js.unityweb",
+    "Build/093597b1ebb720c8940689b4ff3a4af9.data.unityweb",
+    "Build/b53f1dba378d07422905281ac6a6502e.wasm.unityweb",
     "TemplateData/style.css"
 ];
 

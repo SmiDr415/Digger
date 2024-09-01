@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace MultiTool
 {
-    [RequireComponent(typeof(BoxCollider2D), typeof(Rigidbody2D), typeof(SpriteRenderer))]
+    [RequireComponent( typeof(Rigidbody2D), typeof(SpriteRenderer))]
     //[ExecuteInEditMode]
     public class PlayerController : MonoBehaviour
     {

@@ -17,6 +17,8 @@ namespace MultiTool
         private Coroutine _coroutineWay;
         private int _count = 1;
 
+        private bool _startWay = false;
+
 
         public void Init()
         {
@@ -36,16 +38,23 @@ namespace MultiTool
 
         private void FixedUpdate()
         {
-            if(_coroutineWay == null)
+            if(!_startWay && _coroutineWay == null)
+            {
                 if(Vector2.Distance(transform.position, _player.position) < _playerController.GatherRadius)
                 {
                     _coroutineWay = StartCoroutine(MoveToTargetCoroutine());
                 }
+            }
+            else if(_startWay && _coroutineWay == null)
+            {
+                _coroutineWay = StartCoroutine(MoveToTargetCoroutine());
+            }
         }
 
         // Корутина для плавного движения к цели
         private IEnumerator MoveToTargetCoroutine()
         {
+            _startWay = true;
             _phisicCollider.enabled = false;
             GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
             while(Vector3.Distance(transform.position, _player.position) > 0.01f) // Проверяем расстояние до цели
@@ -55,6 +64,7 @@ namespace MultiTool
             }
 
             transform.position = _player.position;
+            _startWay = false;
         }
 
 
@@ -64,6 +74,7 @@ namespace MultiTool
             {
                 if(InventoryManager.Instance.AddItem(_dropItem.NameItemEN, _count))
                 {
+                    _startWay = false;
                     Destroy(gameObject);
                 }
                 else
