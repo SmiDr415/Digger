@@ -47,5 +47,14 @@ namespace MultiTool
             OnGetDamage?.Invoke(_currentFormIndex, _currentForm.Strength);
         }
 
+        internal void RestoreAllForms()
+        {
+            for(int i = 0; i < _forms.Length; i++)
+            {
+                PlayerForm form = _forms[i];
+                form.Repair(500);
+                UIController.Instance.SetStrengthValue(i, form.Strength);
+            }
+        }
     }
 }

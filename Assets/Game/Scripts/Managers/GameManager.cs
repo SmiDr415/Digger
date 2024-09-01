@@ -25,6 +25,8 @@ namespace MultiTool
         private GameObject _winPanel;
         [SerializeField]
         private TileMapGenerator _tileMap;
+        [SerializeField]
+        private LevelController _levelController;
 
         private FormController _formController;
 
@@ -82,8 +84,20 @@ namespace MultiTool
             _menuParentObjects.SetActive(false);
             _isPlaying = true;
             _playerController.gameObject.SetActive(true);
+
+            _formController.RestoreAllForms();
         }
 
+        public void ShowLevelsMenu()
+        {
+            _isPlaying = false;
+            _playerController.transform.position = Vector3.zero;
+            _playerController.gameObject.SetActive(false);
+            _tileMap.ClearTileMap();
+            _tileMap.gameObject.SetActive(false);
+            _uiController.ShowMainMenu(true);
+        }
+        
 
         public void Win()
         {
@@ -94,6 +108,7 @@ namespace MultiTool
             _tileMap.ClearTileMap();
             _tileMap.gameObject.SetActive(false);
             _uiController.ShowMainMenu(true);
+            _levelController.LevelComplete();
         }
 
 

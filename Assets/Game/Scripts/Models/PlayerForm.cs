@@ -96,5 +96,10 @@ namespace MultiTool
         {
             _productionLevel++;
         }
+
+        internal void Repair(int val)
+        {
+            _strength = Math.Clamp(_strength + val, 0, _durability);
+        }
     }
 }

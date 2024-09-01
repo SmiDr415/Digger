@@ -8,6 +8,9 @@ namespace MultiTool
     [System.Serializable]
     public class LevelData
     {
+        public int level; // номер уровня от нуля
+        public int timeTreeStars; // время на три звезды
+        public int timeTwoStars;
         public int gridWidth;                        // Ширина тайловой сетки
         public int gridHeight;                       // Высота тайловой сетки
         public Vector2Int startPosition;           // Координаты старта

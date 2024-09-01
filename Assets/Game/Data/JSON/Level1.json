@@ -1,6 +1,9 @@
 {
+    "level": 1,
+    "timeTreeStars": 100,
+    "timeTwoStars": 120,
     "gridWidth": 25,
-    "gridHeight": 11,
+    "gridHeight": 10,
     "startPosition": {
         "x": 7,
         "y": -5
