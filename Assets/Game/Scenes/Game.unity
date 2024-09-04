@@ -11726,7 +11726,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &809552931
 Transform:
   m_ObjectHideFlags: 0
@@ -13271,7 +13271,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Version: 030924'
+  m_Text: 'Version: 040924'
 --- !u!222 &1030930270
 CanvasRenderer:
   m_ObjectHideFlags: 0
