@@ -1,6 +1,6 @@
 # Multi Tool
 
-![Digger Game Banner](https://igromaker.ru/Games/Digger/bannerMultiTool4.png)
+![Digger Game Banner](https://igromaker.ru/Games/MultiTool/bannerMultiTool4.png)
 
 ## Описание
 
