@@ -18,6 +18,7 @@ namespace MultiTool
 
             _icon.sprite = item.Sprite;
             _quantityText.text = quantity > 1 ? quantity.ToString() : "";
+            _icon.color = Color.white;
         }
 
         public void ClearSlot()
@@ -25,7 +26,7 @@ namespace MultiTool
             _item = null;
             _quantity = 0;
 
-            _icon.sprite = null;
+            _icon.color = new(0, 0, 0, 0);
             _quantityText.text = "";
         }
     }

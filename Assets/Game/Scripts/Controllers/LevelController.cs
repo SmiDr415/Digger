@@ -16,6 +16,8 @@ namespace MultiTool
         private int _maxLevel;
         private LevelData _currentLevelData;
 
+        private ProceduralMapGenerator _proceduralMapGenerator;
+
         private void Start()
         {
             if(PlayerPrefs.HasKey("MaxLevel"))
@@ -62,6 +64,19 @@ namespace MultiTool
             GameManager.Instance.StartGame();
         }
 
+
+        public void StartProceduralMapLevel()
+        {
+            if(_proceduralMapGenerator == null)
+                _proceduralMapGenerator = new(10, 20);
+
+            _currentLevelData = _proceduralMapGenerator.GenerateRandomLevelData();
+            _tileMapGenerator.GenerateTiles(_currentLevelData);
+            if(!_levelTimer.IsRunning)
+                _levelTimer.StartTimer();
+            GameManager.Instance.StartGame(true);
+        }
+
         public void RestartLevel()
         {
             _currentLevel--;
@@ -90,7 +105,7 @@ namespace MultiTool
         public void ShowBrifing(int levelNum)
         {
             _currentLevel = levelNum;
-            LoadLevelData(_levelDatas[levelNum]);
+            LoadLevelData(_levelDatas[levelNum - 1]);
             _brickUI.Init(_currentLevelData);
         }
 

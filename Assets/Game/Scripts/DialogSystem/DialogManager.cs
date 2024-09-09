@@ -19,7 +19,6 @@ namespace DialogSystem
 
         private Queue<Voice> _voices;
         private Coroutine _coroutine;
-
         private Dialog _currentDialog;
 
         private void Start()
@@ -34,6 +33,7 @@ namespace DialogSystem
                 if(d.MissionName == name)
                 {
                     _currentDialog = d;
+                    break;
                 }
             }
 
@@ -46,51 +46,74 @@ namespace DialogSystem
                 _voices.Enqueue(v);
             }
 
-            var voice = _voices.Dequeue();
-            _dialogText.text = voice.Text;
-            _characterImage.sprite = voice.PersonImage;
-            _audioSource.PlayOneShot(voice.Audio);
-            Invoke(nameof(DisplayNextSentence), 5.0f);
+            DisplayNextSentence();
         }
 
         public void DisplayNextSentence()
         {
-            _coroutine ??= StartCoroutine(NextSentence());
-        }
+            if(_coroutine != null)
+            {
+                StopCoroutine(_coroutine);
+                _coroutine = null;
+            }
 
-
-        public void FastNext()
-        {
-            StopAllCoroutines();
             _coroutine = StartCoroutine(NextSentence());
         }
 
+        public void FastNext()
+        {
+            if(_coroutine != null)
+            {
+                StopCoroutine(_coroutine);
+                _coroutine = null;
+            }
+
+            if(_audioSource.isPlaying)
+            {
+                _audioSource.Stop();
+            }
+
+            if(_voices.Count > 0)
+            {
+                DisplayNextSentence();
+            }
+            else
+            {
+                EndDialog();
+            }
+        }
 
         private IEnumerator NextSentence()
         {
-
             _animator.SetTrigger("Next");
+
             if(_voices.Count == 0)
             {
                 EndDialog();
                 yield break;
             }
 
-            yield return new WaitForSeconds(1.0f);
             var voice = _voices.Dequeue();
             _dialogText.text = voice.Text;
             _characterImage.sprite = voice.PersonImage;
-            _audioSource.Stop();
             _audioSource.PlayOneShot(voice.Audio);
 
+            // Ждем, пока анимация завершится
+            yield return new WaitForSeconds(1.0f);
+
+            // Ждем завершения воспроизведения аудио
             yield return new WaitWhile(() => _audioSource.isPlaying);
+
+            // Если еще остались голоса, продолжаем
+            if(_voices.Count > 0)
             {
-                if(_voices.Count > 0 && _coroutine == null)
-                {
-                    DisplayNextSentence();
-                }
+                _coroutine = null; // Очищаем корутину для следующего вызова
+                DisplayNextSentence();
             }
-            _coroutine = null;
+            else
+            {
+                EndDialog();
+            }
         }
 
         private void EndDialog()
@@ -100,9 +123,8 @@ namespace DialogSystem
             if(_currentDialog.MissionName != "Конец")
             {
                 _missionManager.StartMission(_currentDialog.MissionName);
-                _audioSource.Stop();
-
             }
+            _audioSource.Stop();
         }
     }
 }

@@ -4,11 +4,13 @@ using UnityEngine;
 public class CameraAspectRatio : MonoBehaviour
 {
     [SerializeField] private float _targetAspect = 16.0f / 9.0f; // Целевое соотношение сторон
+    [SerializeField] private Canvas _back;
     private Camera _mainCamera;
     private float _lastAspectRatio;
 
     private void Start()
     {
+        _back.gameObject.SetActive(true);
         _mainCamera = GetComponent<Camera>();
         AdjustCamera(); // Первоначальная настройка камеры
     }

@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 namespace MultiTool
 {
-    public class ForgeController : MonoBehaviour
+    public partial class ForgeController : MonoBehaviour
     {
         [SerializeField] private Image _formIcon;
         [SerializeField] private Text _currentDamageText;
@@ -20,16 +21,14 @@ namespace MultiTool
 
         [SerializeField] private Button[] _upgradeButtons;
 
-        private int _defaultPriceUpgrade = 100;
-        private int _defaultUpgradeValue = 1;
-
         private PlayerForm _selectedPlayerForm;
-
         private FormController _formController;
+        private Dictionary<UpgradeType, UpgradeUIElements> _upgradeUIElements;
 
         private void OnEnable()
         {
             _selectedPlayerForm = PlayerController.Instance.Form;
+            InitializeUIElements();
             UpdateFormInfo();
         }
 
@@ -38,88 +37,96 @@ namespace MultiTool
             _formController = GameManager.Instance.FormController;
         }
 
+        private void InitializeUIElements()
+        {
+            _upgradeUIElements = new Dictionary<UpgradeType, UpgradeUIElements>
+            {
+                { UpgradeType.Damage, new UpgradeUIElements(_currentDamageText, _upgradeValueDamageText, _priceDamageUpgradeText, _upgradeButtons[0]) },
+                { UpgradeType.Speed, new UpgradeUIElements(_currentProductionSpeedText, _upgradeValueProductionSpeedText, _priceProductionSpeedUpgradeText, _upgradeButtons[1]) },
+                { UpgradeType.Loot, new UpgradeUIElements(_currentProductionText, _upgradeValueProductionText, _priceProductionUpgradeText, _upgradeButtons[2]) }
+            };
+        }
 
         private void UpdateFormInfo()
         {
             _formIcon.sprite = _selectedPlayerForm.Sprite;
 
-            _currentDamageText.text = _selectedPlayerForm.Damage.ToString();
-            _currentProductionSpeedText.text = $"{_selectedPlayerForm.Cooldown}c";
-            _currentProductionText.text = _selectedPlayerForm?.Production.ToString();
-
-            _upgradeValueDamageText.text = $"+{_defaultUpgradeValue}";
-            _upgradeValueProductionSpeedText.text = $" -0.1c ";
-            _upgradeValueProductionText.text = $"+{_defaultUpgradeValue}";
-
-            _priceDamageUpgradeText.text = _defaultPriceUpgrade.ToString();
-            _priceProductionSpeedUpgradeText.text = _defaultPriceUpgrade.ToString();
-            _priceProductionUpgradeText.text = _defaultPriceUpgrade.ToString();
-
-            for(int i = 0; i < _upgradeButtons.Length; i++)
+            foreach(var upgradeType in _upgradeUIElements.Keys)
             {
-                Button button = _upgradeButtons[i];
-                if(i == 1)
-                {
-                    var isMaxUpgrade = _selectedPlayerForm.Cooldown < 0.15f;
-                    button.interactable = PlayerController.Instance.MoneyAmount >= _defaultPriceUpgrade && !isMaxUpgrade;
-                    if(isMaxUpgrade)
-                    {
-                        
-                    }
-                }
-                else
-                {
-                    button.interactable = PlayerController.Instance.MoneyAmount >= _defaultPriceUpgrade;
-                }
-
+                UpdateUpgradeUI(upgradeType);
             }
+        }
+
+        private void UpdateUpgradeUI(UpgradeType upgradeType)
+        {
+            UpgradeUIElements elements = _upgradeUIElements[upgradeType];
+            UpgradeLevel upLevel = _selectedPlayerForm.GetCost(upgradeType);
+            elements.Button.gameObject.SetActive(upLevel != null);
+            elements.CurrentText.text = GetCurrentUpgradeValue(upgradeType);
+
+            if(upLevel != null)
+            {
+                var oper = upgradeType == UpgradeType.Speed ? string.Empty : "+";
+                elements.UpgradeValueText.text = $"{oper}{upLevel.ChangeValue}";
+                elements.PriceText.text = upLevel.Cost.ToString();
+
+                bool isInteractable = PlayerController.Instance.MoneyAmount >= upLevel.Cost && !IsMaxUpgrade(upgradeType);
+                elements.Button.interactable = isInteractable;
+
+                if(isInteractable)
+                {
+                    elements.Button.onClick.RemoveAllListeners();
+                    elements.Button.onClick.AddListener(() => Upgrade(upgradeType, upLevel.Cost, upLevel.ChangeValue));
+                }
+            }
+        }
+
+        private string GetCurrentUpgradeValue(UpgradeType upgradeType)
+        {
+            return upgradeType switch
+            {
+                UpgradeType.Damage => _selectedPlayerForm.Damage.ToString(),
+                UpgradeType.Speed => $"{_selectedPlayerForm.Cooldown}c",
+                UpgradeType.Loot => _selectedPlayerForm.Production.ToString(),
+                _ => string.Empty,
+            };
+        }
+
+        private bool IsMaxUpgrade(UpgradeType upgradeType)
+        {
+            if(upgradeType == UpgradeType.Speed)
+                return _selectedPlayerForm.Cooldown < 0.15f;
+            // Add conditions for other upgrade types if needed
+            return false;
         }
 
         public void Switch(bool isUp)
         {
             var newFormIndex = isUp ? _selectedPlayerForm.Index + 1 : _selectedPlayerForm.Index - 1;
             var formsCount = _formController.AllForms.Length;
-            if(newFormIndex < 0)
-            {
-                _selectedPlayerForm = _formController.AllForms[formsCount - 1];
-            }
-            else if(newFormIndex >= formsCount)
-            {
-                _selectedPlayerForm = _formController.AllForms[0];
-            }
-            else
-            {
-                _selectedPlayerForm = _formController.AllForms[newFormIndex];
-            }
-
+            _selectedPlayerForm = _formController.AllForms[(newFormIndex + formsCount) % formsCount];
             UpdateFormInfo();
-
         }
 
-        public void Upgrade(int numStat)
+        public void Upgrade(UpgradeType upgradeType, int cost, float value)
         {
-            switch(numStat)
+            switch(upgradeType)
             {
-                case 1:
-                    PlayerController.Instance.AddMoney(-_defaultPriceUpgrade);
-                    _selectedPlayerForm.DamageUpgrade();
+                case UpgradeType.Damage:
+                    _selectedPlayerForm.DamageUpgrade((int)value);
                     break;
-                case 2:
-                    PlayerController.Instance.AddMoney(-_defaultPriceUpgrade);
-                    _selectedPlayerForm.ProductionSpeedUpgrade();
+                case UpgradeType.Speed:
+                    _selectedPlayerForm.ProductionSpeedUpgrade(value);
                     break;
-                case 3:
-                    PlayerController.Instance.AddMoney(-_defaultPriceUpgrade);
-                    _selectedPlayerForm.ProductionUpgrade();
+                case UpgradeType.Loot:
+                    _selectedPlayerForm.ProductionUpgrade((int)value);
                     break;
                 default:
-                    Debug.Log("error");
+                    Debug.Log("Unknown upgrade type.");
                     break;
             }
-
+            PlayerController.Instance.AddMoney(-cost);
             UpdateFormInfo();
         }
-
     }
 }
-

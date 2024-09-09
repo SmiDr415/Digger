@@ -15,7 +15,7 @@ namespace MultiTool
 
         public void Init(LevelData levelData)
         {
-            _level.text = $"Уровень {levelData.level}";
+            _level.text = $"Уровень {levelData.level + 1}";
 
             // Преобразуем время в секундах в минуты и секунды
             int targetTime1Minutes = levelData.timeTreeStars / 60;

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace MultiTool
 {
@@ -15,6 +16,6 @@ namespace MultiTool
         public int gridHeight;                       // Высота тайловой сетки
         public Vector2Int startPosition;           // Координаты старта
         public Vector2Int finishPosition;          // Координаты финиша
-        public CellData[] cells;                     // Массив данных для каждой клетки
+        public List<CellData> cells;                     // Массив данных для каждой клетки
     }
 }

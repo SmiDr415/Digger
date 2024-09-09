@@ -32,5 +32,7 @@ namespace MultiTool
             PlayerController.Instance.transform.position = new Vector3(levelData.startPosition.x, levelData.startPosition.y, 0);
             _strengthDisplay.InitializeTileStrengthDict();
         }
+
+
     }
 }

@@ -8,9 +8,11 @@ namespace MultiTool
 
         private int _lastScreenWidth;
         private int _lastScreenHeight;
+        private Camera _camera;
 
         private void Start()
         {
+            _camera = GetComponent<Camera>();
             _lastScreenWidth = Screen.width;
             _lastScreenHeight = Screen.height;
             UpdateScreenOrientation();
@@ -28,7 +30,9 @@ namespace MultiTool
 
         private void UpdateScreenOrientation()
         {
-            _blockedVerticalScreen.SetActive(Screen.width < Screen.height);
+            bool isVerticalOrientation = Screen.width < Screen.height;
+            _blockedVerticalScreen.SetActive(isVerticalOrientation);
+            _camera.depth = isVerticalOrientation ? 1 : 0;
         }
     }
 }

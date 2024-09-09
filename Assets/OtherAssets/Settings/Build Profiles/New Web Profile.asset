@@ -60,8 +60,11 @@ MonoBehaviour:
     - line: '|     y: 0'
     - line: '|     width: 1'
     - line: '|     height: 1'
-    - line: '|   m_SplashScreenLogos: []'
-    - line: '|   m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 04aa30e7bae8e5c4bb6718fe6142845d,
+    - line: '|   m_SplashScreenLogos:'
+    - line: '|   - logo: {fileID: 21300000, guid: 9df9144b07b23f44489a46feb38f0886,
+        type: 3}'
+    - line: '|     duration: 2'
+    - line: '|   m_VirtualRealitySplashScreen: {fileID: 2800000, guid: fd129c136e75cb34799f7d91e317831b,
         type: 3}'
     - line: '|   m_HolographicTrackingLossScreen: {instanceID: 0}'
     - line: '|   defaultScreenWidth: 1920'
@@ -310,7 +313,15 @@ MonoBehaviour:
     - line: '|   AndroidAppBundleSizeToValidate: 150'
     - line: '|   AndroidReportGooglePlayAppDependencies: 1'
     - line: '|   androidSymbolsSizeThreshold: 800'
-    - line: '|   m_BuildTargetIcons: []'
+    - line: '|   m_BuildTargetIcons:'
+    - line: '|   - m_BuildTarget: '
+    - line: '|     m_Icons:'
+    - line: '|     - serializedVersion: 2'
+    - line: '|       m_Icon: {fileID: 2800000, guid: 5a13e89fb5c33dc41b46ab78719de7e8,
+        type: 3}'
+    - line: '|       m_Width: 128'
+    - line: '|       m_Height: 128'
+    - line: '|       m_Kind: 0'
     - line: '|   m_BuildTargetPlatformIcons: []'
     - line: '|   m_BuildTargetBatching: []'
     - line: '|   m_BuildTargetShaderSettings: []'
@@ -604,16 +615,16 @@ MonoBehaviour:
     - line: '|   ps4IncludedModules: []'
     - line: '|   ps4attribVROutputEnabled: 0'
     - line: '|   monoEnv: '
-    - line: '|   splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid:
-        040be0e474e09894ca320b08d9462cc8, type: 3}'
+    - line: '|   splashScreenBackgroundSourceLandscape: {fileID: -8148323656620213880,
+        guid: f305861febdb1474d807fb8c90155ffd, type: 3}'
     - line: '|   splashScreenBackgroundSourcePortrait: {instanceID: 0}'
     - line: '|   blurSplashScreenBackground: 1'
     - line: '|   spritePackerPolicy: '
     - line: '|   webGLMemorySize: 32'
     - line: '|   webGLExceptionSupport: 1'
-    - line: '|   webGLNameFilesAsHashes: 1'
+    - line: '|   webGLNameFilesAsHashes: 0'
     - line: '|   webGLShowDiagnostics: 0'
-    - line: '|   webGLDataCaching: 1'
+    - line: '|   webGLDataCaching: 0'
     - line: '|   webGLDebugSymbols: 0'
     - line: '|   webGLEmscriptenArgs: '
     - line: '|   webGLModulesDirectory: '
@@ -774,7 +785,7 @@ MonoBehaviour:
       data:
         m_Development: 0
         m_ConnectProfiler: 0
-        m_BuildWithDeepProfilingSupport: 0
+        m_BuildWithDeepProfilingSupport: 1
         m_AllowDebugging: 0
         m_WaitForManagedDebugger: 0
         m_ManagedDebuggerFixedPort: 0

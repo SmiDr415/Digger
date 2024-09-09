@@ -58,6 +58,13 @@ namespace MultiTool
             }
             return null;
         }
+
+        internal string GetRandomTileName(float y)
+        {
+            int index = y > Random.Range(0.0f, 1) ? 1 : 2;
+
+            return _tileDatas[index].NameEn;
+        }
     }
 
 }

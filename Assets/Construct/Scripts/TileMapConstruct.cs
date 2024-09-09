@@ -22,10 +22,8 @@ namespace MultiTool
         [SerializeField] private TextAsset _fileJson;
 
         private bool _saveProcess;
+        private ProceduralMapGenerator _proceduralMapGenerator;
 
-        /// <summary>
-        /// Сохраняет текущую карту тайлов в JSON файл.
-        /// </summary>
         public async void SaveTileMap()
         {
             if(_saveProcess)
@@ -82,7 +80,7 @@ namespace MultiTool
                 gridHeight = _tilemap.size.y,
                 startPosition = startPos,
                 finishPosition = finishPos,
-                cells = cellDataList.ToArray(),
+                cells = cellDataList,
                 timeTreeStars = _timeTreeStars,
                 timeTwoStars = _timeTwoStars
             };
@@ -137,6 +135,28 @@ namespace MultiTool
 
             _level = levelData.level;
             _timeTreeStars = levelData.timeTreeStars;
+        }
+
+        public void GenerateRandomMap()
+        {
+            _tilemap.ClearAllTiles();
+            if(_proceduralMapGenerator == null)
+            _proceduralMapGenerator = new(10, 20);
+            LevelData levelData = _proceduralMapGenerator.GenerateRandomLevelData();
+
+            foreach(var cell in levelData.cells)
+            {
+                TileBase tile = _tileDataSO.GetTileDataByName(cell.tileName)?.Tiles[0];
+
+                if(tile != null)
+                {
+                    _tilemap.SetTile((Vector3Int)cell.position, tile);
+                }
+            }
+
+            _level = levelData.level;
+            _timeTreeStars = levelData.timeTreeStars;
+
         }
 
     }

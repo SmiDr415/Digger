@@ -12,8 +12,9 @@ namespace MultiTool
 
         private void Start()
         {
-            transform.position = _player.position - Vector3.forward;
-            _offset = transform.position - _player.position; // Вычисляем начальный отступ
+            //transform.position = _player.position - Vector3.forward;
+            _targetPosition = transform.position;
+            _offset = transform.position; // Вычисляем начальный отступ
         }
 
         private void FixedUpdate()

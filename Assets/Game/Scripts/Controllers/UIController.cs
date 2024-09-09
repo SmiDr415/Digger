@@ -19,6 +19,7 @@ namespace MultiTool
         [SerializeField] private Color _selectedColor = Color.cyan;
         [SerializeField] private Text[] _formStrenghts;
         [SerializeField] private Text _money;
+        [SerializeField] private Text _shopMoney;
 
         [SerializeField] private PlayerController _playerController;
 
@@ -49,7 +50,8 @@ namespace MultiTool
 
         private void Start()
         {
-            _money.text = _playerController.MoneyAmount.ToString();
+            UpdateMoneyUI();
+
             _formController = GameManager.Instance.FormController;
             ShowMainMenu(true);
         }
@@ -61,6 +63,7 @@ namespace MultiTool
             _gameCanvas.gameObject.SetActive(!isShow);
             _gameUIPanel.SetActive(isShow);
             _levelsPanel.SetActive(!isShow);
+
         }
 
         public void ShowGameUI(bool isShow)
@@ -106,6 +109,7 @@ namespace MultiTool
         private void UpdateMoneyUI()
         {
             _money.text = _playerController.MoneyAmount.ToString();
+            _shopMoney.text = _playerController.MoneyAmount.ToString();
         }
 
         public void SetStrengthValue(int index, int val)
