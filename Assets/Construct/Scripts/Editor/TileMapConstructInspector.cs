@@ -21,5 +21,10 @@ public class TileMapConstructInspector : Editor
             tileMapConstruct.SaveTileMap();
         }
 
+        if(GUILayout.Button("Generate Random Map"))
+        {
+            tileMapConstruct.GenerateRandomMap();
+        }
+
     }
 }

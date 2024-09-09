@@ -112,12 +112,12 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/40b0f14b1efdf376baccf14d6c0ef188.loader.js";
+      var loaderUrl = buildUrl + "/MyPWA.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/093597b1ebb720c8940689b4ff3a4af9.data.unityweb",
-        frameworkUrl: buildUrl + "/11a65cc0e8628c0a9edd1220c2afc1f4.framework.js.unityweb",
-        codeUrl: buildUrl + "/b53f1dba378d07422905281ac6a6502e.wasm.unityweb",
+        dataUrl: buildUrl + "/MyPWA.data.unityweb",
+        frameworkUrl: buildUrl + "/MyPWA.framework.js.unityweb",
+        codeUrl: buildUrl + "/MyPWA.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "AnroiDevel",
         productName: "MultiTool",
@@ -132,7 +132,7 @@
         document.getElementsByTagName('head')[0].appendChild(meta);
       }
 
-      canvas.style.background = "url('" + buildUrl + "/e38183f3d7061e9d6c26f12d560c1e40.jpg') center / cover";
+      canvas.style.background = "url('" + buildUrl + "/MyPWA.jpg') center / cover";
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");

@@ -9,6 +9,7 @@ namespace MultiTool
         [SerializeField] private GameObject _lotItemPrefab;
         [SerializeField] private InventoryManager _inventoryManager;
         [SerializeField] private Transform _parentLots;
+        [SerializeField] private GameObject _closeLable;
 
         private List<ShopLot> _lots = new();
 
@@ -21,6 +22,7 @@ namespace MultiTool
         public void Init()
         {
             var inventoryItems = _inventoryManager.Items;
+            _closeLable.SetActive(inventoryItems.Count <= 0);
             foreach(var lot in _lots)
             {
                 lot.gameObject.SetActive(false);

@@ -8,6 +8,7 @@ public class LevelTimer : MonoBehaviour
     private float _elapsedTime;              // Прошедшее время в секундах
     private bool _isRunning;                 // Флаг состояния таймера
 
+    public bool IsRunning => _isRunning;
 
     private void Update()
     {

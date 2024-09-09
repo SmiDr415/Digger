@@ -9,7 +9,7 @@ namespace MultiTool
             if(collision.gameObject.TryGetComponent(out PlayerController player))
             {
                 player.Stop();
-                GameManager.Instance.Win();
+                GameManager.Instance.Finish();
             }
         }
     }

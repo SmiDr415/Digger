@@ -20,10 +20,13 @@ namespace MultiTool
         private float _timeStepRepair = 1f;
         private float _lastTimeRepair;
 
-        private int _damageLevel = 0;
-        private int _productionSpeedLevel = 0;
-        private int _productionLevel = 0;
+        private int _damageLevel = 1;
+        private int _productionSpeedLevel = 1;
+        private int _productionLevel = 1;
         private int _repairStepValue = 10;
+        private int _production = 1;
+
+        private UpgradeData _upgradeData;
 
         public PlayerForm(FormData data, int index)
         {
@@ -37,6 +40,7 @@ namespace MultiTool
             _tileHarvestables = data.TileHarvestable;
             _cost = data.Cost;
             _durability = data.Durability;
+            _upgradeData = data.UpgradeData;
         }
 
         public int Index => _index;
@@ -44,9 +48,9 @@ namespace MultiTool
         public Vector2 SizeInTiles => _sizeInTiles;
         public Sprite Sprite => _sprite;
         public int Strength => _strength;
-        public float Cooldown => _cooldown - (float)_productionSpeedLevel / 10;
-        public int Damage => _damage + _damageLevel;
-        public int Production => 1 + _productionLevel;
+        public float Cooldown => (float)Math.Round(_cooldown, 2);
+        public int Damage => _damage;
+        public int Production => _production;
         public int Cost => _cost;
         public int Durability => _durability;
 
@@ -54,6 +58,17 @@ namespace MultiTool
         {
             _strength = Mathf.Clamp(_strength -= _cost * val, 0, _durability);
         }
+
+        public UpgradeLevel GetCost(UpgradeType upgradeType)
+        {
+            var upgrade = _upgradeData.Upgrades.Find(u => u.UpgradeType == upgradeType);
+            var levelType = upgradeType == UpgradeType.Speed ? _productionSpeedLevel : upgradeType == UpgradeType.Damage ? _damageLevel : _productionLevel;
+
+            var lev = upgrade.Levels.Find(l => l.Level == levelType);
+            return lev;
+        }
+
+
 
         public HarvestType GetHarvestType(TileType tileType)
         {
@@ -82,24 +97,30 @@ namespace MultiTool
             }
         }
 
-        public void DamageUpgrade()
+        public void DamageUpgrade(int value)
         {
             _damageLevel++;
+            _damage += value;
         }
 
-        public void ProductionSpeedUpgrade()
+        public void ProductionSpeedUpgrade(float value)
         {
             _productionSpeedLevel++;
+            _cooldown += value;
         }
 
-        public void ProductionUpgrade()
+        public void ProductionUpgrade(int value)
         {
             _productionLevel++;
+            _production += value;
+
         }
 
         internal void Repair(int val)
         {
             _strength = Math.Clamp(_strength + val, 0, _durability);
         }
+
+
     }
 }
