@@ -10,6 +10,7 @@ namespace MultiTool
             {
                 player.Stop();
                 GameManager.Instance.Finish();
+                Destroy(this);
             }
         }
     }

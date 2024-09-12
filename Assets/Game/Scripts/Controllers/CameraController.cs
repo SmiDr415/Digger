@@ -19,7 +19,7 @@ namespace MultiTool
 
         private void FixedUpdate()
         {
-            if(_player != null)
+            if(_player.gameObject.activeInHierarchy)
             {
                 Vector3 smoothedPosition = Vector3.Lerp(transform.position, _targetPosition, _smoothSpeed);
                 transform.position = smoothedPosition;

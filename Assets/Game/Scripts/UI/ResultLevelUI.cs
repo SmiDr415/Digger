@@ -30,7 +30,7 @@ namespace MultiTool
             }
             gameObject.SetActive(true);
 
-            _nextLevelButton.interactable = result.level < 2;
+            _nextLevelButton.interactable = result.level < 3;
         }
     }
 }

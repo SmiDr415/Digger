@@ -51,7 +51,7 @@ namespace MultiTool
         {
             foreach(var tileData in _tileDatas)
             {
-                if(tileName.Contains(tileData.NameEn) || tileData.NameEn.Contains(tileName))
+                if(tileName.Contains(tileData.NameEn) || tileData.NameEn.Contains(tileName) || tileData.NameEn.EndsWith(tileName)|| tileData.NameEn.ToLower().Contains(tileName.ToLower()))
                 {
                     return tileData;
                 }
@@ -64,6 +64,17 @@ namespace MultiTool
             int index = y > Random.Range(0.0f, 1) ? 1 : 2;
 
             return _tileDatas[index].NameEn;
+        }
+
+        internal TileBase GetCrackTile(string name, int currentStrength)
+        {
+            var tileData = GetTileDataByName(name);
+            var durability = (int)(((float)currentStrength / tileData.Durability[0]) * 10);
+
+            var val = durability >= 5 ? durability >= 7 ? 0 : 1 : durability < 3 ? 3 : 2;
+            var cracksData = GetTileDataByName("Crack");
+            var res = cracksData.Tiles[val];
+            return res;
         }
     }
 

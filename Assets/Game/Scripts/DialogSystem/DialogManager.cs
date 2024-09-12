@@ -16,6 +16,8 @@ namespace DialogSystem
         [SerializeField] private Animator _animator;
         [SerializeField] private MissionManager _missionManager;
         [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private LevelController _levelController;
+        [SerializeField] private TileMapGenerator _tileMapGenerator;
 
         private Queue<Voice> _voices;
         private Coroutine _coroutine;
@@ -28,6 +30,8 @@ namespace DialogSystem
 
         public void StartDialog(string name)
         {
+            PlayerController.Instance.gameObject.SetActive(false);
+            _tileMapGenerator.ClearTileMap();
             foreach(var d in _dialogList)
             {
                 if(d.MissionName == name)
@@ -37,8 +41,7 @@ namespace DialogSystem
                 }
             }
 
-            PlayerController.Instance.gameObject.SetActive(false);
-            _dialogPanel.SetActive(true);
+            UIController.Instance.ShowDialog();
 
             _voices.Clear();
             foreach(var v in _currentDialog.Voices)
@@ -49,7 +52,7 @@ namespace DialogSystem
             DisplayNextSentence();
         }
 
-        public void DisplayNextSentence()
+        private void DisplayNextSentence()
         {
             if(_coroutine != null)
             {
@@ -118,12 +121,15 @@ namespace DialogSystem
 
         private void EndDialog()
         {
+            _levelController.StartProceduralMapLevel();
+
             _dialogPanel.SetActive(false);
             PlayerController.Instance.gameObject.SetActive(true);
             if(_currentDialog.MissionName != "Конец")
             {
                 _missionManager.StartMission(_currentDialog.MissionName);
             }
+
             _audioSource.Stop();
         }
     }

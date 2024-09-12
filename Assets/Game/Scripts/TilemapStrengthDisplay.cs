@@ -10,7 +10,7 @@ namespace MultiTool
         private Tilemap _tilemap;
 
         [SerializeField]
-        private GameObject _textPrefab;
+        private Tilemap _tilemapCracks;
 
         [SerializeField]
         private GameObject _dropPrefab;
@@ -192,6 +192,8 @@ namespace MultiTool
                     {
                         var tile = _tilemap.GetTile(tilePos);
                         var dropName = _dropItemDatabase.GetNameByTileName(tile.name);
+                        _tilemapCracks.SetTile(tilePos, null);
+                        //_tilemapCracks.DeleteCells(tilePos, tilePos);
 
                         if(dropName != null)
                         {
@@ -207,9 +209,9 @@ namespace MultiTool
                     }
                     else
                     {
-                        var tile = _tilemap.GetTile(tilePos);
-                        var newTile = _tileData.GetTileByStrength(tile.name, currentStrength);
-                        _tilemap.SetTile(tilePos, newTile);
+                        var blockName = _tilemap.GetTile(tilePos).name;
+                        var crackTile = _tileData.GetCrackTile(blockName, currentStrength);
+                        _tilemapCracks.SetTile(tilePos, crackTile);
                         GameObject textObj = _tilemap.GetInstantiatedObject(tilePos);
                         TextMesh newtextMesh = textObj.GetComponentInChildren<TextMesh>();
                         newtextMesh.text = currentStrength.ToString();

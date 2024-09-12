@@ -38,7 +38,21 @@ namespace MultiTool
                     }
                     else
                     {
-                        cell.tileName = (float)y / _height < Random.Range(0, 1.0f) ? "Stone" : "Dirt";
+                        float probability = (float)y / _height; // Вероятность в зависимости от высоты
+                        float randomValue = Random.Range(0, 1.0f); // Случайное значение от 0 до 1
+
+                        if(randomValue * 0.8f < probability)
+                        {
+                            cell.tileName = "Dirt"; 
+                        }
+                        else if(randomValue  * 0.3f < probability)
+                        {
+                            cell.tileName = "Clay"; 
+                        }
+                        else
+                        {
+                            cell.tileName = "Stone"; 
+                        }
                     }
 
                     generatedLevelData.cells.Add(cell);

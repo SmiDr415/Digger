@@ -23,11 +23,17 @@ MonoBehaviour:
     _nameItemEN: Item_Copper
     _sellCost: 3
     _itemType: 1
-    _sprite: {fileID: 21300000, guid: 32d78c59ef2faf8458e4452091d5e7a2, type: 3}
+    _sprite: {fileID: 21300000, guid: 4adbd1d52f9af2346872291476bd4f24, type: 3}
     _tile: {fileID: 11400000, guid: a2bea500e7b582544a5d748d2a7c06f3, type: 2}
   - _nameItemRu: "\u0416\u0435\u043B\u0435\u0437\u043E"
     _nameItemEN: Item_Iron
     _sellCost: 5
     _itemType: 1
-    _sprite: {fileID: 21300000, guid: fcec82bcfb14f5a41a39231309fb61f0, type: 3}
+    _sprite: {fileID: 21300000, guid: 79b343f2c5b7ee643967832fe68fb308, type: 3}
     _tile: {fileID: 11400000, guid: eee501ee31b87f942be9cabcb83316e2, type: 2}
+  - _nameItemRu: "\u041F\u0435\u0441\u043E\u043A"
+    _nameItemEN: Item_Sand
+    _sellCost: 1
+    _itemType: 1
+    _sprite: {fileID: 21300000, guid: e68f0ceed91f7cf4d8295bdd0c81f20c, type: 3}
+    _tile: {fileID: 11400000, guid: 730ecd7bfb189f04fbd89d51166666f7, type: 2}
