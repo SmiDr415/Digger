@@ -1,7 +1,7 @@
 {
     "level": 0,
     "timeTreeStars": 90,
-    "timeTwoStars": 120,
+    "timeTwoStars": 150,
     "gridWidth": 11,
     "gridHeight": 10,
     "startPosition": {
@@ -109,7 +109,7 @@
                 "x": 0,
                 "y": -4
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
@@ -158,14 +158,14 @@
                 "x": 1,
                 "y": -4
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": 1,
                 "y": -3
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
@@ -200,28 +200,28 @@
                 "x": 2,
                 "y": -6
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": 2,
                 "y": -5
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": 2,
                 "y": -4
             },
-            "tileName": "Tile_Stone"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": 2,
                 "y": -3
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
@@ -263,14 +263,14 @@
                 "x": 3,
                 "y": -4
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": 3,
                 "y": -3
             },
-            "tileName": "Tile_Stone"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
@@ -417,14 +417,14 @@
                 "x": 5,
                 "y": -2
             },
-            "tileName": "Tile_Stone"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": 5,
                 "y": -1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
@@ -466,28 +466,28 @@
                 "x": 6,
                 "y": -2
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": 6,
                 "y": -1
             },
-            "tileName": "Tile_Stone"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": 6,
                 "y": 0
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": 6,
                 "y": 1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
@@ -529,7 +529,7 @@
                 "x": 7,
                 "y": -1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
@@ -578,7 +578,7 @@
                 "x": 8,
                 "y": -1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {

@@ -3,9 +3,11 @@ namespace MultiTool
     public enum TileType
     {
         Grass,
+        Dirt,
         Stone,
         Ore,
         Undefinit,
+        Сlay
         //  здесь новые типы тайлов
     }
 
@@ -13,5 +15,7 @@ namespace MultiTool
     {
         Flower,
         Ore,
+        Sand,
+        Сlay
     }
 }

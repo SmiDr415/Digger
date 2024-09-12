@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fcec82bcfb14f5a41a39231309fb61f0
+guid: 51408323b292c434e98cede4c976791c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -376879650705011835
-    second: Item_Iron_0
+      213: 8882582778694141248
+    second: Ground4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 2048
+  spritePixelsToUnits: 1024
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Item_Iron_0
+      name: Ground4_0
       rect:
         serializedVersion: 2
-        x: 91
-        y: 36
-        width: 843
-        height: 951
+        x: 0
+        y: 0
+        width: 89
+        height: 91
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 58b87a854fd05caf0800000000000000
-      internalID: -376879650705011835
+      spriteID: 045011ca9f5454b70800000000000000
+      internalID: 8882582778694141248
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Item_Iron_0: -376879650705011835
+      Ground4_0: 8882582778694141248
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

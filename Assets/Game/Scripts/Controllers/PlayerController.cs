@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace MultiTool
 {
-    [RequireComponent( typeof(Rigidbody2D), typeof(SpriteRenderer))]
+    [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer))]
     //[ExecuteInEditMode]
     public class PlayerController : MonoBehaviour
     {
@@ -91,6 +91,11 @@ namespace MultiTool
         public int GatherRadius => _gatherRadius;
         public PlayerForm Form => _currentForm;
 
+
+        private void OnDisable()
+        {
+            transform.position = Vector3.zero;
+        }
 
         #region Initialization
         private void Awake()

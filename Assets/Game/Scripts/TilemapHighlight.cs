@@ -49,6 +49,24 @@ namespace MultiTool
                 {
                     if(highlightObject.TryGetComponent(out SpriteRenderer spriteRenderer))
                     {
+                        var tm = highlightObject.GetComponentInChildren<TextMesh>();
+                        if(tm != null)
+                        {
+                            spriteRenderer.color = tm.color;
+                            //if(tm.color == Color.green)
+                            //{
+                            //    spriteRenderer.color = Color.green;
+                            //}
+                            //else if(tm.color == Color.yellow)
+                            //{
+                            //    spriteRenderer.color = Color.yellow;
+                            //}
+                            //else
+                            //{
+                            //    spriteRenderer.color = Color.red;
+                            //}
+                        }
+
                         spriteRenderer.enabled = true;
                         _previousHighlightPos = tilePos;
                         _previousHighlightObject = highlightObject;

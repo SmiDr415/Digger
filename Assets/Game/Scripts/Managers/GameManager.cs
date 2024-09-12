@@ -80,7 +80,7 @@ namespace MultiTool
         public void StartGame(bool isProcedural = false)
         {
             _isProceduralMode = isProcedural;
-            _uiController.ShowGameUI(true);
+            _uiController.StartLevel();
             _tileMap.gameObject.SetActive(true);
             //_dialogManager.StartDialog("Осмотрись");
             _menuParentObjects.SetActive(false);
@@ -97,7 +97,7 @@ namespace MultiTool
             _playerController.gameObject.SetActive(false);
             _tileMap.ClearTileMap();
             _tileMap.gameObject.SetActive(false);
-            _uiController.ShowMainMenu(true);
+            _uiController.SetCanvasVisibility(true);
         }
 
 
@@ -115,7 +115,7 @@ namespace MultiTool
             else
             {
                 _winPanel.SetActive(true);
-                _uiController.ShowMainMenu(true);
+                _uiController.SetCanvasVisibility(true);
                 _levelController.LevelComplete();
             }
         }

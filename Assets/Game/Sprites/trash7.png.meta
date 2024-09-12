@@ -1,0 +1,3679 @@
+fileFormatVersion: 2
+guid: b5638c71b33357940aece92a37ea5d16
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7397488246891740255
+    second: trash7_0
+  - first:
+      213: 7223615868502606562
+    second: trash7_1
+  - first:
+      213: -3778965589023181388
+    second: trash7_2
+  - first:
+      213: -2473277051971412760
+    second: trash7_3
+  - first:
+      213: -8526749333760097187
+    second: trash7_4
+  - first:
+      213: 8095918879964240657
+    second: trash7_5
+  - first:
+      213: -1707511338650075250
+    second: trash7_6
+  - first:
+      213: 3394454662825351918
+    second: trash7_7
+  - first:
+      213: -2439733337543334402
+    second: trash7_8
+  - first:
+      213: -2483962862076204790
+    second: trash7_9
+  - first:
+      213: 8097902502334335936
+    second: trash7_10
+  - first:
+      213: 5368697689193803886
+    second: trash7_11
+  - first:
+      213: -3178674301879992315
+    second: trash7_12
+  - first:
+      213: -455330445309924804
+    second: trash7_13
+  - first:
+      213: 8635481164921349716
+    second: trash7_14
+  - first:
+      213: -5466305733029673382
+    second: trash7_15
+  - first:
+      213: -6531987378405877501
+    second: trash7_16
+  - first:
+      213: 1520541822663367157
+    second: trash7_17
+  - first:
+      213: -792922650464318952
+    second: trash7_18
+  - first:
+      213: 2383114205798911514
+    second: trash7_19
+  - first:
+      213: 3536143512099264201
+    second: trash7_20
+  - first:
+      213: 3174637253249505190
+    second: trash7_21
+  - first:
+      213: -7732081667979881590
+    second: trash7_22
+  - first:
+      213: -4693191125384336578
+    second: trash7_23
+  - first:
+      213: -6014644532421904483
+    second: trash7_24
+  - first:
+      213: -4830932527817752539
+    second: trash7_25
+  - first:
+      213: -7410050388339512036
+    second: trash7_26
+  - first:
+      213: 2255474414769472672
+    second: trash7_27
+  - first:
+      213: 6461055183927179605
+    second: trash7_28
+  - first:
+      213: -681599872730328986
+    second: trash7_29
+  - first:
+      213: -8729898516317299926
+    second: trash7_30
+  - first:
+      213: -7330195794140986485
+    second: trash7_31
+  - first:
+      213: 462433904248693682
+    second: trash7_32
+  - first:
+      213: 788610125592865881
+    second: trash7_33
+  - first:
+      213: -3370264383352214512
+    second: trash7_34
+  - first:
+      213: -6550583688466176552
+    second: trash7_35
+  - first:
+      213: 2603909345904344417
+    second: trash7_36
+  - first:
+      213: -7656013948557189421
+    second: trash7_37
+  - first:
+      213: 1130004008518916800
+    second: trash7_38
+  - first:
+      213: -8416829093748249375
+    second: trash7_39
+  - first:
+      213: -658380923197150680
+    second: trash7_40
+  - first:
+      213: -6916908532776620654
+    second: trash7_41
+  - first:
+      213: 9106675783703373177
+    second: trash7_42
+  - first:
+      213: 1012997735995002040
+    second: trash7_43
+  - first:
+      213: 4379249850496497939
+    second: trash7_44
+  - first:
+      213: 6290360374925416688
+    second: trash7_45
+  - first:
+      213: 4184936993587632599
+    second: trash7_46
+  - first:
+      213: -2524276630616429989
+    second: trash7_47
+  - first:
+      213: 201953056495682670
+    second: trash7_48
+  - first:
+      213: 8118771952739822541
+    second: trash7_49
+  - first:
+      213: -7410369520152876179
+    second: trash7_50
+  - first:
+      213: -5981778873594095620
+    second: trash7_51
+  - first:
+      213: 251923839492042288
+    second: trash7_52
+  - first:
+      213: -5223563499897517917
+    second: trash7_53
+  - first:
+      213: -6644123034802438580
+    second: trash7_54
+  - first:
+      213: -3316351021348353755
+    second: trash7_55
+  - first:
+      213: 4623511392713437044
+    second: trash7_56
+  - first:
+      213: 8612841803733380699
+    second: trash7_57
+  - first:
+      213: -1574035703105444826
+    second: trash7_58
+  - first:
+      213: 3991256307402827058
+    second: trash7_59
+  - first:
+      213: -6513758212529820799
+    second: trash7_60
+  - first:
+      213: 5860523593768266204
+    second: trash7_61
+  - first:
+      213: 324757106431191683
+    second: trash7_62
+  - first:
+      213: -1428543162149785742
+    second: trash7_63
+  - first:
+      213: -7303850491021149606
+    second: trash7_64
+  - first:
+      213: 5968087168497024006
+    second: trash7_65
+  - first:
+      213: 811785810339375607
+    second: trash7_66
+  - first:
+      213: -6426821582795634368
+    second: trash7_67
+  - first:
+      213: -4670594607927572806
+    second: trash7_68
+  - first:
+      213: 8945494635077164761
+    second: trash7_69
+  - first:
+      213: 7892200503415264303
+    second: trash7_70
+  - first:
+      213: 2806104763848563434
+    second: trash7_71
+  - first:
+      213: 5293329333633058882
+    second: trash7_72
+  - first:
+      213: -8524829210013251506
+    second: trash7_73
+  - first:
+      213: -7440183984865578776
+    second: trash7_74
+  - first:
+      213: 4469094045075809925
+    second: trash7_75
+  - first:
+      213: 10261411094875410
+    second: trash7_76
+  - first:
+      213: 5895802311787535264
+    second: trash7_77
+  - first:
+      213: 1357825750233250966
+    second: trash7_78
+  - first:
+      213: -2149739256399478097
+    second: trash7_79
+  - first:
+      213: 5640045971317378586
+    second: trash7_80
+  - first:
+      213: 2815821981300705668
+    second: trash7_81
+  - first:
+      213: 8567378487353927688
+    second: trash7_82
+  - first:
+      213: -8001543596046110523
+    second: trash7_83
+  - first:
+      213: -8332914087347750531
+    second: trash7_84
+  - first:
+      213: 8124868679734303508
+    second: trash7_85
+  - first:
+      213: 2047277514400178677
+    second: trash7_86
+  - first:
+      213: -7392655819251685894
+    second: trash7_87
+  - first:
+      213: -2994728687094566951
+    second: trash7_88
+  - first:
+      213: 171884959950117364
+    second: trash7_89
+  - first:
+      213: 6794979401093720618
+    second: trash7_90
+  - first:
+      213: 8342641550908831668
+    second: trash7_91
+  - first:
+      213: 4186275179891984935
+    second: trash7_92
+  - first:
+      213: -5794062622760443687
+    second: trash7_93
+  - first:
+      213: -2352407535745447330
+    second: trash7_94
+  - first:
+      213: -2996278590933615268
+    second: trash7_95
+  - first:
+      213: -903381135763913420
+    second: trash7_96
+  - first:
+      213: -1935924099434614475
+    second: trash7_97
+  - first:
+      213: -152427300225099463
+    second: trash7_98
+  - first:
+      213: 828419770970434282
+    second: trash7_99
+  - first:
+      213: -8344432953611588782
+    second: trash7_100
+  - first:
+      213: -7288775815195054168
+    second: trash7_101
+  - first:
+      213: -2440851668818995661
+    second: trash7_102
+  - first:
+      213: 2794885875301239290
+    second: trash7_103
+  - first:
+      213: -9017012948962262761
+    second: trash7_104
+  - first:
+      213: -2408457541534950361
+    second: trash7_105
+  - first:
+      213: 718373632699480330
+    second: trash7_106
+  - first:
+      213: -3002810431938267720
+    second: trash7_107
+  - first:
+      213: 3345402663703727543
+    second: trash7_108
+  - first:
+      213: 188083098223609508
+    second: trash7_109
+  - first:
+      213: 5323420623369170966
+    second: trash7_110
+  - first:
+      213: 3886149900193930509
+    second: trash7_111
+  - first:
+      213: 5716188158904551326
+    second: trash7_112
+  - first:
+      213: -3975398289591504015
+    second: trash7_113
+  - first:
+      213: -285365730148545832
+    second: trash7_114
+  - first:
+      213: -4366927785705549758
+    second: trash7_115
+  - first:
+      213: 4786264052001258812
+    second: trash7_116
+  - first:
+      213: 7552042283864592452
+    second: trash7_117
+  - first:
+      213: 6251279120185346119
+    second: trash7_118
+  - first:
+      213: -8131774888308874341
+    second: trash7_119
+  - first:
+      213: 7653098273355367217
+    second: trash7_120
+  - first:
+      213: -7008498982187910380
+    second: trash7_121
+  - first:
+      213: 706751087073862064
+    second: trash7_122
+  - first:
+      213: 7880039598290176931
+    second: trash7_123
+  - first:
+      213: 612592471544831253
+    second: trash7_124
+  - first:
+      213: -2700708991524888476
+    second: trash7_125
+  - first:
+      213: -3693775126327112
+    second: trash7_126
+  - first:
+      213: 7203968474127627012
+    second: trash7_127
+  - first:
+      213: -7166528587732087348
+    second: trash7_128
+  - first:
+      213: 802763152829256642
+    second: trash7_129
+  - first:
+      213: 244686021115971761
+    second: trash7_130
+  - first:
+      213: 5720227016867733992
+    second: trash7_131
+  - first:
+      213: -7537955218248746719
+    second: trash7_132
+  - first:
+      213: 4794944450559386146
+    second: trash7_133
+  - first:
+      213: -2207664335653001417
+    second: trash7_134
+  - first:
+      213: -2249052958175816965
+    second: trash7_135
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: trash7_0
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 908
+        width: 50
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a304ed02a7d65990800000000000000
+      internalID: -7397488246891740255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_1
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1061
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e209fb2c507f3460800000000000000
+      internalID: 7223615868502606562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_2
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 1035
+        width: 46
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b539df81da6e8bc0800000000000000
+      internalID: -3778965589023181388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_3
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 979
+        width: 31
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec5e1e00a72dadd0800000000000000
+      internalID: -2473277051971412760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_4
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1012
+        width: 43
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d544e6858a6eaa980800000000000000
+      internalID: -8526749333760097187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_5
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 1028
+        width: 33
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11b95aac35b7a5070800000000000000
+      internalID: 8095918879964240657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_6
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 1063
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8f7fc9fb73bd48e0800000000000000
+      internalID: -1707511338650075250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_7
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 1060
+        width: 36
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eea9fdff7868b1f20800000000000000
+      internalID: 3394454662825351918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_8
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 1010
+        width: 83
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef52d0da473542ed0800000000000000
+      internalID: -2439733337543334402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_9
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1058
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a096fa200f0378dd0800000000000000
+      internalID: -2483962862076204790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_10
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1022
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cb826ddb67816070800000000000000
+      internalID: 8097902502334335936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_11
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 1050
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e607bde8a12718a40800000000000000
+      internalID: 5368697689193803886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_12
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 985
+        width: 15
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500c7c3509413e3d0800000000000000
+      internalID: -3178674301879992315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_13
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 1020
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3aa1e75f575ea9f0800000000000000
+      internalID: -455330445309924804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_14
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 1013
+        width: 42
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 456a6b3ed5467d770800000000000000
+      internalID: 8635481164921349716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_15
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 932
+        width: 49
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a56c515c5e7c324b0800000000000000
+      internalID: -5466305733029673382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_16
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 1012
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30958c85618b955a0800000000000000
+      internalID: -6531987378405877501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_17
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 1019
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f999f54bbc0a1510800000000000000
+      internalID: 1520541822663367157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_18
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 974
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81a86bcec09fef4f0800000000000000
+      internalID: -792922650464318952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_19
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 934
+        width: 19
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1ec4df6eb5821120800000000000000
+      internalID: 2383114205798911514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_20
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 970
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c69a79f9c7e21130800000000000000
+      internalID: 3536143512099264201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_21
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 968
+        width: 17
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a798aa03c39e0c20800000000000000
+      internalID: 3174637253249505190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_22
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 941
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a83dfb570b022b490800000000000000
+      internalID: -7732081667979881590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_23
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 902
+        width: 35
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b637c798f6edeb0800000000000000
+      internalID: -4693191125384336578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_24
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 948
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d973fba2aa0b78ca0800000000000000
+      internalID: -6014644532421904483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_25
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 930
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5200b89167415fcb0800000000000000
+      internalID: -4830932527817752539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_26
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 767
+        width: 172
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1d27439e663a2990800000000000000
+      internalID: -7410050388339512036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_27
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 900
+        width: 19
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a4015cb70e0d4f10800000000000000
+      internalID: 2255474414769472672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_28
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 916
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 559fc2825774aa950800000000000000
+      internalID: 6461055183927179605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_29
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 928
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66015fae6887a86f0800000000000000
+      internalID: -681599872730328986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_30
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 869
+        width: 70
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2b92b96d8b29d680800000000000000
+      internalID: -8729898516317299926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_31
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 711
+        width: 168
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b830a2423c9e54a90800000000000000
+      internalID: -7330195794140986485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_32
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 902
+        width: 44
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b327d29f25ea6600800000000000000
+      internalID: 462433904248693682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_33
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 908
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95c2d322bb4b1fa00800000000000000
+      internalID: 788610125592865881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_34
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 775
+        width: 113
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ce327566a6a31d0800000000000000
+      internalID: -3370264383352214512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_35
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 856
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d5618187d6a715a0800000000000000
+      internalID: -6550583688466176552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_36
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 806
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16db2f501c1f22420800000000000000
+      internalID: 2603909345904344417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_37
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 818
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3de10d880ef50c590800000000000000
+      internalID: -7656013948557189421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_38
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 810
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ca9982a8a49eaf00800000000000000
+      internalID: 1130004008518916800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_39
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 803
+        width: 18
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ec66f3988a613b80800000000000000
+      internalID: -8416829093748249375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_40
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 828
+        width: 12
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82aa0f1e906fcd6f0800000000000000
+      internalID: -658380923197150680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_41
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 763
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29d2bf736543200a0800000000000000
+      internalID: -6916908532776620654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_42
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 787
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 975aa444069616e70800000000000000
+      internalID: 9106675783703373177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_43
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 783
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bcc144e214ee0e00800000000000000
+      internalID: 1012997735995002040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_44
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 729
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 319b689698836cc30800000000000000
+      internalID: 4379249850496497939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_45
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 696
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f85f98ee69db4750800000000000000
+      internalID: 6290360374925416688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_46
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 678
+        width: 37
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d99e2ed502e31a30800000000000000
+      internalID: 4184936993587632599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_47
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 695
+        width: 53
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5aa94557c7f7fcd0800000000000000
+      internalID: -2524276630616429989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_48
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 682
+        width: 52
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e64cab12c3b7dc200800000000000000
+      internalID: 201953056495682670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_49
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 685
+        width: 87
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcb267f631caba070800000000000000
+      internalID: 8118771952739822541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_50
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 632
+        width: 115
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6be7e8ee24192990800000000000000
+      internalID: -7410369520152876179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_51
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 719
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf7dc7aaec37cfca0800000000000000
+      internalID: -5981778873594095620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_52
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 655
+        width: 12
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03e2063b5630f7300800000000000000
+      internalID: 251923839492042288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_53
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 650
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a889e62cac2287b0800000000000000
+      internalID: -5223563499897517917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_54
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 669
+        width: 35
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4e3c9a4d455bc3a0800000000000000
+      internalID: -6644123034802438580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_55
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 509
+        width: 162
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 529070e1154f9f1d0800000000000000
+      internalID: -3316351021348353755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_56
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 595
+        width: 63
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47fe7a18d130a2040800000000000000
+      internalID: 4623511392713437044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_57
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 677
+        width: 10
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5ea92adcf5f68770800000000000000
+      internalID: 8612841803733380699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_58
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 630
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6242e9c1ed6e72ae0800000000000000
+      internalID: -1574035703105444826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_59
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 618
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 235684a077ac36730800000000000000
+      internalID: 3991256307402827058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_60
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 636
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18b6065ca6b7a95a0800000000000000
+      internalID: -6513758212529820799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_61
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 596
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd96a5c7823c45150800000000000000
+      internalID: 5860523593768266204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_62
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 613
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38a6d1f1ed4c18400800000000000000
+      internalID: 324757106431191683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_63
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 516
+        width: 28
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27fafb1109bcc2ce0800000000000000
+      internalID: -1428543162149785742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_64
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 502
+        width: 18
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5a3f160da283aa90800000000000000
+      internalID: -7303850491021149606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_65
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 590
+        width: 49
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60cf4d2d8a7e2d250800000000000000
+      internalID: 5968087168497024006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_66
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 488
+        width: 95
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f92bfab4ea044b00800000000000000
+      internalID: 811785810339375607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_67
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 566
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04907aa32d75fc6a0800000000000000
+      internalID: -6426821582795634368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_68
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 576
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab64f9033f6be2fb0800000000000000
+      internalID: -4670594607927572806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_69
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 573
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dedfefa9f7c42c70800000000000000
+      internalID: 8945494635077164761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_70
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 466
+        width: 26
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f24d93e0b8ab68d60800000000000000
+      internalID: 7892200503415264303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_71
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 491
+        width: 100
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aea99b35a6941f620800000000000000
+      internalID: 2806104763848563434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_72
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 483
+        width: 61
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2488a52dbfea57940800000000000000
+      internalID: 5293329333633058882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_73
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 557
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e48494efff8b1b980800000000000000
+      internalID: -8524829210013251506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_74
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 534
+        width: 9
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e07986e5182fb890800000000000000
+      internalID: -7440183984865578776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_75
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 507
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 586ae801b59650e30800000000000000
+      internalID: 4469094045075809925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_76
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 462
+        width: 78
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21d4433f2b4742000800000000000000
+      internalID: 10261411094875410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_77
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 539
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0abd50c17f812d150800000000000000
+      internalID: 5895802311787535264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_78
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 481
+        width: 59
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69cf7856357f7d210800000000000000
+      internalID: 1357825750233250966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_79
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 503
+        width: 57
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa2c89e39879a22e0800000000000000
+      internalID: -2149739256399478097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_80
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 425
+        width: 15
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1ece3dbde7754e40800000000000000
+      internalID: 5640045971317378586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_81
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 463
+        width: 49
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4894a225c2fc31720800000000000000
+      internalID: 2815821981300705668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_82
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 440
+        width: 65
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 808ed03a75175e670800000000000000
+      internalID: 8567378487353927688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_83
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 492
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c0bede4e7ec4f090800000000000000
+      internalID: -8001543596046110523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_84
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 339
+        width: 101
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d79f9c789ca8b5c80800000000000000
+      internalID: -8332914087347750531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_85
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 397
+        width: 26
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41b924e440551c070800000000000000
+      internalID: 8124868679734303508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_86
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 446
+        width: 13
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f1a77a6d04696c10800000000000000
+      internalID: 2047277514400178677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_87
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 446
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af567ca43b2086990800000000000000
+      internalID: -7392655819251685894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_88
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 418
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9df6e0730269076d0800000000000000
+      internalID: -2994728687094566951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_89
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 363
+        width: 68
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f91f0cd578a26200800000000000000
+      internalID: 171884959950117364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_90
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 398
+        width: 43
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2aa94293cd9c4e50800000000000000
+      internalID: 6794979401093720618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_91
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 416
+        width: 71
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b7b5521a4407c370800000000000000
+      internalID: 8342641550908831668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_92
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 393
+        width: 38
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72a0f75a813a81a30800000000000000
+      internalID: 4186275179891984935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_93
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 386
+        width: 63
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d0eefb2eba579fa0800000000000000
+      internalID: -5794062622760443687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_94
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 338
+        width: 45
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5ac0f05fc19a5fd0800000000000000
+      internalID: -2352407535745447330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_95
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 324
+        width: 35
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5d3b4b1f741b66d0800000000000000
+      internalID: -2996278590933615268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_96
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 373
+        width: 41
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 435c002b4ab8673f0800000000000000
+      internalID: -903381135763913420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_97
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 234
+        width: 121
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 531f41dd9473225e0800000000000000
+      internalID: -1935924099434614475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_98
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 342
+        width: 48
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 939d2049d2872edf0800000000000000
+      internalID: -152427300225099463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_99
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 222
+        width: 105
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aea6a9d74632f7b00800000000000000
+      internalID: 828419770970434282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_100
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 341
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25beaeb707e923c80800000000000000
+      internalID: -8344432953611588782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_101
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 313
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8af27df730119da90800000000000000
+      internalID: -7288775815195054168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_102
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 196
+        width: 100
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 336df92e65a502ed0800000000000000
+      internalID: -2440851668818995661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_103
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 322
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af9461945ed69c620800000000000000
+      internalID: 2794885875301239290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_104
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 329
+        width: 24
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 711c1024f722dd280800000000000000
+      internalID: -9017012948962262761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_105
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 323
+        width: 45
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72cd23460a0739ed0800000000000000
+      internalID: -2408457541534950361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_106
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 269
+        width: 38
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a093f09430d28f900800000000000000
+      internalID: 718373632699480330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_107
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 318
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b57b7c52dfd356d0800000000000000
+      internalID: -3002810431938267720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_108
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 307
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bdc4b87ff14d6e20800000000000000
+      internalID: 3345402663703727543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_109
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 272
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a68fd1d4943c9200800000000000000
+      internalID: 188083098223609508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_110
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 238
+        width: 47
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61078ed2ad690e940800000000000000
+      internalID: 5323420623369170966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_111
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 210
+        width: 59
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0d9af89eb06ee530800000000000000
+      internalID: 3886149900193930509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_112
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 155
+        width: 80
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e97ccc848daf35f40800000000000000
+      internalID: 5716188158904551326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_113
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 206
+        width: 95
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 173f334715c84d8c0800000000000000
+      internalID: -3975398289591504015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_114
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 193
+        width: 38
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8da0d6f516d2a0cf0800000000000000
+      internalID: -285365730148545832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_115
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 178
+        width: 54
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 240dc3dd05e8563c0800000000000000
+      internalID: -4366927785705549758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_116
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 201
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3db1ccebc93c6240800000000000000
+      internalID: 4786264052001258812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_117
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 102
+        width: 75
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4409a7ad17e3ec860800000000000000
+      internalID: 7552042283864592452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_118
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 186
+        width: 31
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 748c6763d3101c650800000000000000
+      internalID: 6251279120185346119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_119
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 131
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9368e4b2d1262f80800000000000000
+      internalID: -8131774888308874341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_120
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 154
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 133808ee454453a60800000000000000
+      internalID: 7653098273355367217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_121
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 104
+        width: 36
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41bb00eee4fccbe90800000000000000
+      internalID: -7008498982187910380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_122
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 85
+        width: 7
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b1a8a18e52eec900800000000000000
+      internalID: 706751087073862064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_123
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 102
+        width: 24
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ab0910b3468b5d60800000000000000
+      internalID: 7880039598290176931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_124
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 79
+        width: 15
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51d12827b9d508800800000000000000
+      internalID: 612592471544831253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_125
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 82
+        width: 10
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 460a47e2b77258ad0800000000000000
+      internalID: -2700708991524888476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_126
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 104
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b017b5f780e2fff0800000000000000
+      internalID: -3693775126327112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_127
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 80
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4037d71b823a9f360800000000000000
+      internalID: 7203968474127627012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_128
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 49
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccd0c8728306b8c90800000000000000
+      internalID: -7166528587732087348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_129
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 49
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c3192395dcf32b00800000000000000
+      internalID: 802763152829256642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_130
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 49
+        width: 46
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b80f1ac3ac456300800000000000000
+      internalID: 244686021115971761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_131
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 49
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e16efe2a24526f40800000000000000
+      internalID: 5720227016867733992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_132
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 49
+        width: 130
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1293b73baadc36790800000000000000
+      internalID: -7537955218248746719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_133
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 63
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 222a255b2901b8240800000000000000
+      internalID: 4794944450559386146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_134
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 49
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 737aa12cbfccc51e0800000000000000
+      internalID: -2207664335653001417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash7_135
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 49
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf293e22042c9c0e0800000000000000
+      internalID: -2249052958175816965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      trash7_0: -7397488246891740255
+      trash7_1: 7223615868502606562
+      trash7_10: 8097902502334335936
+      trash7_100: -8344432953611588782
+      trash7_101: -7288775815195054168
+      trash7_102: -2440851668818995661
+      trash7_103: 2794885875301239290
+      trash7_104: -9017012948962262761
+      trash7_105: -2408457541534950361
+      trash7_106: 718373632699480330
+      trash7_107: -3002810431938267720
+      trash7_108: 3345402663703727543
+      trash7_109: 188083098223609508
+      trash7_11: 5368697689193803886
+      trash7_110: 5323420623369170966
+      trash7_111: 3886149900193930509
+      trash7_112: 5716188158904551326
+      trash7_113: -3975398289591504015
+      trash7_114: -285365730148545832
+      trash7_115: -4366927785705549758
+      trash7_116: 4786264052001258812
+      trash7_117: 7552042283864592452
+      trash7_118: 6251279120185346119
+      trash7_119: -8131774888308874341
+      trash7_12: -3178674301879992315
+      trash7_120: 7653098273355367217
+      trash7_121: -7008498982187910380
+      trash7_122: 706751087073862064
+      trash7_123: 7880039598290176931
+      trash7_124: 612592471544831253
+      trash7_125: -2700708991524888476
+      trash7_126: -3693775126327112
+      trash7_127: 7203968474127627012
+      trash7_128: -7166528587732087348
+      trash7_129: 802763152829256642
+      trash7_13: -455330445309924804
+      trash7_130: 244686021115971761
+      trash7_131: 5720227016867733992
+      trash7_132: -7537955218248746719
+      trash7_133: 4794944450559386146
+      trash7_134: -2207664335653001417
+      trash7_135: -2249052958175816965
+      trash7_14: 8635481164921349716
+      trash7_15: -5466305733029673382
+      trash7_16: -6531987378405877501
+      trash7_17: 1520541822663367157
+      trash7_18: -792922650464318952
+      trash7_19: 2383114205798911514
+      trash7_2: -3778965589023181388
+      trash7_20: 3536143512099264201
+      trash7_21: 3174637253249505190
+      trash7_22: -7732081667979881590
+      trash7_23: -4693191125384336578
+      trash7_24: -6014644532421904483
+      trash7_25: -4830932527817752539
+      trash7_26: -7410050388339512036
+      trash7_27: 2255474414769472672
+      trash7_28: 6461055183927179605
+      trash7_29: -681599872730328986
+      trash7_3: -2473277051971412760
+      trash7_30: -8729898516317299926
+      trash7_31: -7330195794140986485
+      trash7_32: 462433904248693682
+      trash7_33: 788610125592865881
+      trash7_34: -3370264383352214512
+      trash7_35: -6550583688466176552
+      trash7_36: 2603909345904344417
+      trash7_37: -7656013948557189421
+      trash7_38: 1130004008518916800
+      trash7_39: -8416829093748249375
+      trash7_4: -8526749333760097187
+      trash7_40: -658380923197150680
+      trash7_41: -6916908532776620654
+      trash7_42: 9106675783703373177
+      trash7_43: 1012997735995002040
+      trash7_44: 4379249850496497939
+      trash7_45: 6290360374925416688
+      trash7_46: 4184936993587632599
+      trash7_47: -2524276630616429989
+      trash7_48: 201953056495682670
+      trash7_49: 8118771952739822541
+      trash7_5: 8095918879964240657
+      trash7_50: -7410369520152876179
+      trash7_51: -5981778873594095620
+      trash7_52: 251923839492042288
+      trash7_53: -5223563499897517917
+      trash7_54: -6644123034802438580
+      trash7_55: -3316351021348353755
+      trash7_56: 4623511392713437044
+      trash7_57: 8612841803733380699
+      trash7_58: -1574035703105444826
+      trash7_59: 3991256307402827058
+      trash7_6: -1707511338650075250
+      trash7_60: -6513758212529820799
+      trash7_61: 5860523593768266204
+      trash7_62: 324757106431191683
+      trash7_63: -1428543162149785742
+      trash7_64: -7303850491021149606
+      trash7_65: 5968087168497024006
+      trash7_66: 811785810339375607
+      trash7_67: -6426821582795634368
+      trash7_68: -4670594607927572806
+      trash7_69: 8945494635077164761
+      trash7_7: 3394454662825351918
+      trash7_70: 7892200503415264303
+      trash7_71: 2806104763848563434
+      trash7_72: 5293329333633058882
+      trash7_73: -8524829210013251506
+      trash7_74: -7440183984865578776
+      trash7_75: 4469094045075809925
+      trash7_76: 10261411094875410
+      trash7_77: 5895802311787535264
+      trash7_78: 1357825750233250966
+      trash7_79: -2149739256399478097
+      trash7_8: -2439733337543334402
+      trash7_80: 5640045971317378586
+      trash7_81: 2815821981300705668
+      trash7_82: 8567378487353927688
+      trash7_83: -8001543596046110523
+      trash7_84: -8332914087347750531
+      trash7_85: 8124868679734303508
+      trash7_86: 2047277514400178677
+      trash7_87: -7392655819251685894
+      trash7_88: -2994728687094566951
+      trash7_89: 171884959950117364
+      trash7_9: -2483962862076204790
+      trash7_90: 6794979401093720618
+      trash7_91: 8342641550908831668
+      trash7_92: 4186275179891984935
+      trash7_93: -5794062622760443687
+      trash7_94: -2352407535745447330
+      trash7_95: -2996278590933615268
+      trash7_96: -903381135763913420
+      trash7_97: -1935924099434614475
+      trash7_98: -152427300225099463
+      trash7_99: 828419770970434282
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

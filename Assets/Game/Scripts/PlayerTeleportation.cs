@@ -34,15 +34,16 @@ namespace MultiTool
         private IEnumerator TeleportRoutine()
         {
             _playerAnimation.Teleport(true);
-            GameManager.Instance.UIController.ShowCancelButton(true);
+            UIController.Instance.ShowCancelButton(true);
             yield return new WaitForSeconds(_teleportationDelay);
             if(_isTeleporting)
             {
                 //transform.position = _hubPosition.position;
                 _isTeleporting = false;
                 _playerAnimation.Teleport(false);
-                GameManager.Instance.UIController.ShowCancelButton(false);
-                GameManager.Instance.ShowLevelsMenu();
+                UIController.Instance.ShowCancelButton(false);
+                UIController.Instance.ShowLevelsMenu();
+                PlayerController.Instance.gameObject.SetActive(false);
             }
         }
 
