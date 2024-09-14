@@ -13271,7 +13271,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Version: 040924'
+  m_Text: 'Version: 130924'
 --- !u!222 &1030930270
 CanvasRenderer:
   m_ObjectHideFlags: 0
