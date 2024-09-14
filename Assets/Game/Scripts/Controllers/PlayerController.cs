@@ -92,10 +92,10 @@ namespace MultiTool
         public PlayerForm Form => _currentForm;
 
 
-        private void OnDisable()
-        {
-            transform.position = Vector3.zero;
-        }
+        //private void OnDisable()
+        //{
+        //    transform.position = Vector3.zero;
+        //}
 
         #region Initialization
         private void Awake()

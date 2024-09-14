@@ -14,6 +14,7 @@ namespace MultiTool
         [SerializeField] private TileBase[] _tiles;
         [SerializeField] private int _miningLevel;
         [SerializeField] private int[] _durability;
+        [SerializeField] private RuntimeAnimatorController _animatorController;
 
         public string NameRu => _nameRu;
         public string NameEn => _nameEn;
@@ -22,6 +23,7 @@ namespace MultiTool
         public TileBase[] Tiles => _tiles;
         public int MiningLevel => _miningLevel;
         public int[] Durability => _durability;
+        public RuntimeAnimatorController AnimatorController => _animatorController;
     }
 
 }

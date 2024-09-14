@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting;
+using UnityEngine;
 using UnityEngine.Tilemaps;
 
 namespace MultiTool
@@ -51,7 +52,7 @@ namespace MultiTool
         {
             foreach(var tileData in _tileDatas)
             {
-                if(tileName.Contains(tileData.NameEn) || tileData.NameEn.Contains(tileName) || tileData.NameEn.EndsWith(tileName)|| tileData.NameEn.ToLower().Contains(tileName.ToLower()))
+                if(tileName.Contains(tileData.NameEn) || tileData.NameEn.Contains(tileName) || tileData.NameEn.EndsWith(tileName) || tileData.NameEn.ToLower().Contains(tileName.ToLower()))
                 {
                     return tileData;
                 }
@@ -75,6 +76,21 @@ namespace MultiTool
             var cracksData = GetTileDataByName("Crack");
             var res = cracksData.Tiles[val];
             return res;
+        }
+
+        internal RuntimeAnimatorController GetTileAnimator(string name)
+        {
+            foreach(var tile in _tileDatas)
+            {
+                foreach(var tileData in tile.Tiles)
+                {
+                    if(tileData.name.Contains(name))
+                    {
+                        return tile.AnimatorController;
+                    }
+                }
+            }
+            return null;
         }
     }
 

@@ -11,6 +11,7 @@ namespace MultiTool
         [SerializeField] private FormType _formType;
         [SerializeField] private Vector2 _sizeInTiles;
         [SerializeField] private Sprite _sprite;
+        [SerializeField] private Sprite _icon;
         [SerializeField] private List<TileHarvestable> _tileHarvestables;
         [SerializeField] private TextAsset _upgradeJson;
 
@@ -26,6 +27,7 @@ namespace MultiTool
         public FormType FormType => _formType;
         public Vector2 SizeInTiles => _sizeInTiles;
         public Sprite Sprite => _sprite;
+        public Sprite Icon => _icon;
         public int Damage => _damage;
         public int ExtractedResourceAmount => _extractedResourceAmount;
         public int Cost => _cost;

@@ -49,7 +49,7 @@ namespace MultiTool
 
         private void UpdateFormInfo()
         {
-            _formIcon.sprite = _selectedPlayerForm.Sprite;
+            _formIcon.sprite = _selectedPlayerForm.Icon;
 
             foreach(var upgradeType in _upgradeUIElements.Keys)
             {

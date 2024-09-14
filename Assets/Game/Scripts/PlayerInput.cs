@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace MultiTool
@@ -205,18 +206,26 @@ namespace MultiTool
 
         private void HandleFormSwitchInput()
         {
-            if(Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                if(GameManager.Instance.FormController.CurrentForm.Index != (int)FormType.Form_Sickle)
+            var formBindings = new Dictionary<KeyCode, FormType>
                 {
-                    _playerController.PlayerShapeshift.SwitchForm(FormType.Form_Sickle);
-                }
-            }
-            else if(Input.GetKeyDown(KeyCode.Alpha2))
+                    { KeyCode.Alpha1, FormType.Form_Sickle },
+                    { KeyCode.Alpha2, FormType.Form_Shovel },
+                    { KeyCode.Alpha3, FormType.Form_Pickaxe }
+                };
+
+            foreach(var binding in formBindings)
             {
-                if(GameManager.Instance.FormController.CurrentForm.Index != (int)FormType.Form_Pickaxe)
+                if(Input.GetKeyDown(binding.Key))
                 {
-                    _playerController.PlayerShapeshift.SwitchForm(FormType.Form_Pickaxe);
+                    FormType formType = binding.Value;
+                    int formIndex = (int)formType;
+
+                    if(GameManager.Instance.FormController.CurrentForm.Index != formIndex)
+                    {
+                        _playerController.PlayerShapeshift.SwitchForm(formType);
+                    }
+
+                    break;
                 }
             }
         }
