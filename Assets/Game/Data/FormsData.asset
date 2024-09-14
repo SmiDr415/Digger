@@ -16,6 +16,7 @@ MonoBehaviour:
   - _formType: 0
     _sizeInTiles: {x: 2, y: 2}
     _sprite: {fileID: 21300000, guid: 2cffc2f5348c59f46bfb2c93a19e87f1, type: 3}
+    _icon: {fileID: 21300000, guid: e5a0adc8a133e864b97bd155bc283843, type: 3}
     _tileHarvestables:
     - _tileType: 0
       _harvestType: 1
@@ -35,12 +36,34 @@ MonoBehaviour:
     _durability: 100
   - _formType: 1
     _sizeInTiles: {x: 2, y: 2}
+    _sprite: {fileID: 21300000, guid: bf1997390815f9e4bbac0a0534012ebd, type: 3}
+    _icon: {fileID: 21300000, guid: 2fe6ff01167b44842ae380ac30cc45f7, type: 3}
+    _tileHarvestables:
+    - _tileType: 0
+      _harvestType: 0
+    - _tileType: 1
+      _harvestType: 1
+    - _tileType: 2
+      _harvestType: 2
+    - _tileType: 5
+      _harvestType: 1
+    - _tileType: 3
+      _harvestType: 2
+    _upgradeJson: {fileID: 4900000, guid: 61602a4e683a00e4496514e0db38b26a, type: 3}
+    _damage: 1
+    _extractedResourceAmount: 1
+    _cost: 1
+    _cooldown: 1
+    _durability: 200
+  - _formType: 2
+    _sizeInTiles: {x: 2, y: 2}
     _sprite: {fileID: 21300000, guid: 9fa927e424c004e4b9cce309646bd147, type: 3}
+    _icon: {fileID: 21300000, guid: 2c3df632de15bab4f9c11b1c7a25e35e, type: 3}
     _tileHarvestables:
     - _tileType: 0
       _harvestType: 2
     - _tileType: 1
-      _harvestType: 0
+      _harvestType: 2
     - _tileType: 2
       _harvestType: 1
     - _tileType: 5

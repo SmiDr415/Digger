@@ -21,6 +21,7 @@ public class ProjectWindowSettings : ScriptableObject
     [SerializeField] private Texture2D _audioFolder;
     [SerializeField] private Texture2D _dataFolder;
     [SerializeField] private Texture2D _spritesFolder;
+    [SerializeField] private Texture2D _shaderFolder;
 
     [SerializeField, Range(0, 5)] private int _space = 1;
 
@@ -40,7 +41,7 @@ public class ProjectWindowSettings : ScriptableObject
     public Texture2D MaterialsFolder => _materialsFolder != null ? _materialsFolder : _folderIcon;
     public Texture2D SpritesFolder => _spritesFolder != null ? _spritesFolder : _folderIcon;
     public Texture2D ModelsFolder { get; internal set; }
-    public Texture2D ShadersFolder { get; internal set; }
+    public Texture2D ShadersFolder => _shaderFolder != null ? _shaderFolder : _folderIcon;
     public Texture2D EditorFolder => _editorFolder != null ? _editorFolder : _folderIcon;
     public Texture2D GameFolder => _gameFolder != null ? _gameFolder : _folderIcon;
     public Texture2D DataFolder => _dataFolder != null ? _dataFolder : _folderIcon;

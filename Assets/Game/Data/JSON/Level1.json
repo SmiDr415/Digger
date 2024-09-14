@@ -1,7 +1,7 @@
 {
     "level": 1,
     "timeTreeStars": 100,
-    "timeTwoStars": 120,
+    "timeTwoStars": 150,
     "gridWidth": 25,
     "gridHeight": 10,
     "startPosition": {
@@ -123,7 +123,14 @@
                 "x": -14,
                 "y": -2
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
+        },
+        {
+            "position": {
+                "x": -14,
+                "y": -1
+            },
+            "tileName": "Tile_SubPlantain"
         },
         {
             "position": {
@@ -172,7 +179,14 @@
                 "x": -13,
                 "y": -2
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
+        },
+        {
+            "position": {
+                "x": -13,
+                "y": -1
+            },
+            "tileName": "Tile_SubPlantain"
         },
         {
             "position": {
@@ -228,7 +242,14 @@
                 "x": -12,
                 "y": -2
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
+        },
+        {
+            "position": {
+                "x": -12,
+                "y": -1
+            },
+            "tileName": "Tile_SubPlantain"
         },
         {
             "position": {
@@ -270,35 +291,28 @@
                 "x": -11,
                 "y": -3
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": -11,
                 "y": -2
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": -11,
                 "y": -1
             },
-            "tileName": "Tile_Dirt"
-        },
-        {
-            "position": {
-                "x": -11,
-                "y": 0
-            },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_SubPlantain"
         },
         {
             "position": {
                 "x": -11,
                 "y": 1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
@@ -340,35 +354,21 @@
                 "x": -10,
                 "y": -3
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": -10,
                 "y": -2
             },
-            "tileName": "Tile_Dirt"
-        },
-        {
-            "position": {
-                "x": -10,
-                "y": -1
-            },
-            "tileName": "Tile_Dirt"
-        },
-        {
-            "position": {
-                "x": -10,
-                "y": 0
-            },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_SubPlantain"
         },
         {
             "position": {
                 "x": -10,
                 "y": 1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
@@ -410,35 +410,28 @@
                 "x": -9,
                 "y": -3
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": -9,
                 "y": -2
             },
-            "tileName": "Tile_Dirt"
-        },
-        {
-            "position": {
-                "x": -9,
-                "y": -1
-            },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_SubPlantain"
         },
         {
             "position": {
                 "x": -9,
                 "y": 0
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -9,
                 "y": 1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
@@ -473,42 +466,28 @@
                 "x": -8,
                 "y": -4
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": -8,
                 "y": -3
             },
-            "tileName": "Tile_Dirt"
-        },
-        {
-            "position": {
-                "x": -8,
-                "y": -2
-            },
-            "tileName": "Tile_Dirt"
-        },
-        {
-            "position": {
-                "x": -8,
-                "y": -1
-            },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_SubPlantain"
         },
         {
             "position": {
                 "x": -8,
                 "y": 0
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -8,
                 "y": 1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
@@ -543,42 +522,35 @@
                 "x": -7,
                 "y": -4
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": -7,
                 "y": -3
             },
-            "tileName": "Tile_Dirt"
-        },
-        {
-            "position": {
-                "x": -7,
-                "y": -2
-            },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_SubPlantain"
         },
         {
             "position": {
                 "x": -7,
                 "y": -1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -7,
                 "y": 0
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -7,
                 "y": 1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
@@ -606,49 +578,42 @@
                 "x": -6,
                 "y": -5
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": -6,
                 "y": -4
             },
-            "tileName": "Tile_Dirt"
-        },
-        {
-            "position": {
-                "x": -6,
-                "y": -3
-            },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_SubPlantain"
         },
         {
             "position": {
                 "x": -6,
                 "y": -2
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -6,
                 "y": -1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -6,
                 "y": 0
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -6,
                 "y": 1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
@@ -669,56 +634,42 @@
                 "x": -5,
                 "y": -6
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": -5,
                 "y": -5
             },
-            "tileName": "Tile_Dirt"
-        },
-        {
-            "position": {
-                "x": -5,
-                "y": -4
-            },
-            "tileName": "Tile_Dirt"
-        },
-        {
-            "position": {
-                "x": -5,
-                "y": -3
-            },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_SubPlantain"
         },
         {
             "position": {
                 "x": -5,
                 "y": -2
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -5,
                 "y": -1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -5,
                 "y": 0
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -5,
                 "y": 1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
@@ -739,56 +690,56 @@
                 "x": -4,
                 "y": -6
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -4,
                 "y": -5
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -4,
                 "y": -4
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -4,
                 "y": -3
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -4,
                 "y": -2
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -4,
                 "y": -1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -4,
                 "y": 0
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -4,
                 "y": 1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
@@ -816,49 +767,42 @@
                 "x": -3,
                 "y": -5
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": -3,
                 "y": -4
             },
-            "tileName": "Tile_Dirt"
-        },
-        {
-            "position": {
-                "x": -3,
-                "y": -3
-            },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_SubPlantain"
         },
         {
             "position": {
                 "x": -3,
                 "y": -2
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -3,
                 "y": -1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -3,
                 "y": 0
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -3,
                 "y": 1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
@@ -886,49 +830,42 @@
                 "x": -2,
                 "y": -5
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": -2,
                 "y": -4
             },
-            "tileName": "Tile_Dirt"
-        },
-        {
-            "position": {
-                "x": -2,
-                "y": -3
-            },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_SubPlantain"
         },
         {
             "position": {
                 "x": -2,
                 "y": -2
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -2,
                 "y": -1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -2,
                 "y": 0
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -2,
                 "y": 1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
@@ -956,49 +893,42 @@
                 "x": -1,
                 "y": -5
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": -1,
                 "y": -4
             },
-            "tileName": "Tile_Dirt"
-        },
-        {
-            "position": {
-                "x": -1,
-                "y": -3
-            },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_SubPlantain"
         },
         {
             "position": {
                 "x": -1,
                 "y": -2
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -1,
                 "y": -1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -1,
                 "y": 0
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": -1,
                 "y": 1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
@@ -1026,49 +956,42 @@
                 "x": 0,
                 "y": -5
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": 0,
                 "y": -4
             },
-            "tileName": "Tile_Dirt"
-        },
-        {
-            "position": {
-                "x": 0,
-                "y": -3
-            },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_SubPlantain"
         },
         {
             "position": {
                 "x": 0,
                 "y": -2
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 0,
                 "y": -1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 0,
                 "y": 0
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 0,
                 "y": 1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
@@ -1096,49 +1019,42 @@
                 "x": 1,
                 "y": -5
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": 1,
                 "y": -4
             },
-            "tileName": "Tile_Dirt"
-        },
-        {
-            "position": {
-                "x": 1,
-                "y": -3
-            },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_SubPlantain"
         },
         {
             "position": {
                 "x": 1,
                 "y": -2
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 1,
                 "y": -1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 1,
                 "y": 0
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 1,
                 "y": 1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
@@ -1159,56 +1075,56 @@
                 "x": 2,
                 "y": -6
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 2,
                 "y": -5
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 2,
                 "y": -4
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 2,
                 "y": -3
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 2,
                 "y": -2
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 2,
                 "y": -1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 2,
                 "y": 0
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 2,
                 "y": 1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
@@ -1243,42 +1159,35 @@
                 "x": 3,
                 "y": -4
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": 3,
                 "y": -3
             },
-            "tileName": "Tile_Dirt"
-        },
-        {
-            "position": {
-                "x": 3,
-                "y": -2
-            },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_SubPlantain"
         },
         {
             "position": {
                 "x": 3,
                 "y": -1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 3,
                 "y": 0
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 3,
                 "y": 1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
@@ -1313,42 +1222,35 @@
                 "x": 4,
                 "y": -4
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": 4,
                 "y": -3
             },
-            "tileName": "Tile_Dirt"
-        },
-        {
-            "position": {
-                "x": 4,
-                "y": -2
-            },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_SubPlantain"
         },
         {
             "position": {
                 "x": 4,
                 "y": -1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 4,
                 "y": 0
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 4,
                 "y": 1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
@@ -1369,56 +1271,49 @@
                 "x": 5,
                 "y": -6
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": 5,
                 "y": -5
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": 5,
                 "y": -4
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Clay"
         },
         {
             "position": {
                 "x": 5,
                 "y": -3
             },
-            "tileName": "Tile_Dirt"
-        },
-        {
-            "position": {
-                "x": 5,
-                "y": -2
-            },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_SubPlantain"
         },
         {
             "position": {
                 "x": 5,
                 "y": -1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 5,
                 "y": 0
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 5,
                 "y": 1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
@@ -1437,37 +1332,30 @@
         {
             "position": {
                 "x": 6,
-                "y": -3
+                "y": -6
             },
-            "tileName": "Tile_Dirt"
-        },
-        {
-            "position": {
-                "x": 6,
-                "y": -2
-            },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_SubPlantain"
         },
         {
             "position": {
                 "x": 6,
                 "y": -1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 6,
                 "y": 0
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 6,
                 "y": 1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
@@ -1482,6 +1370,13 @@
                 "y": -7
             },
             "tileName": "NotDestroy"
+        },
+        {
+            "position": {
+                "x": 7,
+                "y": -6
+            },
+            "tileName": "Tile_SubPlantain"
         },
         {
             "position": {
@@ -1495,35 +1390,35 @@
                 "x": 7,
                 "y": -3
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 7,
                 "y": -2
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 7,
                 "y": -1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 7,
                 "y": 0
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 7,
                 "y": 1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
@@ -1542,37 +1437,44 @@
         {
             "position": {
                 "x": 8,
+                "y": -6
+            },
+            "tileName": "Tile_SubPlantain"
+        },
+        {
+            "position": {
+                "x": 8,
                 "y": -3
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 8,
                 "y": -2
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 8,
                 "y": -1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 8,
                 "y": 0
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {
                 "x": 8,
                 "y": 1
             },
-            "tileName": "Tile_Dirt"
+            "tileName": "Tile_Stone"
         },
         {
             "position": {

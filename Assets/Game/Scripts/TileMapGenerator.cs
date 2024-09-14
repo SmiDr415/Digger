@@ -7,11 +7,13 @@ namespace MultiTool
     {
         [SerializeField] private TilemapStrengthDisplay _strengthDisplay;
         [SerializeField] private Tilemap _tilemap;                  // —сылка на компонент Tilemap
+        [SerializeField] private Tilemap _cracksTilemap;
         [SerializeField] private TilesData _tileDataSO;              // —сылка на ScriptableObject с информацией о тайлах
 
         public void ClearTileMap()
         {
             _tilemap.ClearAllTiles();
+            _cracksTilemap.ClearAllTiles();
         }
 
 

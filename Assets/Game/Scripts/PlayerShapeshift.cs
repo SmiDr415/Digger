@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -49,18 +50,26 @@ namespace MultiTool
         public void SwithForm(int index)
         {
             var forms = GameManager.Instance.FormController.AllForms;
-            if(_currentForm != forms[index])
+
+            if(index < 0 || index >= forms.Length)
             {
-                if(index == 0)
-                {
-                    SwitchForm(FormType.Form_Sickle);
-                }
-                else if(index == 1)
-                {
-                    SwitchForm(FormType.Form_Pickaxe);
-                }
+                Debug.LogError($"Invalid index: {index}");
+                return;
+            }
+
+            // Получаем все значения перечисления FormType
+            FormType[] formTypes = (FormType[])Enum.GetValues(typeof(FormType));
+
+            if(_currentForm != forms[index] && index < formTypes.Length)
+            {
+                SwitchForm(formTypes[index]);
+            }
+            else
+            {
+                Debug.LogError($"Invalid form index: {index}");
             }
         }
+
 
         private IEnumerator ShapeshiftRoutine()
         {

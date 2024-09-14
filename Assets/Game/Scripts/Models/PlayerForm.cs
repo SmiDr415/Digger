@@ -10,6 +10,7 @@ namespace MultiTool
         private readonly string _formName;
         private readonly Vector2 _sizeInTiles;
         private readonly Sprite _sprite;
+        private readonly Sprite _icon;
         private int _strength;
         private float _cooldown;
         private int _damage;
@@ -32,6 +33,7 @@ namespace MultiTool
         {
             _formName = data.FormType.ToString();
             _sprite = data.Sprite;
+            _icon = data.Icon;
             _sizeInTiles = data.SizeInTiles;
             _index = index;
             _strength = data.Durability;
@@ -47,6 +49,7 @@ namespace MultiTool
         public string FormName => _formName;
         public Vector2 SizeInTiles => _sizeInTiles;
         public Sprite Sprite => _sprite;
+        public Sprite Icon => _icon;
         public int Strength => _strength;
         public float Cooldown => (float)Math.Round(_cooldown, 2);
         public int Damage => _damage;

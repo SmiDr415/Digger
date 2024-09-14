@@ -34,9 +34,11 @@ namespace MultiTool
 
         private Color _disableColor = new(0, 0, 0, 0);
 
+        private bool _tilemapInit = false;
 
         public void InitializeTileStrengthDict()
         {
+            _tilemapInit = false;
             _tileStrengthDict = new Dictionary<TileBase, int>();
             _tileCurrentStrengthDict = new Dictionary<Vector3Int, int>();
             _tileTextObjects = new Dictionary<Vector3Int, TextMesh>();
@@ -52,7 +54,7 @@ namespace MultiTool
             }
 
             DisplayStrengthOnTiles();
-
+            _tilemapInit = true;
         }
 
         private void DisplayStrengthOnTiles()
@@ -67,13 +69,25 @@ namespace MultiTool
 
                 _tileCurrentStrengthDict[pos] = strength;
 
-                GameObject textObj = _tilemap.GetInstantiatedObject(pos);
-                if(textObj == null)
+                GameObject tileGO = _tilemap.GetInstantiatedObject(pos);
+                if(tileGO == null)
                     continue;
-                TextMesh textMesh = textObj.GetComponentInChildren<TextMesh>();
+                TextMesh textMesh = tileGO.GetComponentInChildren<TextMesh>();
+
+                if(!_tilemapInit)
+                {
+                    RuntimeAnimatorController animController = _tileData.GetTileAnimator(tile.name);
+                    if(animController)
+                    {
+                        _tilemap.SetColor(pos, new(0, 0, 0, 0));
+                        var tileController = tileGO.GetComponent<TileGOController>();
+                        tileController.InitAnimation(animController);
+                    }
+                }
+
                 if(textMesh != null)
                 {
-                    _tileTextObjects[pos] = textObj.GetComponentInChildren<TextMesh>();
+                    _tileTextObjects[pos] = tileGO.GetComponentInChildren<TextMesh>();
                     textMesh.text = strength.ToString();
                     if(strength <= 0)
                     {
@@ -126,7 +140,7 @@ namespace MultiTool
 
                                     var tileType = _tileData.GetTileType(tile.name);
                                     var typeHarvestable = playerForm.GetHarvestType(tileType);
-                                    if(tileUp != null && _tilemap.GetColliderType(pos + Vector3Int.up) == Tile.ColliderType.None)
+                                    if(tileUp != null && _tilemap.GetColliderType(pos + Vector3Int.up) == Tile.ColliderType.None && _tilemap.GetColliderType(pos) != Tile.ColliderType.None)
                                         typeHarvestable = HarvestType.Unharvestable;
 
                                     switch(typeHarvestable)
