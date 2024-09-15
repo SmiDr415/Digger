@@ -29,6 +29,7 @@ MonoBehaviour:
     - _tileType: 3
       _harvestType: 2
     _upgradeJson: {fileID: 4900000, guid: 61602a4e683a00e4496514e0db38b26a, type: 3}
+    _runtimeAnimatorController: {fileID: 9100000, guid: ecdd60e0cc020b8479df99e16ce56e0f, type: 2}
     _damage: 1
     _extractedResourceAmount: 1
     _cost: 1
@@ -50,6 +51,7 @@ MonoBehaviour:
     - _tileType: 3
       _harvestType: 2
     _upgradeJson: {fileID: 4900000, guid: 61602a4e683a00e4496514e0db38b26a, type: 3}
+    _runtimeAnimatorController: {fileID: 9100000, guid: 4cb739363164ce54cbf690c2f8d48cac, type: 2}
     _damage: 1
     _extractedResourceAmount: 1
     _cost: 1
@@ -71,6 +73,7 @@ MonoBehaviour:
     - _tileType: 3
       _harvestType: 1
     _upgradeJson: {fileID: 4900000, guid: 61602a4e683a00e4496514e0db38b26a, type: 3}
+    _runtimeAnimatorController: {fileID: 9100000, guid: 59a7d71bef0d2794a8be185fe981ad3c, type: 2}
     _damage: 1
     _extractedResourceAmount: 1
     _cost: 1

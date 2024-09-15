@@ -14,6 +14,7 @@ namespace MultiTool
         [SerializeField] private Sprite _icon;
         [SerializeField] private List<TileHarvestable> _tileHarvestables;
         [SerializeField] private TextAsset _upgradeJson;
+        [SerializeField] private RuntimeAnimatorController _runtimeAnimatorController;
 
         [SerializeField, Tooltip("Количество урона, которое форма наносит за один удар по ресурсу")] private int _damage;
         [SerializeField, Tooltip("Количество ресурса, которые выпадает с тайла/спрайта за один удар")] private int _extractedResourceAmount;
@@ -34,6 +35,7 @@ namespace MultiTool
         public float Cooldown => _cooldown;
         public List<TileHarvestable> TileHarvestable => _tileHarvestables;
         public int Durability => _durability;
+        public RuntimeAnimatorController RuntimeAnimatorController => _runtimeAnimatorController;
 
         // Свойство с ленивой инициализацией
         public UpgradeData UpgradeData
