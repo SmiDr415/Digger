@@ -736,7 +736,6 @@ MonoBehaviour:
   _tilemapStrengthDisplay: {fileID: 0}
   _interactionTrigger: {fileID: 6247708458688455133}
   _gatherTrigger: {fileID: 2316091487376629022}
-  _rigidbody2D: {fileID: 2973025131455783287}
 --- !u!212 &1894333493895490058
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -857,13 +856,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.8618182, y: 1.8618182}
+    oldSize: {x: 1.7066667, y: 1.7066667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.8618182, y: 1.8618182}
+  m_Size: {x: 1.7066667, y: 1.7066667}
   m_EdgeRadius: 0.02
 --- !u!95 &5649260313178774464
 Animator:
