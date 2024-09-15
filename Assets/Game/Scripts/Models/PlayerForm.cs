@@ -16,6 +16,7 @@ namespace MultiTool
         private int _damage;
         private int _cost;
         private int _durability;
+        private RuntimeAnimatorController _runtimeAnimatorController;
         private readonly List<TileHarvestable> _tileHarvestables;
 
         private float _timeStepRepair = 1f;
@@ -43,6 +44,7 @@ namespace MultiTool
             _cost = data.Cost;
             _durability = data.Durability;
             _upgradeData = data.UpgradeData;
+            _runtimeAnimatorController = data.RuntimeAnimatorController;
         }
 
         public int Index => _index;
@@ -56,6 +58,7 @@ namespace MultiTool
         public int Production => _production;
         public int Cost => _cost;
         public int Durability => _durability;
+        public RuntimeAnimatorController RuntimeAnimatorController => _runtimeAnimatorController;
 
         internal void GetDamage(int val)
         {

@@ -78,9 +78,9 @@ namespace MultiTool
             yield return new WaitForSeconds(_shapeshiftDelay);
             if(_isShapeshifting)
             {
-                PerformShapeshift(_targetFormType);
                 _isShapeshifting = false;
                 _playerAnimation.Shapeshift(false);
+                PerformShapeshift(_targetFormType);
                 GameManager.Instance.UIController.ShowCancelButton(false);
             }
         }

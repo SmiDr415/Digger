@@ -7,113 +7,101 @@ namespace MultiTool
     //[ExecuteInEditMode]
     public class PlayerController : MonoBehaviour
     {
+        [Header("Player Settings")]
         [SerializeField] private Animator _animator;
         [SerializeField] private AudioSource _audioSourceJump;
-
         [SerializeField] private AnimationCurve _gravityCurve;
         [SerializeField] private AnimationCurve _jumpVelocityCurve;
 
-        public static PlayerController Instance { get; private set; }
-
-        [Header("Player Settings")]
-
         [Header("Радиус сбора ресурсов")]
         [Tooltip("Радиус, в котором все предметы притягиваются к герою")]
-        [SerializeField]
-        [Range(0, 5)]
-        private int _gatherRadius = 0;
+        [SerializeField, Range(0, 5)] private int _gatherRadius = 0;
 
         [Header("Радиус разрушения ресурсов")]
         [Tooltip("Радиус, в котором игрок может выбрать блок для разрушения")]
-        [SerializeField]
-        [Range(1, 5)]
-        private int _breakRadius = 3;
+        [SerializeField, Range(1, 5)] private int _breakRadius = 3;
 
         [Header("Радиус взаимодействия")]
         [Tooltip("Радиус, в котором игрок может взаимодействовать с интерактивными объектами")]
-        [SerializeField]
-        [Range(0, 5)]
-        private int _interactionRadius = 0;
+        [SerializeField, Range(0, 5)] private int _interactionRadius = 0;
 
         [Header("Текущий баланс денег")]
         [Tooltip("Количество денег на балансе героя")]
-        [SerializeField]
-        private int _moneyAmount = 0;
+        [SerializeField] private int _moneyAmount = 0;
 
         [Header("Скорость движения по горизонтали")]
         [Tooltip("Скорость движения героя по горизонтали")]
-        [SerializeField]
-        [Range(1, 10)]
-        private float _moveSpeed = 1.0f;
+        [SerializeField, Range(1, 10)] private float _moveSpeed = 1.0f;
 
         [Header("Максимальная высота прыжка")]
         [Tooltip("Максимальная высота, на которую может прыгнуть герой")]
-        [SerializeField]
-        [Range(1, 5)]
-        private int _maxJumpHeight = 1;
+        [SerializeField, Range(1, 5)] private int _maxJumpHeight = 1;
 
         [Header("Время достижения максимальной высоты прыжка")]
         [Tooltip("Время, за которое герой достигает максимальной высоты прыжка")]
-        [SerializeField]
-        private float _timeToJumpApex = 0.4f;
-        private AudioClip _jumpSfx;
+        [SerializeField] private float _timeToJumpApex = 0.4f;
+
         [Space]
-
-        private PlayerAnimation _playerAnimation;
-        private PlayerShapeshift _playerShapeshift;
-        private PlayerTeleportation _playerTeleportation;
-
         [SerializeField] private Transform _groundCheck;
         [SerializeField] private LayerMask _groundLayer;
         [SerializeField] private TilemapStrengthDisplay _tilemapStrengthDisplay;
         [SerializeField] private BoxCollider2D _interactionTrigger;
         [SerializeField] private BoxCollider2D _gatherTrigger;
 
+        private static PlayerController _instance;
+        private PlayerAnimation _playerAnimation;
+        private PlayerShapeshift _playerShapeshift;
+        private PlayerTeleportation _playerTeleportation;
         private BoxCollider2D _playerBoxCollider;
-        [SerializeField] private Rigidbody2D _rigidbody2D;
         private SpriteRenderer _spriteRenderer;
+        private Rigidbody2D _rigidbody2D;
+
         private bool _isGrounded;
         private PlayerForm _currentForm;
         private InteractiveObject _currentInteractive;
-
         private float _gravityScale;
         private float _jumpVelocity;
         private float _lastMineTime;
 
-
+        public static PlayerController Instance => _instance;
         public int MoneyAmount => _moneyAmount;
-
-        public bool IsReady => !_playerTeleportation.IsTeleporting && !_playerShapeshift.IsShapeshifting && IsCooldown() && gameObject.activeInHierarchy;
-
+        public bool IsReady => !_playerTeleportation.IsTeleporting && !_playerShapeshift.IsShapeshifting && IsCooldown && gameObject.activeInHierarchy;
         public PlayerShapeshift PlayerShapeshift => _playerShapeshift;
         public PlayerTeleportation PlayerTeleportation => _playerTeleportation;
         public InteractiveObject InteractiveSprite => _currentInteractive;
         public int GatherRadius => _gatherRadius;
         public PlayerForm Form => _currentForm;
 
-
-        //private void OnDisable()
-        //{
-        //    transform.position = Vector3.zero;
-        //}
+        public bool IsCooldown => Time.time - _lastMineTime > _currentForm.Cooldown;
 
         #region Initialization
+
         private void Awake()
         {
-            SetupSingleton();
-            InitializeComponents();
-            SubscribeToEvents();
-            UpdateColliderSize();
-            CalculateJumpForce(); // Вычислить силу прыжка при инициализации
+            if(_instance == null)
+            {
+                _instance = this;
+                InitializeComponents();
+                SubscribeToEvents();
+                CalculateJumpForce(); // Вычислить силу прыжка при инициализации
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
+
 
         private void Start()
         {
             if(GameManager.Instance.FormController != null)
+            {
                 _currentForm = GameManager.Instance.FormController.CurrentForm;
+            }
             UpdateTileStrengthDisplay();
             _lastMineTime = Time.time;
         }
+
 
         private void OnValidate()
         {
@@ -124,6 +112,7 @@ namespace MultiTool
             CalculateJumpForce(); // Вычислить силу прыжка при изменении значений в инспекторе
         }
 
+
         private void InitializeComponents()
         {
             _playerAnimation = GetComponent<PlayerAnimation>();
@@ -132,13 +121,9 @@ namespace MultiTool
 
             _playerBoxCollider = GetComponent<BoxCollider2D>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
-
+            _rigidbody2D = GetComponent<Rigidbody2D>();
         }
 
-        private void SetupSingleton()
-        {
-            Instance = this;
-        }
 
         public void SubscribeToEvents()
         {
@@ -149,7 +134,6 @@ namespace MultiTool
 
         private void FixedUpdate()
         {
-            //if(_rigidbody2D.velocity != Vector2.zero)
             UpdateTileStrengthDisplay();
             _gravityScale *= _gravityCurve.Evaluate(Time.time);
         }
@@ -173,9 +157,7 @@ namespace MultiTool
 
             _playerAnimation.SetJump(Mathf.Abs(moveVelocity.y) > 1f);
             _playerAnimation.SetWalk(Mathf.Abs(moveVelocity.x) > 1f);
-            //_animator.applyRootMotion = Mathf.Abs(moveVelocity.x) < 0.001f;
         }
-
 
         public void Jump()
         {
@@ -187,7 +169,6 @@ namespace MultiTool
                 _audioSourceJump.Play();
 
             }
-            //_animator.applyRootMotion = true;
         }
 
         private void CheckIfGrounded()
@@ -214,31 +195,26 @@ namespace MultiTool
         private void OnChangeForm()
         {
             _currentForm = GameManager.Instance.FormController.CurrentForm;
-            UpdateColliderSize();
+            _animator.enabled = false;
+            if(_currentForm.RuntimeAnimatorController)
+            {
+                _animator.runtimeAnimatorController = _currentForm.RuntimeAnimatorController;
+                _animator.enabled = true;
+            }
             UpdatePlayerSprite();
-        }
-
-        public bool IsCooldown()
-        {
-            return Time.time - _lastMineTime > _currentForm.Cooldown;
+            UpdateColliderSize();
         }
 
         private void UpdateColliderSize()
         {
-            if(_playerBoxCollider == null)
+            if(_playerBoxCollider == null || _spriteRenderer == null)
             {
-                _playerBoxCollider = GetComponent<BoxCollider2D>();
+                InitializeComponents();
             }
-
-            if(_spriteRenderer == null)
-            {
-                _spriteRenderer = GetComponent<SpriteRenderer>();
-            }
-
             _playerBoxCollider.size = _spriteRenderer.sprite.bounds.size;
-            _groundCheck.localPosition = _spriteRenderer.sprite.bounds.size;
+            //_groundCheck.localPosition = _spriteRenderer.sprite.bounds.size;
 
-            UpdateGroundPosition();
+            //UpdateGroundPosition();
         }
 
         private void UpdatePlayerSprite()
@@ -251,33 +227,32 @@ namespace MultiTool
 
         private void UpdateGroundPosition()
         {
-            Vector3 colliderBottom = GetGroundCheckPoint();
-            _groundCheck.position = colliderBottom;
+            _groundCheck.position = GetGroundCheckPoint();
         }
 
         private Vector3 GetGroundCheckPoint()
         {
             Vector2 offset = _playerBoxCollider.offset;
             Vector2 size = _playerBoxCollider.size;
-
-            offset.y -= size.y / 2;
-
+            offset.y -= size.y / 2 + 0.1f;
             return transform.position + (Vector3)offset;
         }
+
         #endregion
 
+
         #region Interaction
+
         public void GetDamage(int val)
         {
-            if(_currentForm == null)
+            if(_currentForm != null)
             {
-                return;
-            }
 
-            _playerAnimation.Mine();
-            _currentForm.GetDamage(val);
-            _lastMineTime = Time.time;
-            UIController.Instance.SetStrengthValue(_currentForm.Index, _currentForm.Strength);
+                _playerAnimation.Mine();
+                _currentForm.GetDamage(val);
+                _lastMineTime = Time.time;
+                UIController.Instance.SetStrengthValue(_currentForm.Index, _currentForm.Strength);
+            }
         }
 
         public void ReadyInteractible()
@@ -287,13 +262,11 @@ namespace MultiTool
 
         private void TryShowInteractiveWindow(InteractiveObject interactiveSprite)
         {
-            if(interactiveSprite == null)
+            if(interactiveSprite != null)
             {
-                return;
+                _rigidbody2D.velocity = Vector3.zero;
+                GUIWindowManager.Instance.ShowWindowAbovePosition(interactiveSprite.GetTopColliderPosition());
             }
-
-            _rigidbody2D.velocity = Vector3.zero;
-            GUIWindowManager.Instance.ShowWindowAbovePosition(interactiveSprite.GetTopColliderPosition());
         }
 
         internal void ActivateReadyInteractible(InteractiveObject interactiveSprite)
@@ -319,12 +292,11 @@ namespace MultiTool
         }
         #endregion
 
+
         #region Jump Calculation
+
         private void CalculateJumpForce()
         {
-            if(_rigidbody2D == null)
-                _rigidbody2D = GetComponent<Rigidbody2D>();
-
             _gravityScale = (2 * _maxJumpHeight) / Mathf.Pow(_timeToJumpApex, 2);
             _jumpVelocity = Mathf.Sqrt(2 * _gravityScale * _maxJumpHeight);
 
@@ -335,6 +307,7 @@ namespace MultiTool
         {
             Debug.Log("Финиш");
         }
+
         #endregion
     }
 }
